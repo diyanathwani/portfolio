@@ -11594,7 +11594,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       label: "Creative Writing & Thought Pieces",
       blurb: "The unpaid stuff, and the reason I do everything else.",
       pieces: [
-        { title: "Mila toh Haathi, Gayi toh Pooch", client: "Personal", tag: "Personal essay", text: "A personal essay that sounds like a proverb and reads like a confession." }
+        { title: "Mila toh Haathi, Gayi toh Pooch", client: "Personal", tag: "Personal essay", text: "A personal essay that sounds like a proverb and reads like a confession." },
+        { title: "Art as a Revolution", client: "Personal", tag: "Think piece - IFP nominee", text: "My nominated think piece for the IFP Season 15 50-Hour Writing Challenge, on the theme The Quiet Revolution." }
       ]
     },
     {
@@ -12709,44 +12710,37 @@ Note: ${note}
     { show: "Naveen Yadav", ep: "Hosted by Diya", line: "**@flicksandfunnys**, verified cinema creator\n**103K** followers on Instagram\nCollab with **Prime Video**", tone: "l", a: diya_portrait_default, b: naveen_circ_default, bg: naveen_cover_default, bgPos: "50% 30%", href: DRIVE("1xdjr0AONMN46VbhMpTwOwxTvaM6OzhHC") },
     { show: "Sankalp Arora", ep: "Hosted by Diya \xB7 Project Sankalp, FundaSpring x IIT Madras", line: "**Co\u2011founder** (Business & Marketing Strategy) and **CMO**, Founders\u2019 Office, **Fundaspring** by BodhBridge\nBodhBridge: started by **IIT Madras alumni**\n**Mentor**, Raahat mental health society\n**Workshops Category Head**, Paradox \u201923", tone: "y", a: diya_portrait_default, b: sankalp_li_default, bg: fundaspring_default, bgPos: "50% 50%", bgAlt: "Fundaspring by BodhBridge logo", href: DRIVE("1FtG8Fvfd0ZT6xWwmkmyS9iVHjF0gcHV4") }
   ];
-  var CLIPS = ["Creator economy & one\u2011person businesses", "Event host to content strategist", "Creativity x AI x data science", "Running Paradox: nights, sponsors, promo", "Stress levels (honest edition)", "IIT superpowers, ranked"];
   function Pods({ guest = false }) {
     const LIST = PODS.filter((p) => p.show === "IITM BS Diaries" === guest);
-    return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: guest ? "pd pd-guest" : "pd", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "pd-grid", children: LIST.map((p, i) => {
-        const q = p;
-        const swap = i % 2 === 1;
-        const guestAlt = p.show === "IITM BS Diaries" ? "IIT Madras logo" : `${p.show}, podcast guest`;
-        return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("a", { href: p.href, target: "_blank", rel: "noopener noreferrer", className: `pd-cover pd-v2 t-${p.tone}`, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "pd-hero", style: { ...q.bgTop ? { height: 300 } : {}, ...!q.bg ? { height: 110 } : {} }, children: [
-            q.bg && (q.bgTop ? /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "pd-zoomwrap", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: "pd-heroimg", style: { objectPosition: "50% 0%" }, src: q.bg, alt: q.bgAlt || q.bgCap || guestAlt }) }) : /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: "pd-heroimg", style: q.bgPos ? { objectPosition: q.bgPos, objectFit: "contain", background: q.bgWhite ? "#fff" : "#000", padding: q.bgWhite ? "18px 0 60px" : void 0, boxSizing: "border-box" } : void 0, src: q.bg, alt: q.bgAlt || q.bgCap || guestAlt })),
-            q.bgCap && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("p", { className: "pd-capline", children: q.bgCap }),
-            /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: `pd-circ ${swap ? "is-r" : "is-l is-flip"}`, src: p.a, alt: "Diya Nathwani" }),
-            /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: `pd-circ ${swap ? "is-l" : "is-r"}`, style: q.bLogo ? { objectFit: "contain", padding: 8, boxSizing: "border-box" } : void 0, src: p.b, alt: guestAlt }),
-            /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("span", { className: "pd-vs", children: "x" })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("span", { className: "pd-no pd-no2", children: guest ? "AS A GUEST" : `EP. ${String(i + 1).padStart(2, "0")}` }),
-          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("h4", { children: p.show }),
-          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("small", { children: p.ep }),
-          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("ul", { className: "pd-pts", children: p.line.split("\n").map((ln, k2) => {
-            const claim = ln.startsWith("%%");
-            const seg = claim ? ln.split("%%") : null;
-            return /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("li", { className: claim ? "pd-claim" : void 0, children: claim ? /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(import_jsx_runtime24.Fragment, { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("mark", { children: seg[1] }),
-              seg.slice(2).join("%%")
-            ] }) : ln.split("**").map((t, m) => m % 2 ? /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("strong", { children: t }, m) : t) }, k2);
-          }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("span", { className: "pd-play", children: [
-            "\u25B6",
-            " Watch"
-          ] })
-        ] }, p.show);
-      }) }),
-      guest && /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(import_jsx_runtime24.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("p", { className: "pd-clips-h", children: "The IITM BS Diaries clips, bite-sized:" }),
-        /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "pd-clips", children: CLIPS.map((c, i) => /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("span", { className: `pd-clip c${i % 3}`, children: c }, c)) })
-      ] })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: guest ? "pd pd-guest" : "pd", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "pd-grid", children: LIST.map((p, i) => {
+      const q = p;
+      const swap = i % 2 === 1;
+      const guestAlt = p.show === "IITM BS Diaries" ? "IIT Madras logo" : `${p.show}, podcast guest`;
+      return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("a", { href: p.href, target: "_blank", rel: "noopener noreferrer", className: `pd-cover pd-v2 t-${p.tone}`, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "pd-hero", style: { ...q.bgTop ? { height: 300 } : {}, ...!q.bg ? { height: 110 } : {} }, children: [
+          q.bg && (q.bgTop ? /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "pd-zoomwrap", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: "pd-heroimg", style: { objectPosition: "50% 0%" }, src: q.bg, alt: q.bgAlt || q.bgCap || guestAlt }) }) : /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: "pd-heroimg", style: q.bgPos ? { objectPosition: q.bgPos, objectFit: "contain", background: q.bgWhite ? "#fff" : "#000", padding: q.bgWhite ? "18px 0 60px" : void 0, boxSizing: "border-box" } : void 0, src: q.bg, alt: q.bgAlt || q.bgCap || guestAlt })),
+          q.bgCap && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("p", { className: "pd-capline", children: q.bgCap }),
+          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: `pd-circ ${swap ? "is-r" : "is-l is-flip"}`, src: p.a, alt: "Diya Nathwani" }),
+          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: `pd-circ ${swap ? "is-l" : "is-r"}`, style: q.bLogo ? { objectFit: "contain", padding: 8, boxSizing: "border-box" } : void 0, src: p.b, alt: guestAlt }),
+          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("span", { className: "pd-vs", children: "x" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("span", { className: "pd-no pd-no2", children: guest ? "AS A GUEST" : `EP. ${String(i + 1).padStart(2, "0")}` }),
+        /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("h4", { children: p.show }),
+        /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("small", { children: p.ep }),
+        /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("ul", { className: "pd-pts", children: p.line.split("\n").map((ln, k2) => {
+          const claim = ln.startsWith("%%");
+          const seg = claim ? ln.split("%%") : null;
+          return /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("li", { className: claim ? "pd-claim" : void 0, children: claim ? /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(import_jsx_runtime24.Fragment, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("mark", { children: seg[1] }),
+            seg.slice(2).join("%%")
+          ] }) : ln.split("**").map((t, m) => m % 2 ? /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("strong", { children: t }, m) : t) }, k2);
+        }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("span", { className: "pd-play", children: [
+          "\u25B6",
+          " Watch"
+        ] })
+      ] }, p.show);
+    }) }) });
   }
 
   // src/photos/ifp-wall.jpg
@@ -12788,11 +12782,11 @@ Note: ${note}
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime25.jsxs)("span", { className: "pg-ifp-p", children: [
             "The theme: ",
-            /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("b", { children: "Art as a Revolution" }),
+            /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("b", { children: "The Quiet Revolution" }),
             ".",
             /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("br", {}),
             "My take: ",
-            /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("b", { children: "The Quiet Revolution" }),
+            /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("b", { children: "Art as a Revolution" }),
             "."
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("span", { className: "pg-ifp-p", children: "Art doesn't march with banners. It slips in through a song, a film or a meme, and rewires how you think while you believe it was your idea." })
@@ -13125,10 +13119,78 @@ Note: ${note}
   var GENRE = { "Think piece": "think", "Original song": "music", "Short film": "film" };
   var TONES = ["ink", "lime", "cream", "coral", "lilac", "yellow"];
   var MOTIFS = ["num", "ring", "stripe", "quote", "grid", "arrow"];
+  function MarqueeRow({ rev, children }) {
+    const ref = import_react25.default.useRef(null);
+    (0, import_react25.useEffect)(() => {
+      const el2 = ref.current;
+      if (!el2) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if (el2.scrollWidth <= el2.clientWidth + 4) return;
+      let raf = 0, last = performance.now();
+      const drag = { on: false, x: 0, scroll: 0 };
+      let hover = false;
+      const unit = () => el2.scrollWidth / 3;
+      const speed = () => unit() / 3e4;
+      const step = (now) => {
+        const dt2 = Math.min(60, now - last);
+        last = now;
+        if (!drag.on && !hover) {
+          el2.scrollLeft += (rev ? -1 : 1) * dt2 * speed();
+          const u = unit();
+          if (el2.scrollLeft >= u) el2.scrollLeft -= u;
+          else if (el2.scrollLeft < 0) el2.scrollLeft += u;
+        }
+        raf = requestAnimationFrame(step);
+      };
+      const down = (e2) => {
+        drag.on = true;
+        drag.x = e2.clientX;
+        drag.scroll = el2.scrollLeft;
+        el2.classList.add("is-drag");
+      };
+      const move = (e2) => {
+        if (!drag.on) return;
+        const u = unit();
+        let sl2 = drag.scroll + drag.x - e2.clientX;
+        if (u > 0) {
+          sl2 = (sl2 % u + u) % u;
+        }
+        el2.scrollLeft = sl2;
+      };
+      const up = () => {
+        drag.on = false;
+        el2.classList.remove("is-drag");
+      };
+      const enter = () => {
+        hover = true;
+      };
+      const leave = () => {
+        hover = false;
+      };
+      el2.addEventListener("pointerdown", down);
+      el2.addEventListener("pointermove", move);
+      el2.addEventListener("pointerup", up);
+      el2.addEventListener("pointercancel", up);
+      el2.addEventListener("mouseenter", enter);
+      el2.addEventListener("mouseleave", leave);
+      raf = requestAnimationFrame(step);
+      return () => {
+        cancelAnimationFrame(raf);
+        el2.removeEventListener("pointerdown", down);
+        el2.removeEventListener("pointermove", move);
+        el2.removeEventListener("pointerup", up);
+        el2.removeEventListener("pointercancel", up);
+        el2.removeEventListener("mouseenter", enter);
+        el2.removeEventListener("mouseleave", leave);
+      };
+    }, [rev]);
+    return /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("div", { className: "nk-marquee", ref, children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("div", { className: "nk-marquee-track", children }) });
+  }
   function AutoRow({ children }) {
     const ref = import_react25.default.useRef(null);
     const [moving, setMoving] = (0, import_react25.useState)(false);
     const paused = import_react25.default.useRef(false);
+    const drag = import_react25.default.useRef(null);
     (0, import_react25.useEffect)(() => {
       const el2 = ref.current;
       if (!el2) return;
@@ -13162,17 +13224,31 @@ Note: ${note}
         }
         raf = requestAnimationFrame(step);
       };
-      const hold = () => {
+      const hold = (e2) => {
         paused.current = true;
         if (resume) clearTimeout(resume);
+        drag.current = { x: e2.clientX, scroll: el2.scrollLeft };
+        el2.classList.add("is-drag");
+      };
+      const move = (e2) => {
+        if (!drag.current) return;
+        const half = el2.scrollWidth / 2;
+        let sl2 = drag.current.scroll + drag.current.x - e2.clientX;
+        if (half > 0) {
+          sl2 = (sl2 % half + half) % half;
+        }
+        el2.scrollLeft = sl2;
       };
       const release = () => {
+        drag.current = null;
+        el2.classList.remove("is-drag");
         if (resume) clearTimeout(resume);
         resume = setTimeout(() => {
           paused.current = false;
         }, 1800);
       };
       el2.addEventListener("pointerdown", hold);
+      el2.addEventListener("pointermove", move);
       el2.addEventListener("pointerup", release);
       el2.addEventListener("pointercancel", release);
       el2.addEventListener("touchstart", hold, { passive: true });
@@ -13182,6 +13258,7 @@ Note: ${note}
         cancelAnimationFrame(raf);
         if (resume) clearTimeout(resume);
         el2.removeEventListener("pointerdown", hold);
+        el2.removeEventListener("pointermove", move);
         el2.removeEventListener("pointerup", release);
         el2.removeEventListener("pointercancel", release);
         el2.removeEventListener("touchstart", hold);
@@ -13448,7 +13525,7 @@ Looking forward to hearing from you!`;
         marks.forEach((m) => m.remove());
       };
     }, []);
-    return /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("a", { ref, className: "nk-wafab is-hidden", href: "https://wa.me/918407976805", target: "_blank", rel: "noopener noreferrer", "aria-label": "Chat with Diya on WhatsApp" });
+    return /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("a", { ref, className: "nk-wafab is-hidden", href: "https://wa.me/918407976805", target: "_blank", rel: "noopener noreferrer", "aria-label": "Chat with Diya on WhatsApp", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" }) }) });
   }
   function HomePage() {
     const clock = useClock();
@@ -13521,10 +13598,10 @@ Looking forward to hearing from you!`;
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("section", { className: "nk-marquee-wrap", "aria-label": "Brands and clients", children: [
         /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(Title, { cls: "nk-serif is-center is-onp is-mixed", pre: "My", hl: "MAIN CHARACTER", post: "Brands" }),
-        /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(Title, { cls: "nk-serif is-center is-onp is-mixed", pre: "The", hl: "client", post: "wall" }),
+        /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("p", { className: "cw-script", children: "(the client wall)" }),
         [0, 1, 2].map((row) => {
           const L2 = LOGOS.filter((_3, i) => i % 3 === row);
-          return /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("div", { className: "nk-marquee" + (row === 1 ? " is-rev" : ""), children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("div", { className: "nk-marquee-track", children: [...L2, ...L2, ...L2].map((l2, i) => /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("div", { className: l2.dark ? "mq is-dark" : "mq", "aria-hidden": i >= L2.length, children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("img", { src: l2.src, alt: i < L2.length ? l2.name : "" }) }, l2.name + i)) }) }, row);
+          return /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(MarqueeRow, { rev: row === 1, children: [...L2, ...L2, ...L2].map((l2, i) => /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("div", { className: l2.dark ? "mq is-dark" : "mq", "aria-hidden": i >= L2.length, children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("img", { src: l2.src, alt: i < L2.length ? l2.name : "" }) }, l2.name + i)) }, row);
         })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("section", { className: "nk nk-dark nk-about", id: "about", children: [
@@ -13576,13 +13653,22 @@ Looking forward to hearing from you!`;
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { className: "nk-contactline", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("small", { children: "WhatsApp" }),
-              /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("a", { href: WA2, target: "_blank", rel: "noopener noreferrer", children: "Message me" })
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { className: "cl-chip", href: WA2, target: "_blank", rel: "noopener noreferrer", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("span", { className: "cl-ic is-wa", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" }) }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("span", { className: "cl-tx", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("small", { children: "WhatsApp" }),
+                /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("b", { children: "Message me" })
+              ] })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("small", { children: "Email" }),
-              /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("a", { href: `mailto:${EMAIL}`, children: EMAIL })
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { className: "cl-chip", href: `mailto:${EMAIL}`, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("span", { className: "cl-ic is-em", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("svg", { viewBox: "0 0 24 24", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("rect", { x: "2.5", y: "5", width: "19", height: "14", rx: "2" }),
+                /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M3 7l9 6 9-6" })
+              ] }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("span", { className: "cl-tx", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("small", { children: "Email" }),
+                /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("b", { children: EMAIL })
+              ] })
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("button", { className: "nk-btn is-outline", onClick: () => go2("journey"), children: "See my journey" })
@@ -13644,9 +13730,13 @@ Looking forward to hearing from you!`;
             /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("div", { className: "nk-pieces", children: card(d.pieces[0], 0, true) }),
             d.key === "podcast" ? /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)(import_jsx_runtime29.Fragment, { children: [
               /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(AutoRow, { children: rest.map((p, j3) => card(p, j3 + 1, false)) }),
-              /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(AutoRow, { children: POD_LINKS.map((pl2) => /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { className: "nk-podbox", href: pl2.href, target: "_blank", rel: "noopener noreferrer", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("div", { className: "podbox-grid", children: POD_LINKS.map((pl2) => /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { className: "pdb", href: pl2.href, target: "_blank", rel: "noopener noreferrer", children: [
                 /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("strong", { children: pl2.t }),
-                /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("small", { children: pl2.s })
+                /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("small", { children: pl2.s }),
+                /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("span", { className: "pdb-watch", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M8 5v14l11-7z" }) }),
+                  "Watch"
+                ] })
               ] }, pl2.t)) })
             ] }) : /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)(import_jsx_runtime29.Fragment, { children: [
               /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(AutoRow, { children: rowA.map((p, j3) => card(p, 1 + j3 * 2, false)) }),
@@ -13831,48 +13921,60 @@ Looking forward to hearing from you!`;
       /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(WaFab, {}),
       /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("section", { className: "nk nk-light nk-cards", children: [
         /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { className: "nk-ccard", href: `mailto:${EMAIL}`, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("span", { children: "\u2709\uFE0F" }),
+          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("span", { className: "cc-ic", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "2", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("rect", { x: "2.5", y: "5", width: "19", height: "14", rx: "2" }),
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M3 7l9 6 9-6" })
+          ] }) }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { children: [
             /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("small", { children: "Email" }),
             /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("strong", { children: EMAIL })
           ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { className: "nk-ccard", href: WA2, target: "_blank", rel: "noopener noreferrer", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("span", { children: "\u{1F4AC}" }),
+          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("span", { className: "cc-ic cc-wa", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", fill: "currentColor", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" }) }) }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { children: [
             /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("small", { children: "WhatsApp" }),
             /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("strong", { children: "Tap to chat" })
           ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { className: "nk-ccard", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("span", { children: "\u{1F4CD}" }),
+          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("span", { className: "cc-ic cc-pin", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", fill: "currentColor", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" }) }) }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { children: [
             /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("small", { children: "Location" }),
-            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("strong", { children: "Mumbai / Nagpur, India. Remote\u2011friendly." })
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("strong", { children: "Mumbai / Nagpur, India. Remote-friendly." })
           ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { className: "nk-foot", children: [
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { href: LINKEDIN, target: "_blank", rel: "noopener noreferrer", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" }) }),
             "LinkedIn ",
             "\u2197"
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { href: "https://www.instagram.com/mindonecstasy_/", target: "_blank", rel: "noopener noreferrer", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" }) }),
             "Instagram ",
             "\u2197"
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { href: YOUTUBE, target: "_blank", rel: "noopener noreferrer", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" }) }),
             "YouTube ",
             "\u2197"
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { href: SUBSTACK, target: "_blank", rel: "noopener noreferrer", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" }) }),
             "Substack ",
             "\u2197"
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { href: "https://x.com/diya_nathwani", target: "_blank", rel: "noopener noreferrer", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" }) }),
             "X ",
             "\u2197"
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("a", { href: `mailto:${EMAIL}`, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "2", "aria-hidden": "true", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("rect", { x: "2.5", y: "5", width: "19", height: "14", rx: "2" }),
+              /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M3 7l9 6 9-6" })
+            ] }),
             "Email ",
             "\u2197"
           ] })
