@@ -10776,4 +10776,51 @@ h2.nk-serif .title-post {
   display: inline-block;
   transform: skewX(-4deg);
 }
+@media (min-width: 768px) {
+  .nk-pods .pd-grid {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nk-pods .pd-hero {
+    height: 320px;
+  }
+}
+#work {
+  padding-bottom: 40px;
+}
+#journey {
+  padding-top: 40px;
+}
+.wave-badge {
+  position: absolute;
+  left: -30px;
+  bottom: -24px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--lime);
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+.wave-badge .wb-hii {
+  font-family: "Caveat", cursive;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  transform: rotate(-6deg);
+}
+.wave-badge .wb-hand {
+  font-size: 22px;
+  line-height: 1;
+  margin-top: 2px;
+  transform-origin: 70% 80%;
+  animation: wh-wave 1.8s ease-in-out infinite !important;
+}
 /*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/
