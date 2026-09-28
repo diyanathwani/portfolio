@@ -10776,21 +10776,19 @@ h2.nk-serif .title-post {
   display: inline-block;
   transform: skewX(-4deg);
 }
-@media (min-width: 768px) {
-  .nk-pods .pd-grid {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .nk-pods .pd-hero {
-    height: 320px;
-  }
-}
 #work {
   padding-bottom: 40px;
 }
 #journey {
   padding-top: 40px;
+}
+@media (min-width: 768px) {
+  .nk-pods .pd-hero {
+    height: 260px !important;
+  }
+}
+.file-card {
+  max-width: 1240px;
 }
 .wave-badge {
   position: absolute;
