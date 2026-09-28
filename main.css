@@ -10821,4 +10821,57 @@ h2.nk-serif .title-post {
   transform-origin: 70% 80%;
   animation: wh-wave 1.8s ease-in-out infinite !important;
 }
+.file-card {
+  max-width: 1300px;
+}
+.nk-pods .pd {
+  max-width: 1144px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pd-zoomwrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.pd-zoomwrap .pd-heroimg {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2);
+}
+.nk-pods .pd-hero .pd-capline {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  margin: 0;
+  z-index: 3;
+  max-width: 72%;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #fff;
+  background: rgba(17, 17, 17, 0.85);
+  padding: 5px 10px;
+  text-align: left;
+  opacity: 1;
+  white-space: normal;
+}
+@media (min-width: 768px) {
+  .nk-pods .pd-hero .pd-capline {
+    font-size: 15.5px;
+  }
+  .nk-pods .pd-cover.t-p .pd-hero {
+    margin-bottom: 64px;
+  }
+  .nk-pods .pd-cover.t-p .pd-pts {
+    margin-bottom: 10px;
+  }
+  .nk-pods .pd-cover.t-p .pd-pts li {
+    margin: 2px 0;
+  }
+  .nk-pods .pd-cover.t-p.pd-v2 {
+    padding-bottom: 12px;
+  }
+}
 /*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/

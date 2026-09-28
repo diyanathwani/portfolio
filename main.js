@@ -12719,12 +12719,12 @@ Note: ${note}
         const guestAlt = p.show === "IITM BS Diaries" ? "IIT Madras logo" : `${p.show}, podcast guest`;
         return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("a", { href: p.href, target: "_blank", rel: "noopener noreferrer", className: `pd-cover pd-v2 t-${p.tone}`, children: [
           /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "pd-hero", style: { ...q.bgTop ? { height: 300 } : {}, ...!q.bg ? { height: 110 } : {} }, children: [
-            q.bg && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: "pd-heroimg", style: q.bgTop ? { objectPosition: "50% 0%" } : q.bgPos ? { objectPosition: q.bgPos, objectFit: "contain", background: q.bgWhite ? "#fff" : "#000", padding: q.bgWhite ? "18px 0 60px" : void 0, boxSizing: "border-box" } : void 0, src: q.bg, alt: q.bgAlt || q.bgCap || guestAlt }),
+            q.bg && (q.bgTop ? /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "pd-zoomwrap", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: "pd-heroimg", style: { objectPosition: "50% 0%" }, src: q.bg, alt: q.bgAlt || q.bgCap || guestAlt }) }) : /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: "pd-heroimg", style: q.bgPos ? { objectPosition: q.bgPos, objectFit: "contain", background: q.bgWhite ? "#fff" : "#000", padding: q.bgWhite ? "18px 0 60px" : void 0, boxSizing: "border-box" } : void 0, src: q.bg, alt: q.bgAlt || q.bgCap || guestAlt })),
+            q.bgCap && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("p", { className: "pd-capline", children: q.bgCap }),
             /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: `pd-circ ${swap ? "is-r" : "is-l is-flip"}`, src: p.a, alt: "Diya Nathwani" }),
             /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("img", { className: `pd-circ ${swap ? "is-l" : "is-r"}`, style: q.bLogo ? { objectFit: "contain", padding: 8, boxSizing: "border-box" } : void 0, src: p.b, alt: guestAlt }),
             /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("span", { className: "pd-vs", children: "x" })
           ] }),
-          q.bgCap && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("p", { className: "pd-capline", children: q.bgCap }),
           /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("span", { className: "pd-no pd-no2", children: guest ? "AS A GUEST" : `EP. ${String(i + 1).padStart(2, "0")}` }),
           /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("h4", { children: p.show }),
           /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("small", { children: p.ep }),
