@@ -10874,4 +10874,21 @@ h2.nk-serif .title-post {
     padding-bottom: 12px;
   }
 }
+@media (min-width: 900px) {
+  .st-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    gap: 24px;
+  }
+  .st-row .st-card,
+  .st-row .st-card.is-wide {
+    width: 100%;
+    max-width: 300px;
+    grid-column: span 2;
+  }
+  .st-row .st-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+}
 /*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/
