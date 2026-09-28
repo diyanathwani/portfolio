@@ -13527,6 +13527,91 @@ Looking forward to hearing from you!`;
     }, []);
     return /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("a", { ref, className: "nk-wafab is-hidden", href: "https://wa.me/918407976805", target: "_blank", rel: "noopener noreferrer", "aria-label": "Chat with Diya on WhatsApp", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("svg", { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", { d: "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" }) }) });
   }
+  function SubstackPopup() {
+    const ref = (0, import_react25.useRef)(null);
+    const [show, setShow] = (0, import_react25.useState)(false);
+    (0, import_react25.useEffect)(() => {
+      let snooze = 0;
+      try {
+        snooze = Number(localStorage.getItem("dn-ss-snooze") || 0);
+      } catch {
+      }
+      if (Date.now() - snooze < 7 * 864e5) return;
+      const t = window.setTimeout(() => setShow(true), 6e3);
+      return () => window.clearTimeout(t);
+    }, []);
+    (0, import_react25.useEffect)(() => {
+      const el2 = ref.current;
+      if (!show || !el2 || window.self === window.top) return;
+      el2.style.position = "absolute";
+      el2.style.bottom = "auto";
+      const spacing = 100;
+      let marks = [];
+      const visible = /* @__PURE__ */ new Set();
+      const place = () => {
+        if (!visible.size) return;
+        const bottom = Math.max(...visible) * spacing;
+        el2.style.top = Math.max(0, bottom - el2.offsetHeight - 90) + "px";
+      };
+      const io2 = new IntersectionObserver((entries) => {
+        for (const e2 of entries) {
+          const i = Number(e2.target.dataset.i);
+          if (e2.isIntersecting) visible.add(i);
+          else visible.delete(i);
+        }
+        place();
+      }, { threshold: 0 });
+      const build = () => {
+        visible.clear();
+        marks.forEach((m) => {
+          io2.unobserve(m);
+          m.remove();
+        });
+        marks = [];
+        const docH = document.documentElement.scrollHeight;
+        const count = Math.ceil(docH / spacing);
+        for (let i = 0; i < count; i++) {
+          const m = document.createElement("div");
+          m.dataset.i = String(i);
+          m.style.cssText = "position:absolute;left:0;top:" + i * spacing + "px;width:2px;height:" + spacing + "px;pointer-events:none";
+          document.body.appendChild(m);
+          marks.push(m);
+          io2.observe(m);
+        }
+      };
+      build();
+      let rt2;
+      const ro2 = new ResizeObserver(() => {
+        window.clearTimeout(rt2);
+        rt2 = window.setTimeout(build, 800);
+      });
+      ro2.observe(document.body);
+      return () => {
+        window.clearTimeout(rt2);
+        ro2.disconnect();
+        io2.disconnect();
+        marks.forEach((m) => m.remove());
+      };
+    }, [show]);
+    const dismiss = () => {
+      try {
+        localStorage.setItem("dn-ss-snooze", String(Date.now()));
+      } catch {
+      }
+      setShow(false);
+    };
+    if (!show) return null;
+    return /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { ref, className: "ss-pop", role: "dialog", "aria-label": "Subscribe to Diya on Substack", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("button", { className: "ss-x", onClick: dismiss, "aria-label": "Close", children: "\xD7" }),
+      /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("p", { className: "ss-kicker", children: "the substack" }),
+      /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("p", { className: "ss-head", children: "think pieces, hot takes, zero spam" }),
+      /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("p", { className: "ss-body", children: "New writing straight to your inbox. The good stuff stays free." }),
+      /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { className: "ss-row", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("a", { className: "nk-btn is-yellow ss-go", href: SUBSTACK, target: "_blank", rel: "noopener noreferrer", onClick: dismiss, children: "subscribe \u2197" }),
+        /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("button", { className: "ss-later", onClick: dismiss, children: "maybe later" })
+      ] })
+    ] });
+  }
   function HomePage() {
     const clock = useClock();
     const [drawer, setDrawer] = (0, import_react25.useState)(drawers[0].key);
@@ -13980,7 +14065,8 @@ Looking forward to hearing from you!`;
           ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("p", { className: "nk-updated", children: "Updated September 2026." })
-      ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(SubstackPopup, {})
     ] }) });
   }
   function App() {
