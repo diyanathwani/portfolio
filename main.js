@@ -13543,8 +13543,24 @@ Looking forward to hearing from you!`;
       } catch {
       }
       if (Date.now() - snooze < 7 * 864e5) return;
-      const t = window.setTimeout(() => setShow(true), 6e3);
-      return () => window.clearTimeout(t);
+      const sec = document.getElementById("work");
+      if (!sec) {
+        const t = window.setTimeout(() => setShow(true), 6e3);
+        return () => window.clearTimeout(t);
+      }
+      const io2 = new IntersectionObserver((es2) => {
+        if (es2.some((e2) => e2.isIntersecting)) {
+          setShow(true);
+          io2.disconnect();
+        }
+      }, { threshold: 0.12 });
+      io2.observe(sec);
+      return () => io2.disconnect();
+    }, []);
+    (0, import_react25.useEffect)(() => {
+      const open = () => setShow(true);
+      window.addEventListener("dn-ss-open", open);
+      return () => window.removeEventListener("dn-ss-open", open);
     }, []);
     (0, import_react25.useEffect)(() => {
       const el2 = ref.current;
@@ -13619,8 +13635,14 @@ Looking forward to hearing from you!`;
         /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("p", { className: "ss-kicker", children: "the substack" }),
         /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("p", { className: "ss-head", children: "think pieces, hot takes, zero spam" }),
         /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("p", { className: "ss-body", children: "New writing straight to your inbox. The good stuff stays free." }),
+        /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("form", { className: "ss-form", action: "https://diyanathwani.substack.com/api/v1/free?nojs=true", method: "post", target: "_blank", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("input", { type: "hidden", name: "source", value: "embed" }),
+          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("input", { className: "ss-mail", name: "email", type: "email", required: true, placeholder: "your@email.com", "aria-label": "Email" }),
+          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("button", { className: "nk-btn is-yellow ss-go", type: "submit", children: "subscribe \u2197" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("p", { className: "ss-note", children: "Emails are collected by Substack itself." }),
         /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { className: "ss-row", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("a", { className: "nk-btn is-yellow ss-go", href: SUBSTACK, target: "_blank", rel: "noopener noreferrer", onClick: dismiss, children: "subscribe \u2197" }),
+          /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("a", { className: "ss-later", href: SUBSTACK, target: "_blank", rel: "noopener noreferrer", children: "read first \u2197" }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("button", { className: "ss-later", onClick: dismiss, children: "maybe later" })
         ] })
       ] })
@@ -13652,6 +13674,7 @@ Looking forward to hearing from you!`;
           /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("small", { children: "IST, probably overthinking a headline" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("nav", { className: "nk-nav", "aria-label": "Sections", children: [["about", "About"], ["results", "Results"], ["work", "Work"], ["journey", "Journey"], ["featured", "Featured"], ["media", "Media"]].map(([k2, l2]) => /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("button", { onClick: () => go2(k2), children: l2 }, k2)) }),
+        /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("button", { className: "nk-btn is-yellow is-sm nk-subbtn", onClick: () => window.dispatchEvent(new Event("dn-ss-open")), children: "Subscribe" }),
         /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("button", { className: "nk-btn is-outline is-sm", onClick: () => go2("contact"), children: "Let's talk" })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("section", { className: "nk nk-dark nk-hero", children: [

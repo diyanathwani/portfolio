@@ -11227,4 +11227,40 @@ h2.nk-serif .title-post {
     gap: 10px;
   }
 }
+.ss-form {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+.ss-mail {
+  flex: 1;
+  min-width: 0;
+  border: 2px solid #141414;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 14px;
+  background: #fff;
+  color: #141414;
+}
+.ss-mail:focus {
+  outline: 2px solid #8940FA;
+  outline-offset: 1px;
+}
+.ss-form .ss-go {
+  white-space: nowrap;
+}
+.ss-note {
+  font-size: 11.5px;
+  color: #777;
+  margin: 0 0 10px;
+}
+.nk-subbtn {
+  white-space: nowrap;
+}
+@media (max-width: 420px) {
+  .ss-form {
+    flex-direction: column;
+  }
+}
 /*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/
