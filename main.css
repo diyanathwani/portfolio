@@ -5300,7 +5300,6 @@ body {
   object-fit: cover;
   border-radius: 6px 6px 0 0;
   box-shadow: 0 0 0 5px var(--yellow);
-  filter: contrast(1.08);
 }
 .tm-mono {
   display: flex;
@@ -8881,9 +8880,6 @@ h2.nk-serif {
   font: 800 24px var(--sans);
   box-shadow: 4px 4px 0 var(--ink);
   cursor: pointer;
-}
-.tm-cut img {
-  filter: sepia(.16) saturate(1.12) contrast(1.06) brightness(1.02) !important;
 }
 .qs-grid {
   gap: 16px;

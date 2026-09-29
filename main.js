@@ -12079,7 +12079,7 @@ Note: ${note}
       /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "sp-form", children: [
         /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("label", { children: [
           "Your name",
-          /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("input", { value: client.name, onChange: (e2) => setClient({ ...client, name: e2.target.value }), placeholder: "Priya Sharma" })
+          /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("input", { value: client.name, onChange: (e2) => setClient({ ...client, name: e2.target.value }), placeholder: "Sherlock Holmes" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("label", { children: [
           "Your email",
@@ -12350,7 +12350,7 @@ Note: ${note}
           /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "sp-form", children: [
             /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("label", { children: [
               "Full name",
-              /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("input", { value: client.name, onChange: (e2) => setClient({ ...client, name: e2.target.value }), placeholder: "Priya Sharma" })
+              /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("input", { value: client.name, onChange: (e2) => setClient({ ...client, name: e2.target.value }), placeholder: "Sherlock Holmes" })
             ] }),
             /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("label", { children: [
               "Email",
@@ -12610,12 +12610,13 @@ Note: ${note}
     const track = (0, import_react23.useRef)(null);
     const dragging = (0, import_react23.useRef)(null);
     const hovering = (0, import_react23.useRef)(false);
+    const pauseUntil = (0, import_react23.useRef)(0);
     (0, import_react23.useEffect)(() => {
       let frame = 0;
       let last = 0;
       const tick = (time) => {
         const el2 = marquee.current;
-        if (el2 && !dragging.current && !hovering.current && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        if (el2 && !dragging.current && !hovering.current && time > pauseUntil.current && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
           if (last) el2.scrollLeft += Math.min(3, (time - last) * 0.025);
           const halfway = (track.current?.scrollWidth || 0) / 2;
           if (halfway > 0 && el2.scrollLeft >= halfway) el2.scrollLeft -= halfway;
@@ -12628,7 +12629,19 @@ Note: ${note}
     }, []);
     const go3 = (d) => {
       const el2 = marquee.current;
-      if (el2) el2.scrollBy({ left: d * 340, behavior: "smooth" });
+      if (!el2) return;
+      pauseUntil.current = performance.now() + 4500;
+      const card = el2.querySelector(".tm-card");
+      const dist = card ? card.offsetWidth + parseFloat(getComputedStyle(card).marginRight || "0") : 340;
+      const start = el2.scrollLeft;
+      const target = start + d * dist;
+      const t0 = performance.now();
+      const anim = (t) => {
+        const pr2 = Math.min(1, (t - t0) / 450);
+        el2.scrollLeft = start + (target - start) * (1 - Math.pow(1 - pr2, 3));
+        if (pr2 < 1) requestAnimationFrame(anim);
+      };
+      requestAnimationFrame(anim);
     };
     const dragMove = (e2) => {
       const el2 = marquee.current;
@@ -13427,11 +13440,11 @@ Looking forward to hearing from you!`;
         /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("div", { className: "nk-form", children: [
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("label", { children: [
             "Your name",
-            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("input", { value: name, onChange: (e2) => setName(e2.target.value), placeholder: "Priya from a brand you love" })
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("input", { value: name, onChange: (e2) => setName(e2.target.value), placeholder: "Sherlock Holmes" })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("label", { children: [
             "Brand / company",
-            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("input", { value: brand, onChange: (e2) => setBrand(e2.target.value), placeholder: "Where the magic needs to happen" })
+            /* @__PURE__ */ (0, import_jsx_runtime29.jsx)("input", { value: brand, onChange: (e2) => setBrand(e2.target.value), placeholder: "The Detective Agency" })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)("label", { children: [
             "What are you looking for?",
