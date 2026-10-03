@@ -1,1 +1,1 @@
-{"cleanUrls": true}
+{"cleanUrls": true, "rewrites": [{"source": "/og-preview.png", "destination": "/api/og"}]}
