@@ -6,7 +6,33 @@
     <title>Diya Nathwani - Content & Brand Strategist</title>
     <style>html,body{margin:0!important;padding:0!important}html,body,#root{position:static!important;height:auto!important;overflow:visible!important;overflow-x:clip!important;overscroll-behavior:auto!important}</style>
     <link rel="stylesheet" href="main.css">
-  </head>
+  <style id="responsive-audit">/* Responsive layout audit: stable route only. */
+.nk-ecard>div,.nk-contact>div,.nk-form>label{min-width:0}
+.nk-ecard strong{overflow-wrap:anywhere}
+.nk-contact .nk-form{min-width:0}
+.nk-contact .nk-form input,.nk-contact .nk-form select{min-width:0;width:100%;box-sizing:border-box}
+@media(max-width:767px){
+ .nk-about-photo{width:calc(100% - 16px);max-width:100%;margin-left:auto;margin-right:auto}
+ .nk-about-photo img{width:100%;max-width:100%;box-sizing:border-box}
+ .mc-clap{right:8px!important;max-width:calc(100% - 20px)}
+ .nk-end .nk-socials{flex-wrap:wrap;max-width:280px;row-gap:16px}
+ .nk-contactline{max-width:100%;box-sizing:border-box}
+ .nk-contactline span{min-width:0;overflow-wrap:anywhere}
+ .nk-hero-word{font-size:clamp(52px,19vw,72px)!important}
+}
+@media(min-width:768px) and (max-width:1023px){
+ .nk-hero-stage{grid-template-columns:minmax(0,1fr) 230px minmax(0,1.25fr);gap:16px}
+ .nk-hero-photo{width:230px}
+ .nk-hero-word{font-size:clamp(48px,6.8vw,68px)!important}
+ .qs-card{padding:18px 10px}
+ .qs-card strong{font-size:clamp(42px,6.3vw,62px)}
+ .nk-contact{grid-template-columns:230px minmax(0,1fr);gap:28px}
+ .nk-contact-photo{max-width:100%}
+ .nk-form{grid-template-columns:minmax(0,1fr)}
+ .nk-end .nk-ecards{grid-template-columns:1fr}
+}
+@media(min-width:1024px){.nk-contact{grid-template-columns:300px minmax(0,1fr)}.nk-form{grid-template-columns:repeat(2,minmax(0,1fr))}.nk-ecards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style></head>
   <body>
     <div id="root"></div>
     <script>window.instinctFile={initialRoute:"/",route:function(){}};</script>
