@@ -1,0 +1,35 @@
+/* Desktop artwork and all portfolio content stay intact. */
+.ux-mobile-jumps { display:none; }
+.ux-book-end { margin-top:28px; padding-top:20px; border-top:2px solid var(--ink); }
+.ux-book-end p { margin:0 0 12px; font-size:16px; }
+.ux-row-controls { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:12px 0; }
+.ux-row-controls button { min-height:44px; padding:10px 14px; border:2px solid var(--ink); background:var(--cream,#f5efe3); color:var(--ink); font:700 13px var(--sans); cursor:pointer; }
+.tm-arrows { flex-wrap:wrap; }
+.tm-arrows .ux-pause { width:auto; padding:8px 14px; font:700 13px var(--sans); }
+.ux-top { margin-bottom:24px; }
+@media(max-width:899px) {
+ .ux-mobile-jumps { display:block; padding:0 22px; background:var(--cream,#f5efe3); color:var(--ink); border-bottom:2px solid var(--ink); }
+ .ux-mobile-jumps summary { min-height:44px; display:list-item; padding:12px 0; cursor:pointer; font:700 14px var(--sans); }
+ .ux-mobile-jumps nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; padding:0 0 14px; }
+ .ux-mobile-jumps button { min-height:44px; padding:10px; border:2px solid var(--ink); background:var(--yellow); color:var(--ink); font:700 14px var(--sans); cursor:pointer; }
+ .nk-bar .nk-btn, .nk-piece a, .nk-piece-link, .ss-close, .ss-later { min-height:44px; }
+ .ss-close { min-width:44px; width:44px; height:44px; }
+ .nk-piece a { display:inline-flex; align-items:center; padding-block:9px; }
+ .ss-row { align-items:center; }
+ .ss-later { display:inline-flex; align-items:center; }
+}
+@media(max-width:767px) {
+ .nk-hero { padding-top:16px; padding-bottom:20px; }
+ .nk-hero .hn-big { font-size:84px; }
+ .nk-hero-word { font-size:60px; }
+ .nk-hero-photo { width:62%; max-width:242px; margin:6px auto; }
+ .nk-hero-word.is-right { margin-top:24px; }
+ .nk-hero .wave-badge { transform:scale(.85); transform-origin:center; }
+ .nk-hero .scrib.s4 { font-size:17px; }
+ .nk-serif { margin-bottom:24px; }
+}
+.ux-top { color:var(--ink)!important; text-shadow:none!important; }
+@media(max-width:899px){ .ss-pop .ss-close,.ss-pop .ss-x { width:44px!important;height:44px!important;min-width:44px!important; } }
+
+.wave-badge{background:var(--purple)!important;border-color:var(--ink)!important;box-shadow:5px 5px 0 var(--ink)!important}.wave-badge .wb-hii{color:#fff!important}
+.ux-book-end .nk-btn {background:var(--yellow)!important;color:var(--ink)!important;font-family:var(--cond);text-transform:uppercase;font-size:18px;}
