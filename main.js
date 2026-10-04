@@ -1,4 +1,22 @@
-(() => {
+(function(){
+  
+  function clean(){
+    
+    document.querySelectorAll('.rs-proof,.ogcard,.work53-shot').forEach(function(el){
+      
+      var text=(el.textContent||'')+' '+Array.from(el.querySelectorAll('a,img')).map(function(x){return (x.getAttribute('href')||'')+' '+(x.getAttribute('alt')||'')}).join(' ');
+      
+      if(/DPk66KpCWYs|Brut India.*Yashita|Yashita.*Brut India|2M views on Brut/i.test(text))el.remove();
+      
+    });
+    
+  }
+  
+  clean();
+  
+  new MutationObserver(clean).observe(document.documentElement,{childList:true,subtree:true});
+  
+})();(() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
