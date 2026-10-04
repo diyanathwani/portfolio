@@ -1,5 +1,5 @@
 (function(){
-function go(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}
+function go(id){const el=document.getElementById(id);if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
 function button(text,action,cls){const b=document.createElement('button');b.type='button';b.textContent=text;if(cls)b.className=cls;b.addEventListener('click',action);return b;}
 function fix(){
  const bar=document.querySelector('.nk-bar');if(bar){const c=Array.from(bar.querySelectorAll('button')).find(b=>/let.s talk/i.test(b.textContent));if(c)c.textContent="Let's Chat";
