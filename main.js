@@ -1,4 +1,4 @@
-(function(){
+(function(){var s=document.createElement("script");s.src="/client-results-v58.js";s.defer=true;document.head.appendChild(s);})();(function(){
   
   function clean(){
     
