@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Campaign Brain - Diya Nathwani (v2)</title>
+<meta name="description" content="A living map of what great campaigns do: 8 idea archetypes x 10 levers, with sourced examples. Built by Diya Nathwani.">
+<meta property="og:title" content="The Campaign Brain">
+<meta property="og:description" content="8 archetypes x 10 levers. Click a node, see the campaigns behind it.">
+<base href="/">
+<style>
+:root{--bg:#07080d;--panel:#0f111a;--line:#242842;--tx:#e9ecff;--mut:#8b91b8;--a:#7cf5d4;--b:#ff6ad5;--c:#ffd166;--d:#8aa4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(900px 500px at 70% -10%,#1b1f4a55,transparent),radial-gradient(700px 500px at 0% 30%,#3a124a44,transparent);pointer-events:none;z-index:0}
+.w{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 18px}
+nav{position:sticky;top:0;z-index:5;background:#07080dcc;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;gap:6px;align-items:center;overflow-x:auto;padding:10px 18px;white-space:nowrap}
+nav b{margin-right:auto;letter-spacing:.14em;font-size:12px;text-transform:uppercase;color:var(--a)}
+nav a{color:var(--mut);text-decoration:none;font-size:13px;padding:6px 10px;border-radius:99px}
+nav a:hover{color:var(--tx);background:#ffffff12}
+header{padding:54px 0 14px}
+.tag{display:inline-block;font:700 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--a);border:1px solid #7cf5d455;padding:6px 9px;border-radius:99px}
+h1{font-size:clamp(38px,7.2vw,84px);line-height:.98;letter-spacing:-.035em;margin:16px 0 14px;max-width:900px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+header p{color:var(--mut);max-width:620px;font-size:17px}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:22px}
+.stats div{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.1em}
+.stats b{display:block;font-size:30px;color:var(--tx);letter-spacing:-.02em;text-transform:none}
+section{padding:46px 0 10px}
+h2{font-size:clamp(24px,4vw,38px);letter-spacing:-.02em;margin-bottom:6px}
+.sub{color:var(--mut);margin-bottom:20px;max-width:640px}
+.mapwrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;align-items:start}
+@media(max-width:860px){.mapwrap{grid-template-columns:1fr}}
+.map{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:6px;position:relative}
+svg{width:100%;height:auto;display:block;touch-action:manipulation}
+.node{cursor:pointer}
+.node circle{transition:all .2s}
+.node text{pointer-events:none;font-family:inherit}
+.dim{opacity:.16}
+.edge{stroke:#3a4070;stroke-width:1;transition:all .2s}
+.edge.on{stroke:var(--a);stroke-width:2;opacity:1}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:20px;position:sticky;top:64px}
+.card h3{font-size:22px;letter-spacing:-.01em;margin:8px 0}
+.card .def{color:var(--mut);margin-bottom:14px}
+.ex{border-top:1px solid var(--line);padding:12px 0}
+.ex b{display:block;font-size:15px}
+.ex span{color:var(--c);font-size:13px}
+.ex small{display:block;color:var(--mut);margin-top:3px;font-size:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{font-size:11px;padding:4px 8px;border-radius:99px;border:1px solid var(--line);color:var(--mut);cursor:pointer;background:transparent}
+.chip.a{border-color:#7cf5d466;color:var(--a)}.chip.l{border-color:#ff6ad566;color:var(--b)}
+.chip:hover{color:var(--tx);background:#ffffff10}
+.hint{font-size:12px;color:var(--mut);padding:10px 14px}
+.matrix{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:14px}
+table{border-collapse:separate;border-spacing:4px;min-width:760px;width:100%}
+th{font-weight:600;font-size:11px;color:var(--mut);padding:4px 2px;text-align:center}
+th.r{text-align:left;color:var(--tx);font-size:12px;white-space:nowrap;padding-right:10px}
+td{height:40px;border-radius:9px;text-align:center;font-weight:700;font-size:13px;cursor:pointer;background:#141729;color:#4a5080}
+td:hover{outline:2px solid var(--c)}
+.legend{font-size:12px;color:var(--mut);margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.fw{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}
+.fw i{font:700 11px ui-monospace,monospace;color:var(--c);font-style:normal;letter-spacing:.1em;text-transform:uppercase}
+.fw h4{font-size:18px;margin:6px 0}
+.fw p{color:var(--mut);font-size:14px}
+.fw a{color:var(--d);font-size:12px;display:inline-block;margin-top:8px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.bar input{flex:1;min-width:200px;background:var(--panel);border:1px solid var(--line);color:var(--tx);padding:11px 14px;border-radius:99px;font:inherit}
+.bar button,.btn{background:var(--panel);border:1px solid var(--line);color:var(--mut);padding:10px 14px;border-radius:99px;font:inherit;font-size:13px;cursor:pointer}
+.bar button.on,.btn.on{background:var(--a);color:#06100d;border-color:var(--a);font-weight:700}
+.pat{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px;position:relative}
+.pat .n{font:700 11px ui-monospace,monospace;color:var(--b);letter-spacing:.1em}
+.pat h4{font-size:17px;margin:4px 0 6px}
+.pat p{font-size:13.5px;color:var(--mut)}
+.camp{display:grid;grid-template-columns:1fr;gap:8px}
+.cr{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2fr) auto;gap:12px;align-items:center}
+@media(max-width:720px){.cr{grid-template-columns:1fr}}
+.cr b{font-size:15px}.cr small{color:var(--mut);display:block}
+.cr .pf{color:var(--c);font-size:13px}
+.cr a{color:var(--d);font-size:12px;text-decoration:none;border:1px solid var(--line);padding:5px 9px;border-radius:99px;white-space:nowrap}
+.bs{background:linear-gradient(135deg,#14183a,#220f33);border:1px solid #3a2f6a;border-radius:22px;padding:22px}
+.bs select{background:#0b0d17;color:var(--tx);border:1px solid var(--line);border-radius:12px;padding:10px;font:inherit;max-width:100%}
+.sel{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+#bsout{margin-top:6px}
+footer{padding:50px 0 70px;color:var(--mut);font-size:13px}
+footer a{color:var(--d)}
+</style></head><body>
+<nav><div class="w"><b>Campaign Brain</b><a href="#map">Map</a><a href="#matrix">Gaps</a><a href="#sectors">Sectors</a><a href="#brainstorm">Brainstorm</a><a href="#frameworks">Frameworks</a><a href="#patterns">Patterns</a><a href="#index">Campaigns</a></div></nav>
+<div class="w">
+<header>
+<span class="tag">v2 - growing daily</span>
+<h1>How great campaigns <em>actually think.</em></h1>
+<p>Not a gallery. A map. Every campaign here is broken into the one idea it runs on and the levers it pulled, with a number and a source. Click anything.</p>
+<div class="stats"><div><b id="s1">17</b>campaigns studied</div><div><b>8</b>idea archetypes</div><div><b>10</b>levers</div><div><b id="sIN">5</b>India</div><div><b id="sW">12</b>World</div><div><b>100</b>target (50 / 50)</div></div>
+</header>
+
+<section id="map"><h2>The map</h2><p class="sub">Inner ring: 8 idea archetypes (what the idea does). Outer ring: 10 levers (what you change to make it new). Tap an archetype or a lever.</p>
+<div class="mapwrap"><div class="map"><svg id="svg" viewBox="0 0 700 700" role="img" aria-label="Campaign brain map"></svg><div class="hint">Lines show which levers each archetype uses in the campaigns studied so far.</div></div>
+<div class="card" id="card"></div></div></section>
+
+<section id="matrix"><h2>Where the gaps are</h2><p class="sub">Each cell counts studied campaigns that combine that archetype with that lever. Dark cells are empty. Empty means room to be original, or a combo that does not work. Tap a cell.</p>
+<div class="matrix"><table id="mx"></table></div><div class="legend" id="mxl">Tap a cell to see the campaigns.</div></section>
+
+<section id="sectors"><h2>Sector depth</h2><p class="sub">Rule: 30 great campaigns per sector before a sector page gets built. This is the honest progress bar, filled in order of priority.</p><div class="grid" id="sec"></div></section>
+
+<section id="brainstorm"><h2>Brainstorm</h2><p class="sub">Pick an archetype and two levers. See what already exists with that mix, then do something that is not on the list.</p>
+<div class="bs"><div class="sel"><select id="ba"></select><select id="bl1"></select><select id="bl2"></select><button class="btn on" id="bgo">Combine</button></div><div id="bsout"></div></div></section>
+
+<section id="frameworks"><h2>Frameworks behind the work</h2><p class="sub">The thinking that sits under the campaigns. Each one links to the page I read (the case template comes from the Ogilvy APAC Book of Growth 2023).</p><div class="grid" id="fw"></div></section>
+
+<section id="patterns"><h2>Idea pattern library</h2><p class="sub">Reusable idea mechanics. 8 so far, growing toward 500. Filter by sector or search.</p>
+<div class="bar"><input id="q" placeholder="Search patterns, e.g. geofence, name, pledge"><span id="secs"></span></div><div class="grid" id="pat"></div></section>
+
+<section id="index"><h2>Campaigns studied</h2><p class="sub">Every number is from a page I opened. Agency-reported figures are labeled.</p><div class="camp" id="camp"></div></section>
+<footer>By <a href="/">Diya Nathwani</a>. Numbers are as reported by the cited sources; agency-reported claims are marked. Updated daily during the build.</footer>
+</div>
+<script>
+const A=[
+{id:"A1",n:"Truth reveal",d:"Show people something true about themselves that they had not seen."},
+{id:"A2",n:"Product is the media",d:"Change the product or the ad itself so each person gets their own version."},
+{id:"A3",n:"Hijack the context",d:"Use a competitor, a place or a moment as your distribution."},
+{id:"A4",n:"Cultural stance",d:"Take a side on something people already feel."},
+{id:"A5",n:"Character",d:"A face or creature people remember, quote and wait for."},
+{id:"A6",n:"Hyperbole proof",d:"Exaggerate the benefit until it is funny and unforgettable."},
+{id:"A7",n:"Ritual ownership",d:"Attach the brand to a moment in life until it is the default."},
+{id:"A8",n:"Behaviour change",d:"The metric is what people do after, not what they watch."}];
+const L=[
+{id:"L1",n:"Audience",d:"Narrow by behaviour or moment, not demographic."},
+{id:"L2",n:"Occasion",d:"Festival, match, life event."},
+{id:"L3",n:"Culture / language",d:"Local idiom, humour, regional context."},
+{id:"L4",n:"Scarcity / constraint",d:"1 cent, 600 feet, 150 names. A constraint makes it retellable."},
+{id:"L5",n:"Relatability",d:"A truth the viewer recognises in themselves."},
+{id:"L6",n:"Participation",d:"Something a stranger can do: pledge, tag, recreate, reply."},
+{id:"L7",n:"Data / personalisation",d:"Location, name, purchase data."},
+{id:"L8",n:"Talent / persona",d:"Who carries it."},
+{id:"L9",n:"Real-time",d:"Respond within days, not quarters."},
+{id:"L10",n:"Proof format",d:"A number, a before/after, a sales result."}];
+const C=[
+{n:"Dove Real Beauty Sketches",y:2013,ag:"Ogilvy Brasil",a:["A1"],l:["L5","L10"],p:"Only 4% of women call themselves beautiful. 163M views. Titanium Grand Prix.",u:"https://www.thinkwithgoogle.com/_qs/documents/405/dove-real-beauty-sketches_case-studies.pdf",s:"other",r:"W"},
+{n:"Dove Evolution",y:2006,ag:"Ogilvy Toronto",a:["A1"],l:["L5"],p:"75-second film. Film Grand Prix, Cannes 2007.",u:"https://adage.com/article/cannes07/film-grand-prix-dove-evolution/118806/",s:"other",r:"W"},
+{n:"Dove Campaign for Real Beauty",y:2004,ag:"Ogilvy",a:["A1","A4"],l:["L5","L10"],p:"Built on a global study with outside academics before any ad.",u:"https://www.clubofamsterdam.com/contentarticles/52%20Beauty/dove_white_paper_final.pdf",s:"other",r:"W"},
+{n:"Share a Coke",y:2011,ag:"Ogilvy Australia",a:["A2"],l:["L1","L4","L6","L7"],p:"150 names on bottles. Ogilvy reports 80+ markets (agency-reported).",u:"https://www.ogilvy.com.au/Our-Work/Coca-Cola-Share-a-Coke",s:"food",r:"W"},
+{n:"Hutch Pug",y:2003,ag:"Ogilvy India",a:["A5"],l:["L3"],p:"A pug that follows the boy shows network coverage with almost no copy.",u:"https://www.storyboard18.com/brand-marketing/bow-wow-how-cheeka-the-pug-made-hutch-a-household-name-42291.htm",s:"other",r:"IN"},
+{n:"Vodafone ZooZoo",y:2009,ag:"Ogilvy India",a:["A5"],l:["L2","L3"],p:"Debuted in IPL 2009. 10M new subscribers (agency-reported case).",u:"https://www.casestudies.com/company/ogilvyone-worldwide/case-study/vodafone-customer-case-study",s:"other",r:"IN"},
+{n:"Fevicol Bus",y:2002,ag:"Ogilvy India",a:["A6"],l:["L3"],p:"Silver Lion, Cannes 2002. A bus so full only glue holds it.",u:"https://www.storyboard18.com/advertising/when-fevicol-bus-ad-stuck-its-way-to-a-silver-lion-at-cannes-2002-71860.htm",s:"other",r:"IN"},
+{n:"Cadbury Kuch Meetha Ho Jaye",y:1994,ag:"Ogilvy India",a:["A7"],l:["L2","L3"],p:"Positioned chocolate as an Indian sweet moment. Needs a deeper pass.",u:"https://www.e4m.co/advertising-news/cadbury-dairy-milk-the-indian-meethai-42191.html",s:"food",r:"IN"},
+{n:"Not Just a Cadbury Ad",y:2021,ag:"Ogilvy India",a:["A2","A4"],l:["L7","L3","L10"],p:"Local shops promoted by location. Shops in network 2.45M to 5.47M; Diwali 2022 sales 24% above 2019. Gold and Grand Effie, APAC Effie 2022.",u:"https://apaceffie.com/docs/default-source/resource-library/apac-effie-2022-winner_not-just-a-cadbury-ad-2-0",s:"food",r:"IN"},
+{n:"Fearless Girl",y:2017,ag:"McCann New York",a:["A4"],l:["L2","L5"],p:"3 Grand Prix on day one. 4 Grand Prix and 18 Lions in total.",u:"https://www.adweek.com/creativity/fearless-girls-dominating-run-at-cannes-ends-with-4-grand-prix-and-18-total-lions/",s:"creative",r:"W"},
+{n:"Whopper Detour",y:2019,ag:"FCB New York",a:["A3"],l:["L4","L6","L7"],p:"Whopper for 1 cent within 600 ft of McDonald's. 37:1 ROI (agency-reported). #1 on app store.",u:"https://fcb.com/our-work/whopper-detour/",s:"food",r:"W"},
+{n:"#LikeAGirl",y:2014,ag:"Leo Burnett",a:["A4","A1"],l:["L5"],p:"14 Lions in 2015 including a PR Grand Prix and a Titanium.",u:"https://www.prnewswire.com/news-releases/leo-burnett-earns-69-lions-at-the-2015-cannes-lions-international-festival-of-creativity-and-lions-health-awards-300106418.html",s:"creative",r:"W"},
+{n:"Dumb Ways to Die",y:2012,ag:"McCann Melbourne",a:["A6","A8"],l:["L5","L6"],p:"127M safety pledges. 5 Grand Prix (agency page).",u:"https://mccann.com.au/work/dumb-ways-to-die/",s:"creative",r:"W"},
+{n:"Cadbury Gorilla",y:2007,ag:"Fallon London",a:["A5"],l:["L5"],p:"About 10% sales rise reported by Marketing Week.",u:"https://www.marketingweek.com/cadbury-gorilla/",s:"food",r:"W"},
+{n:"Nike Dream Crazy",y:2018,ag:"Wieden+Kennedy",a:["A4"],l:["L8","L5","L10"],p:"31% online sales bump reported. Cannes Creative Effectiveness Grand Prix.",u:"https://adage.com/article/special-report-cannes-lions/nikes-dream-crazy-campaign-wins-cannes-creative-effectiveness-grand-prix/2345861",s:"other",r:"W"},
+{n:"Old Spice - The Man Your Man Could Smell Like",y:2010,ag:"Wieden+Kennedy",a:["A5"],l:["L1","L8","L9","L10"],p:"Goal +15% body wash sales. Got +60% by May 2010. 186 real-time replies in 2.5 days.",u:"https://www.wk.com/work/old-spice-smell-like-a-man-man/",s:"other",r:"W"},
+{n:"Lifebuoy Help a Child Reach 5",y:2012,ag:"Ogilvy",a:["A1","A8"],l:["L10","L1"],p:"Diarrhoea in one village fell from 36% to 5% (Unilever).",u:"https://csrwire.com/press-release/unilever-lifebuoy-campaign-reduces-diarrhoea-from-36-to-5/",s:"other",r:"W"},
+{n:"Dutchie - Love Your Gut",y:2023,ag:"Ogilvy Bangkok",a:["A1"],l:["L1","L5","L10"],p:"Gen Z left yogurt for superfoods. Idea: they are worthless without a healthy gut. Gen Z sales +7%, daily Gen Z eaters doubled. Gold Effie.",u:"",s:"food",r:"W",bk:1},
+{n:"Whitelion - The Loudest Call for Help",y:2023,ag:"Ogilvy Sydney",a:["A3"],l:["L4","L6","L10"],p:"15,000+ payphones ringing at once, zero media spend. 1,520% ROI, an expected 19% decline became 19% growth. 2 Gold Effies.",u:"",s:"creative",r:"W",bk:1},
+{n:"Cadbury - Bake from the Heart",y:2022,ag:"Ogilvy Kuala Lumpur",a:["A2","A7"],l:["L2","L3","L10"],p:"Packs became baking sheets for Hari Raya. Sales +29% vs category +13.6%.",u:"",s:"food",r:"W",bk:1},
+{n:"KFC - Degustation",y:2022,ag:"Ogilvy Sydney",a:["A6"],l:["L1","L10"],p:"11-course tasting for food critics. 1.2B impressions vs 800K target. Projected US$27.9M incremental sales.",u:"",s:"food",r:"W",bk:1},
+{n:"KFC - Crazy Thursdays (China)",y:2022,ag:"Ogilvy Shanghai",a:["A4"],l:["L1","L3","L10"],p:"Mental-health spin on a tired promo. 93M views. Thursday share 34.6% vs 25% target.",u:"",s:"food",r:"W",bk:1},
+{n:"KFC - Left-Handed Menu",y:2022,ag:"Ogilvy Sydney",a:["A4","A6"],l:["L6","L10"],p:"Parody of purpose campaigns. 97,435 app downloads, 104M earned reach in 11 days.",u:"",s:"food",r:"W",bk:1},
+{n:"Dancow - taking on mum-shaming",y:2022,ag:"Ogilvy Jakarta",a:["A4"],l:["L5","L10"],p:"Purpose-led brand revival. Sales +12%.",u:"",s:"food",r:"W",bk:1},
+{n:"Red Label - Taste of Togetherness",y:2022,ag:"Ogilvy Mumbai",a:["A7"],l:["L3","L10"],p:"Nine years of one idea. Unaided awareness to 58%, market share high of 8.09%.",u:"",s:"food",r:"IN",bk:1},
+{n:"ING - the baby bank that grew",y:2022,ag:"Ogilvy Sydney",a:["A3"],l:["L1","L10"],p:"Challenger bank vs the Big Four who hold 75% of Australians' money. Revenue +17.5%.",u:"",s:"other",r:"W",bk:1},
+{n:"Balabala - virtual influencer",y:2022,ag:"Ogilvy Shanghai",a:["A5"],l:["L8","L10"],p:"Sales from $50.5M to $65.6M (+30%) in a quarter-on-quarter comparison.",u:"",s:"other",r:"W",bk:1}];
+const F=[
+{k:"Method",t:"Ogilvy: homework to big idea",d:"Ogilvy on Advertising lays out an order: homework, positioning, brand image, big idea, simplicity with the product as the hero, honest benefits, repeat what works, avoid committees. Creativity serves sales.",u:"#frameworks",w:"Dove, Old Spice, Cadbury"},
+{k:"Case template",t:"Comms, Brand, Business",d:"Effie-winning cases are told in a fixed order: one-line headline, 3-paragraph summary (problem, idea, result), then three impact boxes. COMMS (reach, views, recall), BRAND (awareness, consideration), BUSINESS (sales, ROI) - every number against a target or baseline.",u:"#index",w:"All Ogilvy APAC cases"},
+{k:"Positioning",t:"Own one position in the prospect's mind",d:"\"Positioning is not what you do to a product. Positioning is what you do to the mind of the prospect.\" Ries and Trout, 1981.",u:"https://www.willpatrick.co.uk/notes/positioning-al-ries-jack-trout/",w:"Dove, Whopper Detour"},
+{k:"Big Idea",t:"No great campaign without a Big Idea",d:"Ogilvy's rule: do the homework on the product first, then find the one idea. He also wanted the benefit shown in a specific, factual way.",u:"https://en.wikipedia.org/wiki/Confessions_of_an_Advertising_Man",w:"Sketches, Old Spice"},
+{k:"Creative truth",t:"Bernbach and Think Small",d:"DDB's 1959 VW Beetle work sold a car by being honest and small when everyone else shouted features.",u:"https://en.wikipedia.org/wiki/Think_Small",w:"Fevicol Bus, Dumb Ways"},
+{k:"Effectiveness",t:"Brand 60 : Activation 40",d:"IPA data suggests an average best balance of about 60:40 brand building to activation, varying by category.",u:"https://www.wheel.ie/sites/default/files/media/file-uploads/2021-06/the_long_and_short_of_it_pdf_doc.pdf",w:"Gorilla, Nike"},
+{k:"Growth",t:"Mental + physical availability",d:"Sharp: brands grow by being easy to think of and easy to buy, reaching many light buyers.",u:"https://www.allthingspm.app/book-summaries/how-brands-grow",w:"Share a Coke, Whopper Detour"},
+{k:"Judging lens",t:"Effie: strategy, execution, results",d:"Effie judges score a written case across strategy, execution and results, plus the creative itself.",u:"https://effie.org/partners/united-states/entry-details/review-entry-guidelines/",w:"Not Just a Cadbury Ad"},
+{k:"Customer lens",t:"Jobs to be done",d:"Think less about segments and more about the job the customer is hiring the product for.",u:"https://www.library.hbs.edu/working-knowledge/what-customers-want-from-your-products",w:"Cadbury Kuch Meetha, Old Spice"}];
+const P=[
+["Name on the product","A2","Print a name or label so each person gets their own. Share a Coke.","food"],
+["Geofence unlock","A3","A reward that only unlocks near a competitor or place. Whopper Detour.","food"],
+["Local-shop swap","A2","Same ad, different local business by viewer location. Not Just a Cadbury Ad.","food"],
+["The blind experiment","A1","A simple experiment people can retell, with an emotional reveal. Dove Sketches.","brand"],
+["Pledge counter","A8","Turn the viewer into a public number. Dumb Ways to Die.","creative"],
+["Real-time reply sprint","A5","Answer real people in days, in character. Old Spice.","creator"],
+["Mascot franchise","A5","One character carries many ads. Pug, ZooZoo.","brand"],
+["Phrase flip","A4","Take an insult and reverse its meaning. #LikeAGirl.","creator"]];
+const $=s=>document.querySelector(s);
+const an=id=>A.find(x=>x.id==id).n, ln=id=>L.find(x=>x.id==id).n;
+function chip(t,c,fn){return `<button class="chip ${c}" onclick="${fn}">${t}</button>`}
+// map
+const svg=$('#svg');const cx=350,cy=350,rA=150,rL=290;let sel=null;
+const pos=(i,n,r,o=0)=>{const a=(i/n)*Math.PI*2-Math.PI/2+o;return[cx+r*Math.cos(a),cy+r*Math.sin(a)]};
+const links=[];A.forEach(a=>{const ls=new Set();C.filter(c=>c.a.includes(a.id)).forEach(c=>c.l.forEach(x=>ls.add(x)));ls.forEach(x=>links.push([a.id,x]))});
+function draw(){let h='';
+ links.forEach(([a,l])=>{const[x1,y1]=pos(A.findIndex(z=>z.id==a),8,rA);const[x2,y2]=pos(L.findIndex(z=>z.id==l),10,rL);
+  const on=sel&&(sel==a||sel==l);h+=`<line class="edge ${on?'on':''}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" opacity="${sel&&!on?.06:.5}"/>`});
+ const rel=id=>{if(!sel)return true;if(sel==id)return true;return links.some(([a,l])=>(a==sel&&l==id)||(l==sel&&a==id))};
+ h+=`<circle cx="${cx}" cy="${cy}" r="46" fill="#0b0d17" stroke="#7cf5d4" stroke-width="2"/><text x="${cx}" y="${cy+5}" text-anchor="middle" fill="#7cf5d4" font-size="16" font-weight="700">IDEA</text>`;
+ A.forEach((a,i)=>{const[x,y]=pos(i,8,rA);const r=rel(a.id);const n=C.filter(c=>c.a.includes(a.id)).length;
+  h+=`<g class="node ${r?'':'dim'}" onclick="pick('${a.id}')"><circle cx="${x}" cy="${y}" r="${26+n*2.2}" fill="#10331f" stroke="#7cf5d4" stroke-width="${sel==a.id?4:1.6}"/><text x="${x}" y="${y-2}" text-anchor="middle" fill="#7cf5d4" font-size="11" font-weight="700">${a.id}</text><text x="${x}" y="${y+11}" text-anchor="middle" fill="#cfeee4" font-size="9">${n}</text><text x="${x}" y="${y+26+n*2.2+12}" text-anchor="middle" fill="#9fe9d3" font-size="10.5" font-weight="600" stroke="#07080d" stroke-width="3" paint-order="stroke">${a.n}</text></g>`});
+ L.forEach((l,i)=>{const[x,y]=pos(i,10,rL);const r=rel(l.id);const n=C.filter(c=>c.l.includes(l.id)).length;
+  h+=`<g class="node ${r?'':'dim'}" onclick="pick('${l.id}')"><circle cx="${x}" cy="${y}" r="${18+n*1.6}" fill="#331033" stroke="#ff6ad5" stroke-width="${sel==l.id?4:1.4}"/><text x="${x}" y="${y+3}" text-anchor="middle" fill="#ffd0f2" font-size="10" font-weight="700">${l.id}</text><text x="${x}" y="${y+18+n*1.6+12}" text-anchor="middle" fill="#ff9fe3" font-size="10" stroke="#07080d" stroke-width="3" paint-order="stroke">${l.n.split(' /')[0]}</text></g>`});
+ // labels for archetypes near the center
+ svg.innerHTML=h;}
+function card(){const el=$('#card');
+ if(!sel){el.innerHTML=`<span class="tag">Start here</span><h3>Pick a node</h3><p class="def">Green = archetype (what the idea does). Pink = lever (what you pull). Bigger node = more campaigns studied.</p><div class="chips">${A.map(a=>chip(a.id+' '+a.n,'a',`pick('${a.id}')`)).join('')}</div><div class="chips">${L.map(l=>chip(l.id+' '+l.n,'l',`pick('${l.id}')`)).join('')}</div>`;return}
+ const isA=sel[0]=='A';const o=(isA?A:L).find(x=>x.id==sel);const cs=C.filter(c=>(isA?c.a:c.l).includes(sel));
+ el.innerHTML=`<span class="tag">${isA?'Archetype':'Lever'} ${sel}</span><h3>${o.n}</h3><p class="def">${o.d}</p>`+
+ (isA?`<div class="chips">${[...new Set(cs.flatMap(c=>c.l))].map(x=>chip(x+' '+ln(x),'l',`pick('${x}')`)).join('')}</div>`:`<div class="chips">${[...new Set(cs.flatMap(c=>c.a))].map(x=>chip(x+' '+an(x),'a',`pick('${x}')`)).join('')}</div>`)+
+ cs.map(c=>`<div class="ex"><b>${c.n} <small style="display:inline">${c.y}</small></b><span>${c.p}</span><small>${c.u?`<a style="color:#8aa4ff" href="${c.u}" target="_blank" rel="noopener">source</a>`:"Ogilvy APAC Book of Growth 2023"} - ${c.ag}</small></div>`).join('')+
+ `<div style="padding-top:10px"><button class="btn" onclick="pick(null)">Clear</button></div>`}
+window.pick=id=>{sel=id;draw();card()};
+// matrix
+(function(){let h='<tr><th></th>'+L.map(l=>`<th title="${l.n}">${l.id}<br><span style="font-weight:400">${l.n.split(' ')[0]}</span></th>`).join('')+'</tr>';
+ A.forEach(a=>{h+=`<tr><th class="r">${a.id} ${a.n}</th>`+L.map(l=>{const n=C.filter(c=>c.a.includes(a.id)&&c.l.includes(l.id)).length;
+  const bg=n?`background:rgba(124,245,212,${.18+n*.22});color:#06100d`:'';return `<td style="${bg}" onclick="cell('${a.id}','${l.id}')">${n||''}</td>`}).join('')+'</tr>'});
+ $('#mx').innerHTML=h})();
+window.cell=(a,l)=>{const cs=C.filter(c=>c.a.includes(a)&&c.l.includes(l));
+ $('#mxl').innerHTML=`<b style="color:#e9ecff">${an(a)} + ${ln(l)}:</b> `+(cs.length?cs.map(c=>`${c.n} (${c.p})`).join(' | '):'No studied campaign yet. Open space, or a combo that does not work. Test it.')};
+// brainstorm
+$('#ba').innerHTML=A.map(a=>`<option value="${a.id}">${a.id} ${a.n}</option>`).join('');
+['#bl1','#bl2'].forEach((s,i)=>{$(s).innerHTML=L.map(l=>`<option value="${l.id}">${l.id} ${l.n}</option>`).join('');$(s).selectedIndex=i?3:5});
+$('#bgo').onclick=()=>{const a=$('#ba').value,l1=$('#bl1').value,l2=$('#bl2').value;
+ const m=C.filter(c=>c.a.includes(a)||c.l.includes(l1)||c.l.includes(l2)).map(c=>({c,s:(c.a.includes(a)?2:0)+(c.l.includes(l1)?1:0)+(c.l.includes(l2)?1:0)})).sort((x,y)=>y.s-x.s).slice(0,4);
+ $('#bsout').innerHTML=`<p style="margin:8px 0"><b>Brief:</b> an idea that <span style="color:#7cf5d4">${an(a).toLowerCase()}</span>, using <span style="color:#ff6ad5">${ln(l1).toLowerCase()}</span> and <span style="color:#ff6ad5">${ln(l2).toLowerCase()}</span>.</p><p class="sub" style="margin-bottom:8px">Closest proof so far. Your job is to not copy these.</p>`+m.map(x=>`<div class="ex"><b>${x.c.n}</b><span>${x.c.p}</span><small>${x.c.a.map(an).join(' + ')} / ${x.c.l.map(ln).join(', ')}</small></div>`).join('')};
+$('#bgo').click();
+// frameworks
+$('#fw').innerHTML=F.map(f=>`<div class="fw"><i>${f.k}</i><h4>${f.t}</h4><p>${f.d}</p><p style="margin-top:8px;font-size:12.5px">Shows up in: ${f.w}</p><a href="${f.u}" target="_blank" rel="noopener">Source</a></div>`).join('');
+// patterns
+let sec='all';const secs=['all','food','brand','creator','creative','india'];
+function pats(){const q=$('#q').value.toLowerCase();$('#pat').innerHTML=P.map((p,i)=>({p,i})).filter(({p})=>(sec=='all'||p[3]==sec)&&(p.join(' ').toLowerCase().includes(q))).map(({p,i})=>`<div class="pat"><div class="n">P${String(i+1).padStart(3,'0')} / ${an(p[1])}</div><h4>${p[0]}</h4><p>${p[2]}</p></div>`).join('')||'<p class="sub">Nothing yet in this filter. The library grows daily.</p>'}
+$('#secs').innerHTML=secs.map(s=>`<button class="btn ${s==sec?'on':''}" data-s="${s}">${s}</button>`).join(' ');
+$('#secs').onclick=e=>{if(e.target.dataset.s){sec=e.target.dataset.s;[...$('#secs').children].forEach(b=>b.classList.toggle('on',b.dataset.s==sec));pats()}};
+$('#q').oninput=pats;pats();
+// index
+$('#camp').innerHTML=C.map(c=>`<div class="cr"><div><b>${c.n}</b><small>${c.y} - ${c.ag}</small></div><div class="pf">${c.p}<div class="chips">${c.a.map(x=>chip(x+' '+an(x),'a',`pick('${x}');location.hash='#map'`)).join('')}${c.l.map(x=>chip(ln(x),'l',`pick('${x}');location.hash='#map'`)).join('')}</div></div>${c.u?`<a href="${c.u}" target="_blank" rel="noopener">Source</a>`:`<a href="#index" style="pointer-events:none">Book of Growth</a>`}</div>`).join('');
+$('#s1').textContent=C.length;
+const SEC=[["Real estate","re"],["Luxury","lux"],["Creator economy","cr"],["Food and beverage","food"],["Creative / public good","creative"],["B2B","b2b"]];
+$('#sec').innerHTML=SEC.map(([n,k])=>{const c=C.filter(x=>x.s==k).length;return `<div class="fw"><i>${c} / 30</i><h4>${n}</h4><div style="height:8px;border-radius:9px;background:#141729;margin-top:10px;overflow:hidden"><div style="height:100%;width:${Math.round(c/30*100)}%;background:linear-gradient(90deg,#7cf5d4,#ff6ad5)"></div></div><p style="margin-top:8px;font-size:12.5px">${c?C.filter(x=>x.s==k).map(x=>x.n).join(', '):'Next up in the study.'}</p></div>`}).join('');
+$('#sIN').textContent=C.filter(c=>c.r=='IN').length;$('#sW').textContent=C.filter(c=>c.r=='W').length;
+draw();card();
+</script></body></html>
