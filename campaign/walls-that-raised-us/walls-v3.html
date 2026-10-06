@@ -1,0 +1,142 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Walls That Raised Us | Campaign concept by Diya Nathwani</title>
+<meta name="description" content="Families recreate one old family photo inside their new home, so a new house gets its first memory.">
+<link rel="canonical" href="https://diyanathwani.site/campaign/walls-that-raised-us/">
+<meta property="og:title" content="Walls That Raised Us | Campaign by Diya Nathwani"><meta property="og:description" content="Rooted in memories. Ready for what's next.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,500&family=Special+Elite&family=Caveat:wght@500;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#efe4cf;--paper2:#e4d3b3;--ink:#2b1d14;--sepia:#7a5230;--saffron:#d9791f;--maroon:#7d1f2a;--serif:"Playfair Display",serif;--type:"Special Elite",monospace;--hand:"Caveat",cursive;--body:"Lora",Georgia,serif}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);font:400 19px/1.65 var(--body);overflow-x:hidden;background:var(--paper) repeating-linear-gradient(0deg,rgba(90,60,30,.035) 0 2px,transparent 2px 5px)}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.04}p{margin:0 0 14px}
+.type{font-family:var(--type);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sepia)}
+.top{position:fixed;z-index:50;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:16px 4vw;font-family:var(--type);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.top a{color:var(--ink);text-decoration:none}
+.intro{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 6vw 60px;background:radial-gradient(circle at 70% 30%,#f6ecd7,var(--paper))}
+.intro h1{font-size:clamp(56px,10vw,160px);font-weight:800}.intro h1 i{color:var(--maroon);font-weight:500}
+.intro .what{font-size:clamp(22px,2.6vw,36px);max-width:900px;margin-top:30px;line-height:1.35}
+.intro .what b{background:linear-gradient(transparent 62%,rgba(217,121,31,.45) 62%)}
+.intro .tl{font-family:var(--hand);font-size:36px;color:var(--maroon);margin-top:22px}
+.scroll{font-family:var(--type);font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-top:40px;color:var(--sepia)}
+/* scroll story */
+.story{height:600vh;position:relative}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;background:#d9c7a3;transition:background .6s}
+.stage[data-s="2"]{background:#b9a27c}.stage[data-s="3"]{background:#e9e6df}.stage[data-s="4"]{background:#f2e3c2}.stage[data-s="5"]{background:#f6ecd7}
+.wallbase{position:absolute;left:8vw;right:8vw;top:10vh;bottom:22vh;border:1px solid rgba(60,35,10,.25);background:repeating-linear-gradient(90deg,transparent 0 118px,rgba(0,0,0,.04) 118px 120px)}
+.floor{position:absolute;left:0;right:0;bottom:0;height:22vh;background:#8a6a45}
+.marks{position:absolute;left:14vw;bottom:22vh;width:90px;height:56vh}
+.mk{position:absolute;left:0;width:60px;height:3px;background:var(--ink);opacity:0;transition:opacity .4s,transform .4s;transform:translateX(-12px)}
+.mk.on{opacity:.85;transform:none}.mk span{position:absolute;left:70px;top:-16px;font-family:var(--hand);font-size:26px;white-space:nowrap;color:var(--maroon)}
+.kid{position:absolute;left:calc(14vw + 90px);bottom:22vh;width:70px;transition:height .3s}
+.kid::before{content:"";position:absolute;top:-34px;left:15px;width:40px;height:40px;border-radius:50%;background:var(--ink)}
+.kid::after{content:"";position:absolute;inset:0;background:var(--ink);border-radius:30px 30px 6px 6px}
+.cap{position:absolute;left:0;right:0;bottom:3vh;text-align:center;padding:0 6vw;z-index:4}
+.cap p{color:#fbf1dc;font-family:var(--serif);font-size:clamp(22px,3.2vw,46px);line-height:1.2;margin:0;opacity:0;transform:translateY(16px);transition:.5s;position:absolute;left:6vw;right:6vw;bottom:0}
+.cap p.on{opacity:1;transform:none}.cap{height:20vh}
+.box{position:absolute;right:12vw;bottom:22vh;width:min(24vw,260px);aspect-ratio:1.2;background:#c19a62;border:3px solid #7a5a30;opacity:0;transition:.6s;transform:translateY(40px)}
+.box::after{content:"MEMORIES - FRAGILE";position:absolute;left:0;right:0;top:40%;text-align:center;font-family:var(--type);font-size:14px;letter-spacing:.1em}
+.box.on{opacity:1;transform:none}
+.newwall{position:absolute;inset:0;opacity:0;transition:.6s;background:linear-gradient(#f3f0ea 0 100%)}
+.newwall.on{opacity:1}
+.fam{position:absolute;left:50%;bottom:22vh;transform:translateX(-50%);display:flex;gap:18px;align-items:flex-end;opacity:0;transition:.6s}
+.fam.on{opacity:1}.fam i{display:block;background:var(--maroon);border-radius:28px 28px 4px 4px;position:relative}
+.fam i::before{content:"";position:absolute;top:-30px;left:50%;margin-left:-17px;width:34px;height:34px;border-radius:50%;background:var(--ink)}
+.fam i:nth-child(1){width:70px;height:170px}.fam i:nth-child(2){width:78px;height:190px;background:var(--saffron)}.fam i:nth-child(3){width:50px;height:110px;background:#3d6a4b}.fam i:nth-child(4){width:44px;height:96px;background:#2a4a7a}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .15s}.flash.on{opacity:.95}
+.pol{position:absolute;right:14vw;top:18vh;width:min(22vw,230px);background:#fdfaf2;padding:12px 12px 44px;box-shadow:0 14px 30px rgba(60,35,10,.35);transform:rotate(6deg) scale(.4);opacity:0;transition:.7s}
+.pol.on{opacity:1;transform:rotate(6deg) scale(1)}
+.pol div{aspect-ratio:1;background:linear-gradient(#cdb994,#a98a5e)}.pol em{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-family:var(--hand);font-style:normal;font-size:26px}
+.prog{position:absolute;left:0;top:0;height:5px;background:var(--maroon);width:0;z-index:5}
+/* sections */
+.sec{padding:14vh 6vw}
+.six{background:#fffaf0;border-top:2px dashed var(--sepia);border-bottom:2px dashed var(--sepia)}
+.six h2{font-size:clamp(34px,4.6vw,66px);text-align:center;margin-bottom:6vh}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:1150px;margin:0 auto}
+.ic{background:#fff;border:1px solid #cdb994;padding:22px 22px 26px;box-shadow:4px 6px 0 rgba(125,31,42,.12);background-image:repeating-linear-gradient(transparent 0 31px,#ddd0b4 31px 32px)}
+.ic .type{display:block;margin-bottom:10px;color:var(--maroon)}.ic p{font-family:var(--type);font-size:17px;line-height:32px;margin:0}
+.ic:nth-child(2n){transform:rotate(.7deg)}.ic:nth-child(2n+1){transform:rotate(-.6deg)}
+.dark{background:var(--ink);color:#f3e6cc;text-align:center}.dark h2{font-size:clamp(40px,7.4vw,124px);font-weight:600}.dark h2 i{color:#ffc87a}.dark p{max-width:640px;margin:26px auto 0;font-size:22px}
+.mech{background:var(--paper)}.mech h2{font-size:clamp(38px,6vw,96px);text-align:center}.mech h2 i{color:var(--maroon)}
+.film{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;max-width:1200px;margin:8vh auto 0}
+.p{background:#fdfaf2;padding:12px 12px 20px;box-shadow:0 14px 30px rgba(60,35,10,.3);position:relative}
+.p .n{aspect-ratio:1;background:var(--paper2);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:96px;font-weight:800;color:var(--maroon)}
+.p:nth-child(1){transform:rotate(-2deg)}.p:nth-child(2){transform:rotate(1.5deg) translateY(18px)}.p:nth-child(3){transform:rotate(-1deg)}.p:nth-child(4){transform:rotate(2deg) translateY(12px)}
+.p h3{font-size:26px;margin:12px 0 6px}.p p{font-size:15px;line-height:1.45;margin:0}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);background:var(--saffron);color:#2b1204}.phases div{padding:12vh 4vw;border-right:2px solid rgba(43,18,4,.4)}.phases div:last-child{border:0}.phases h3{font-size:clamp(34px,4vw,60px);margin:10px 0 12px}.phases .type{color:#2b1204}
+.boxes{display:grid;grid-template-columns:repeat(3,1fr);max-width:1100px;margin:7vh auto 0;border:2px solid var(--ink)}
+.bx{padding:30px 26px;border-right:2px solid var(--ink)}.bx:last-child{border:0}.bx .n{font-family:var(--serif);font-weight:800;font-size:64px;line-height:1;margin:14px 0 6px}.bx p{font-size:16px;margin:0}.bx em{font-family:var(--type);font-style:normal;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sepia);display:block;margin-top:10px}
+.end{padding:16vh 6vw;text-align:center;background:var(--ink);color:#f3e6cc}.end h2{font-size:clamp(40px,7vw,120px);font-weight:600}.end h2 i{color:#ffc87a}.end p{margin-top:24px;font-family:var(--hand);font-size:30px;color:#ffc87a}
+.fine{padding:20px;text-align:center;font-size:12px;background:var(--ink);color:#bfae93}
+@media(max-width:860px){.cards,.phases,.boxes{grid-template-columns:1fr}.film{grid-template-columns:1fr 1fr}.bx{border-right:0;border-bottom:2px solid var(--ink)}.phases div{border-right:0;border-bottom:2px solid rgba(43,18,4,.4)}.kid{left:calc(14vw + 80px)}.pol{right:6vw;width:36vw}.box{width:34vw;right:6vw}}
+@media(max-width:480px){.film{grid-template-columns:1fr}}
+</style></head><body>
+<div class="top"><a href="/">Diya Nathwani</a><a href="/campaign/">Campaigns</a></div>
+
+<header class="intro"><div class="type">Campaign concept &middot; Homes, Nagpur</div>
+<h1 style="margin-top:16px">Walls<br>That <i>Raised</i> Us.</h1>
+<p class="what">This campaign asks every family to recreate one old family photo inside their new home, so that <b>the new house gets its first memory before the family even finishes unpacking.</b></p>
+<div class="tl">Rooted in memories. Ready for what's next.</div>
+<div class="scroll">Scroll down to watch it happen &darr;</div></header>
+
+<section class="story" id="story"><div class="stage" id="stage" data-s="1"><div class="prog" id="prog"></div>
+<div class="wallbase"></div><div class="floor"></div>
+<div class="marks" id="marks"></div><div class="kid" id="kid" style="height:70px"></div>
+<div class="box" id="box"></div>
+<div class="newwall" id="nw"></div>
+<div class="fam" id="fam"><i></i><i></i><i></i><i></i></div>
+<div class="pol" id="pol"><div></div><em>first memory</em></div>
+<div class="flash" id="flash"></div>
+<div class="cap" id="cap">
+<p class="on">In the old house, a child stood against the wall every birthday while a parent drew a pencil line above their head.</p>
+<p>Year after year the lines climbed, and the wall quietly kept the score of a whole childhood.</p>
+<p>Then the family bought a new home, and the old wall had to stay behind in a box of memories.</p>
+<p>The new walls were clean and beautiful, but they had no pencil marks, no stains and no stories yet.</p>
+<p>So we ask the family to dig out one old photo and stand in the same pose in front of the new wall.</p>
+<p>The flash goes off, the photo goes up, and the new house finally has its first memory.</p></div></div></section>
+
+<section class="sec six"><div class="type" style="text-align:center">The brief on one page</div><h2 style="margin-top:12px">Six sentences that hold the whole idea.</h2><div class="cards">
+<div class="ic"><span class="type">1 Business problem</span><p>A housing project in Nagpur needs more family visits to turn into bookings, and it needs about 5 homes sold to break even (projected).</p></div>
+<div class="ic"><span class="type">2 Consumer problem</span><p>Buying a new home feels like leaving the old one behind, because the old house holds the memories and the new one is bare walls.</p></div>
+<div class="ic"><span class="type">3 Insight</span><p>People do not move homes, they move stories.</p></div>
+<div class="ic"><span class="type">4 Solution</span><p>Families recreate one old family photo inside the new home and share it as Walls That Raised Us.</p></div>
+<div class="ic"><span class="type">5 Consumer goal</span><p>The family wants to know that the new house can feel like home before they move in.</p></div>
+<div class="ic"><span class="type">6 Business goal</span><p>The project wants two to three times more site-office visits (projected) and a faster yes or no.</p></div></div></section>
+
+<section class="sec dark"><div class="type" style="color:#ffc87a">The fear behind the idea</div>
+<h2 style="margin-top:16px">Every buyer quietly fears <i>leaving their memories behind.</i></h2>
+<p>We answer that fear first, because a family that feels safe about its memories is a family that is ready to say yes.</p></section>
+
+<section class="sec mech"><div class="type" style="text-align:center">The mechanic</div><h2 style="margin-top:14px">Recreate <i>One Memory.</i></h2>
+<div class="film">
+<div class="p"><div class="n">1</div><h3>Dig it out</h3><p>The family finds one old photo from the drawer.</p></div>
+<div class="p"><div class="n">2</div><h3>Step in</h3><p>They stand in the same pose in the new home.</p></div>
+<div class="p"><div class="n">3</div><h3>Side by side</h3><p>Then and now sit together in one frame.</p></div>
+<div class="p"><div class="n">4</div><h3>Post it</h3><p>They share it with #WallsThatRaisedUs.</p></div></div></section>
+
+<section class="phases"><div><div class="type">Phase 1</div><h3>Seed</h3><p>Ten Nagpur families recreate their photos and a few local creators join them.</p></div><div><div class="type">Phase 2</div><h3>Invite</h3><p>Every visitor can take part, and a memory wall grows inside the site office.</p></div><div><div class="type">Phase 3</div><h3>Move in</h3><p>Each new family takes a first-night photo and the wall gets its first pencil mark.</p></div></section>
+
+<section class="sec" style="background:#fffaf0"><div class="type" style="text-align:center">Impact, planned</div><h2 style="font-size:clamp(34px,5vw,80px);text-align:center;margin-top:12px">Comms, brand and business goals.</h2>
+<div class="boxes"><div class="bx"><div class="type">Comms</div><div class="n">tbd</div><p>The number of memories families post with the tag.</p><em>Target set at launch</em></div><div class="bx"><div class="type">Brand</div><div class="n">tbd</div><p>The share of families who say the project feels like home.</p><em>Target set at launch</em></div><div class="bx"><div class="type">Business</div><div class="n">2-3x</div><p>Site-office visits compared with today.</p><em>Projected, not a result</em></div></div></section>
+
+<section class="end"><h2>Rooted in memories.<br><i>Ready for what's next.</i></h2><p>Concept and strategy by Diya Nathwani</p></section>
+<div class="fine">Concept page. All figures are projected targets, not results.</div>
+<script>
+(function(){
+var st=document.getElementById('story'),stage=document.getElementById('stage'),caps=document.querySelectorAll('#cap p'),marks=document.getElementById('marks'),kid=document.getElementById('kid'),box=document.getElementById('box'),nw=document.getElementById('nw'),fam=document.getElementById('fam'),pol=document.getElementById('pol'),fl=document.getElementById('flash'),prog=document.getElementById('prog');
+var ys=['1998','1999','2001','2003','2005','2008'];ys.forEach(function(y,i){var d=document.createElement('div');d.className='mk';d.style.bottom=(14+i*16)+'%';d.innerHTML='<span>'+y+'</span>';marks.appendChild(d)});
+var mk=marks.querySelectorAll('.mk'),lastS=-1,flashed=false;
+function upd(){var r=st.getBoundingClientRect(),h=st.offsetHeight-innerHeight,p=Math.min(1,Math.max(0,-r.top/h));prog.style.width=(p*100)+'%';
+var s=Math.min(5,Math.floor(p*6));
+caps.forEach(function(c,i){c.classList.toggle('on',i===s)});stage.setAttribute('data-s',Math.min(5,s+1));
+// scenes
+var growP=Math.min(1,p/0.33);var n=Math.floor(growP*6.99);
+mk.forEach(function(m,i){m.classList.toggle('on',s<2&&i<=n||s>=2&&true)});
+kid.style.height=(70+growP*200)+'px';kid.style.opacity=s<3?1:0;marks.style.opacity=s<3?1:0;
+box.classList.toggle('on',s===2);
+nw.classList.toggle('on',s>=3);
+fam.classList.toggle('on',s>=4);
+var f=(s===5);if(f&&!flashed){flashed=true;fl.classList.add('on');setTimeout(function(){fl.classList.remove('on')},160)}if(!f)flashed=false;
+pol.classList.toggle('on',s>=5);
+}
+addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+})();
+</script></body></html>
