@@ -1,0 +1,137 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>City in a Frame | Campaign concept by Diya Nathwani</title>
+<meta name="description" content="A city-wide experience campaign for a premium township in East Pune. Step into the frame. See your future home.">
+<link rel="canonical" href="https://diyanathwani.site/campaign/city-in-a-frame/">
+<meta property="og:title" content="City in a Frame | Campaign by Diya Nathwani"><meta property="og:description" content="See yourself in your future home."><meta property="og:image" content="https://diyanathwani.site/campaign/city-in-a-frame/kv-hero.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1020;--navy2:#111a30;--gold:#c9a35b;--gold2:#e6cf9b;--ivory:#f6f1e7;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--ivory);font:300 18px/1.7 var(--sans);overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.02;letter-spacing:.01em}p{margin:0 0 12px}
+.rule{width:64px;height:1px;background:var(--gold);margin:26px 0}
+.eyebrow{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.top{position:fixed;z-index:30;left:0;right:0;top:0;display:flex;justify-content:space-between;padding:22px 5vw;font-size:12px;letter-spacing:.28em;text-transform:uppercase}
+.top a{color:var(--ivory);text-decoration:none;opacity:.85}
+.hero{position:relative;height:100vh;min-height:620px;background:var(--navy) url(kv-hero.jpg) center/cover;display:flex;align-items:flex-end}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(10,16,32,.25),rgba(10,16,32,.15) 40%,var(--navy))}
+.hero .in{position:relative;z-index:2;padding:0 5vw 9vh;width:100%}
+.hero h1{font-size:clamp(60px,12.5vw,200px);font-weight:400;line-height:.88}.hero h1 i{color:var(--gold2)}
+.hero p{max-width:480px;font-size:20px;margin-top:26px}
+.frame-corner{position:absolute;z-index:3;inset:70px 4vw 4vh;border:1px solid rgba(201,163,91,.45);pointer-events:none}
+.pad{padding:16vh 5vw}
+.idea{text-align:center;background:var(--ivory);color:var(--navy)}
+.idea .eyebrow{color:#9a7a38}
+.idea h2{font-size:clamp(40px,6.4vw,104px);margin-top:22px}.idea h2 i{color:#9a7a38}
+.idea p{max-width:540px;margin:30px auto 0;font-size:21px}
+.idea .rule{margin:34px auto 0;background:#9a7a38}
+.prob{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;background:var(--navy2)}
+.prob .t{padding:12vh 5vw;display:flex;flex-direction:column;justify-content:center}
+.prob h2{font-size:clamp(40px,5.4vw,88px)}.prob h2 i{color:var(--gold2)}
+.prob .v{display:flex;flex-direction:column;justify-content:center;gap:0;padding:0 5vw 0 0}
+.q{font-family:var(--serif);font-style:italic;font-size:clamp(26px,3vw,44px);line-height:1.15;padding:34px 0;border-top:1px solid rgba(201,163,91,.35)}
+.q small{display:block;font:300 12px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-top:12px;font-style:normal}
+.stat{display:flex;align-items:baseline;gap:18px;margin-top:34px}.stat b{font-family:var(--serif);font-weight:400;font-size:clamp(70px,9vw,140px);color:var(--gold2);line-height:.8}.stat span{font-size:14px;letter-spacing:.2em;text-transform:uppercase;max-width:200px;line-height:1.5}
+.insight{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--navy) url(kv-family.jpg) center/cover}
+.insight::before{content:"";position:absolute;inset:0;background:rgba(10,16,32,.72)}
+.insight .c{position:relative;padding:0 6vw}.insight h2{font-size:clamp(42px,8vw,140px)}.insight h2 i{color:var(--gold2)}.insight p{max-width:520px;margin:28px auto 0;font-size:21px}
+.chap{padding:14vh 0 0}.chap .hd{padding:0 5vw;max-width:1100px}
+.chap h2{font-size:clamp(44px,7vw,120px);margin-top:18px}.chap h2 i{color:var(--gold2)}
+.strip{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8vh 5vw 4vh;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.fr{flex:0 0 min(78vw,420px);scroll-snap-align:center;position:relative}
+.fr .img{aspect-ratio:4/5;background-size:cover;background-position:center;border:1px solid var(--gold);outline:10px solid var(--navy);box-shadow:0 0 0 11px rgba(201,163,91,.6),0 30px 60px rgba(0,0,0,.5);transition:transform .5s}
+.fr:hover .img{transform:scale(1.015)}
+.fr .no{font-family:var(--serif);font-size:60px;color:var(--gold);line-height:1;margin-top:34px}.fr h3{font-size:34px;margin-top:2px}.fr p{font-size:15px;opacity:.8;margin-top:8px}
+.hint{padding:0 5vw 10vh;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);opacity:.8}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(201,163,91,.4);border-bottom:1px solid rgba(201,163,91,.4);margin:0 5vw}
+.s{padding:40px 24px 44px;border-right:1px solid rgba(201,163,91,.4)}.s:last-child{border:0}.s b{font-family:var(--serif);font-weight:400;font-size:72px;color:var(--gold);line-height:.9}.s h3{font-size:32px;margin:14px 0 8px}.s p{font-size:15px;opacity:.8}
+.mall{position:relative;height:100vh;min-height:560px;background:url(kv-mall.jpg) center/cover;display:flex;align-items:flex-end;margin-top:14vh}
+.mall::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(10,16,32,.92))}
+.mall .c{position:relative;z-index:2;padding:0 5vw 9vh;max-width:760px}.mall h2{font-size:clamp(40px,6vw,96px)}.mall h2 i{color:var(--gold2)}
+.phase{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--ivory);color:var(--navy)}
+.ph{padding:12vh 4vw;border-right:1px solid rgba(10,16,32,.2)}.ph:last-child{border:0}.ph .n{font-family:var(--serif);font-style:italic;font-size:22px;color:#9a7a38}.ph h3{font-size:clamp(34px,4vw,60px);margin:10px 0 14px}.ph p{font-size:17px;max-width:300px}
+.goal{display:grid;grid-template-columns:1.1fr .9fr;min-height:90vh;background:var(--navy2)}
+.goal .t{padding:12vh 5vw;display:flex;flex-direction:column;justify-content:center}.goal h2{font-size:clamp(40px,5.6vw,92px)}.goal h2 i{color:var(--gold2)}
+.goal .im{background:url(kv-wellness.jpg) center/cover;min-height:420px}
+.chk{margin-top:30px;border-top:1px solid rgba(201,163,91,.4)}.chk div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(201,163,91,.4);font-size:16px}.chk span:last-child{color:var(--gold)}
+.ba{display:grid;grid-template-columns:1fr 1fr}.ba div{padding:12vh 5vw}.ba div:first-child{background:#1a1f2b;color:#b9b6ad}.ba div:last-child{background:var(--gold);color:var(--navy)}.ba h3{font-size:clamp(34px,4.4vw,68px)}.ba p{margin-top:16px;max-width:380px}
+.end{padding:18vh 5vw;text-align:center;background:var(--navy)}.end h2{font-size:clamp(40px,7vw,120px)}.end h2 i{color:var(--gold2)}.end p{margin-top:28px;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.fine{padding:22px 5vw;text-align:center;font-size:12px;opacity:.55;background:var(--navy)}
+.rv{opacity:0;transform:translateY(36px);transition:1.1s cubic-bezier(.2,.7,.2,1)}.rv.on{opacity:1;transform:none}
+@media(max-width:860px){.prob,.goal,.ba,.phase{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.s:nth-child(2){border-right:0}.s{border-bottom:1px solid rgba(201,163,91,.4)}.ph{border-right:0;border-bottom:1px solid rgba(10,16,32,.2)}.prob .v{padding:0 5vw 10vh}.frame-corner{inset:60px 3vw 3vh}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}.s{border-right:0}}
+.pat{overflow:hidden;white-space:nowrap;background:var(--navy);padding:30px 0;border-top:1px solid rgba(201,163,91,.25);border-bottom:1px solid rgba(201,163,91,.25)}
+.pat div{font-family:var(--serif);font-size:clamp(50px,9vw,150px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(201,163,91,.35);letter-spacing:.06em;animation:pt 60s linear infinite;display:inline-block}
+@keyframes pt{to{transform:translateX(-50%)}}
+.six{display:grid;grid-template-columns:repeat(3,1fr);margin:0 5vw;border-top:1px solid rgba(201,163,91,.4)}
+.six div{padding:32px 24px 36px;border-bottom:1px solid rgba(201,163,91,.4);border-right:1px solid rgba(201,163,91,.4)}.six div:nth-child(3n){border-right:0}
+.six b{display:block;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:12px}.six p{font-family:var(--serif);font-size:24px;line-height:1.25;margin:0}
+.imp{display:grid;grid-template-columns:repeat(3,1fr);margin:0 5vw;border:1px solid rgba(201,163,91,.5)}
+.imp div{padding:34px 26px;border-right:1px solid rgba(201,163,91,.4)}.imp div:last-child{border:0}.imp b{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:400}.imp .n{font-family:var(--serif);font-size:56px;margin:12px 0 4px;color:var(--gold2);line-height:1}.imp p{font-size:15px;opacity:.8;margin:0}.imp em{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-style:normal}
+@media(max-width:860px){.six,.imp{grid-template-columns:1fr}.six div,.imp div{border-right:0;border-bottom:1px solid rgba(201,163,91,.4)}}
+</style></head><body>
+<div class="top"><a href="/">Diya Nathwani</a><a href="/campaign/">Campaigns</a></div>
+
+<header class="hero"><div class="frame-corner"></div><div class="in">
+<div class="eyebrow">Campaign concept &middot; Premium homes, East Pune</div>
+<h1 style="margin-top:20px">City in<br>a <i>Frame.</i></h1>
+<p>See yourself in your future home.</p></div></header>
+
+<section class="chap" style="padding-top:12vh"><div class="hd rv"><div class="eyebrow">The brief, on one page</div><h2>Six lines.<br><i>One idea.</i></h2></div><div style="height:7vh"></div>
+<div class="six">
+<div><b>Business problem</b><p>A premium township in East Pune competes with 5 to 7 similar projects.</p></div>
+<div><b>Consumer problem</b><p>They know the specs. They cannot feel the life. So they delay.</p></div>
+<div><b>Insight</b><p>The problem isn't information. It's imagination.</p></div>
+<div><b>Solution</b><p>A gold frame in the mall. Step in, see your future home.</p></div>
+<div><b>Consumer goal</b><p>Feel certain, before the second visit.</p></div>
+<div><b>Business goal</b><p>Fewer revisits. Faster yes or no.</p></div></div></section>
+<div class="pat" style="margin-top:14vh"><div>FRAME &middot; FRAME &middot; FRAME &middot; FRAME &middot; FRAME &middot; FRAME &middot; FRAME &middot; FRAME &middot; FRAME &middot; FRAME &middot; FRAME &middot; FRAME &middot; </div></div>
+<section class="pad idea"><div class="eyebrow rv">The idea</div>
+<h2 class="rv">Don't tell them about the flat.<br><i>Put them in the picture.</i></h2><div class="rule"></div>
+<p class="rv">A gold frame in the mall. A family steps in.<br>One photo of the life they could have.<br>Shared by evening. Asked about by night.</p></section>
+
+<section class="prob"><div class="t rv"><div class="eyebrow">The problem</div><div class="rule"></div>
+<h2>Every premium project looks <i>the same.</i></h2>
+<div class="stat"><b>5-7</b><span>projects a buyer compares (estimate)</span></div></div>
+<div class="v"><div class="q rv">"Samajh aa raha hai... par feel nahi aa rahi."<small>The buyer, after the third site visit</small></div>
+<div class="q rv">"Ek aur visit karte hain next weekend."<small>The family, deciding not to decide</small></div></div></section>
+
+<section class="insight"><div class="c"><div class="eyebrow rv">The insight</div>
+<h2 class="rv" style="margin-top:20px">It was never information.<br>It was <i>imagination.</i></h2>
+<p class="rv">People buy routines, not rooms.<br>So we sell the Tuesday morning, not the 2 BHK.</p></div></section>
+
+<section class="chap"><div class="hd rv"><div class="eyebrow">The frames</div><h2>Four lives.<br><i>Pick one.</i></h2></div>
+<div class="strip">
+<div class="fr"><div class="img" style="background-image:url(kv-morning.jpg)"></div><div class="no">I</div><h3>Morning Calm</h3><p>6:40 AM. Chai. The whole skyline, quiet.</p></div>
+<div class="fr"><div class="img" style="background-image:url(kv-family.jpg)"></div><div class="no">II</div><h3>Family Time</h3><p>The sofa, the lamps, everyone home.</p></div>
+<div class="fr"><div class="img" style="background-image:url(kv-pool.jpg)"></div><div class="no">III</div><h3>Poolside Evenings</h3><p>Blue hour. Nowhere to be.</p></div>
+<div class="fr"><div class="img" style="background-image:url(kv-wellness.jpg)"></div><div class="no">IV</div><h3>Wellness</h3><p>Mist, a deck, the day not started yet.</p></div>
+</div><div class="hint">Swipe &rarr;</div></section>
+
+<section class="chap" style="padding-top:6vh"><div class="hd rv"><div class="eyebrow">The mechanic</div><h2>Pick. Step in.<br><i>Get framed. Share.</i></h2></div>
+<div style="height:7vh"></div>
+<div class="steps">
+<div class="s"><b>1</b><h3>Pick</h3><p>Choose a life. Four to choose from.</p></div>
+<div class="s"><b>2</b><h3>Step in</h3><p>Two seconds in the gold frame. No forms. No pitch.</p></div>
+<div class="s"><b>3</b><h3>Get framed</h3><p>An instant photo of you inside that life.</p></div>
+<div class="s"><b>4</b><h3>Share</h3><p>Post it. A soft visit invite within 48 hours.</p></div>
+</div></section>
+
+<section class="mall"><div class="c rv"><div class="eyebrow">The audience moment</div><h2 style="margin-top:16px">Sunday, 11:30 AM.<br><i>Family. Relaxed. No salesperson.</i></h2></div></section>
+
+<section class="phase">
+<div class="ph rv"><div class="n">Phase I</div><h3>Experience</h3><p>Gold frames at premium malls and weekend hotspots near East Pune.</p></div>
+<div class="ph rv"><div class="n">Phase II</div><h3>Visit</h3><p>The photo brings the family to the township. Follow-up in 48 hours.</p></div>
+<div class="ph rv"><div class="n">Phase III</div><h3>Decide</h3><p>Fewer revisits. Faster yes or no. New launches, new cities, new frames.</p></div></section>
+
+<section class="goal"><div class="t rv"><div class="eyebrow">The goal</div><div class="rule"></div><h2>Better leads.<br><i>Not louder ads.</i></h2>
+<div class="chk"><div><span>Frames taken per weekend</span><span>measure</span></div><div><span>Frame to visit</span><span>measure</span></div><div><span>Revisits per buyer</span><span>lower</span></div><div><span>Days to decision</span><span>shorter</span></div></div></div>
+<div class="im"></div></section>
+
+<section class="chap" style="padding:12vh 0 12vh"><div class="hd rv"><div class="eyebrow">Impact, planned</div><h2>Comms. Brand. <i>Business.</i></h2></div><div style="height:7vh"></div>
+<div class="imp"><div><b>Comms</b><div class="n">tbd</div><p>Frames taken per weekend, photos shared.</p><em>Target set against project baseline</em></div><div><b>Brand</b><div class="n">tbd</div><p>Families who say they could picture living there.</p><em>Target set against project baseline</em></div><div><b>Business</b><div class="n">tbd</div><p>Revisits per buyer. Days to decision.</p><em>Target set against project baseline</em></div></div></section>
+<section class="ba"><div><h3>Before</h3><p>A brochure, a site visit, a discount. They go home unsure.</p></div><div><h3>After</h3><p>They already saw themselves living there. The visit feels like a yes.</p></div></section>
+
+<section class="end"><h2 class="rv">Turning future homes<br>into <i>present feelings.</i></h2><p>Concept and strategy by Diya Nathwani</p></section>
+<div class="fine">Illustrative concept. Images are generated illustrations. Market figure is an estimate. No results claimed.</div>
+<script>var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("on")})},{threshold:.12});document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});</script>
+</body></html>
