@@ -1,0 +1,282 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Read The Note | Spec campaign concept for Zomato by Diya Nathwani</title>
+<meta name="description" content="Every order has a story in the note box. A spec campaign concept.">
+<link rel="canonical" href="https://diyanathwani.site/campaign/read-the-note/">
+<meta property="og:title" content="Read The Note | Spec campaign by Diya Nathwani"><meta property="og:description" content="Every order has a story in the note box."><meta property="og:image" content="https://diyanathwani.site/campaign/read-the-note/rtn-hero.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Plus+Jakarta+Sans:wght@500;700;800&family=Instrument+Serif:ital@0;1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E23744;--ink:#1c1c1c;--cream:#fff8f3;--pink:#ffe3e5;--sans:"Plus Jakarta Sans",system-ui,sans-serif;--serif:"Instrument Serif",serif;--hand:"Caveat",cursive}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:500 18px/1.5 var(--sans);overflow-x:clip}
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.03em;line-height:.95}p{margin:0 0 10px}
+em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:0}
+.top{position:fixed;z-index:20;left:0;right:0;top:0;display:flex;justify-content:space-between;padding:18px 28px;color:#fff;font-weight:700;font-size:14px;mix-blend-mode:difference}
+.top a{color:#fff;text-decoration:none}
+.hero{position:relative;height:100vh;min-height:620px;background:#000 url(rtn-hero.jpg) center/cover;color:#fff;display:flex;align-items:flex-end}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(0,0,0,.82))}
+.hero .in{position:relative;z-index:2;padding:0 6vw 7vh;width:100%}
+.hero h1{font-size:clamp(64px,15vw,230px)}.hero h1 em{color:var(--red)}
+.hero p{font-size:clamp(18px,2.2vw,28px);max-width:620px;margin-top:18px}
+.badge{position:absolute;z-index:3;right:5vw;top:90px;background:var(--red);color:#fff;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:9px 16px;border-radius:99px}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:92vh}
+.split .txt{display:flex;flex-direction:column;justify-content:center;padding:8vw 6vw}
+.split .pic{background-size:cover;background-position:center;min-height:420px;position:relative}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
+.idea h2{font-size:clamp(44px,6.4vw,110px)}.idea p{font-size:22px;margin-top:22px;max-width:480px}
+.sticky{position:absolute;left:-40px;bottom:12%;background:#fff;color:var(--ink);padding:16px 22px;border-radius:6px;box-shadow:0 20px 50px rgba(0,0,0,.25);font-family:var(--hand);font-size:34px;line-height:1;transform:rotate(-4deg);max-width:300px}
+.sticky b{display:block;color:var(--red);margin-top:6px}
+.marq{background:var(--red);color:#fff;padding:22px 0;overflow:hidden;white-space:nowrap}
+.marq div{display:inline-block;animation:m 38s linear infinite;font-family:var(--serif);font-style:italic;font-size:clamp(30px,4.4vw,64px)}
+.marq span{margin:0 28px}.marq i{font-style:normal;font-family:var(--sans);font-weight:800;opacity:.5}
+@keyframes m{to{transform:translateX(-50%)}}
+.insight{padding:14vh 6vw;text-align:center;background:var(--ink);color:#fff}
+.insight h2{font-size:clamp(44px,8vw,140px)}.insight h2 em{color:var(--red)}
+.insight p{max-width:520px;margin:30px auto 0;font-size:21px;opacity:.85}
+.moment{position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--pink);min-height:100vh}
+.moment .pic{background:url(rtn-phone.jpg) center/cover;position:relative;min-height:520px}
+.moment .txt{padding:8vw 6vw;display:flex;flex-direction:column;justify-content:center}
+.moment h2{font-size:clamp(40px,5.6vw,92px)}
+.time{display:inline-block;margin-top:26px;font-weight:800;font-size:22px;border-bottom:4px solid var(--red);width:max-content}
+.note{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%) rotate(-3deg);width:min(78%,360px);background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 24px 60px rgba(0,0,0,.35);font-size:13px;color:#777;font-weight:700}
+.note div{margin-top:6px;border:2px solid var(--red);border-radius:10px;padding:10px 12px;font-family:var(--hand);font-size:28px;line-height:1;color:var(--ink);font-weight:700}
+.mech{padding:12vh 0 0;background:var(--cream)}
+.mech h2{font-size:clamp(46px,8vw,130px);padding:0 6vw}.mech h2 em{color:var(--red)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:8vh;border-top:3px solid var(--ink)}
+.stp{padding:34px 26px 40px;border-right:3px solid var(--ink);min-height:360px;position:relative;overflow:hidden}
+.stp:last-child{border:0}.stp:nth-child(2){background:var(--red);color:#fff}.stp:nth-child(4){background:var(--ink);color:#fff}
+.stp .n{font-size:120px;font-weight:800;line-height:.8;letter-spacing:-.06em;opacity:.95}
+.stp h3{font-size:34px;margin:18px 0 8px}.stp p{font-size:17px;max-width:240px}
+.wide{position:relative;height:90vh;min-height:520px;background:url(rtn-gate.jpg) center 25%/cover}
+.wide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.7),transparent 60%)}
+.wide .c{position:absolute;z-index:2;left:6vw;bottom:9vh;color:#fff;max-width:520px}
+.wide h2{font-size:clamp(40px,6vw,96px)}.wide h2 em{color:#ffb3b9}
+.reply{margin-top:20px;display:inline-block;background:#fff;color:var(--ink);padding:10px 16px;border-radius:12px 12px 12px 0;font-family:var(--hand);font-size:30px;line-height:1}
+.sticker{display:grid;grid-template-columns:1.1fr .9fr;background:#f1e7dc;min-height:100vh}
+.sticker .pic{background:url(rtn-sticker.jpg) center/cover;min-height:520px;position:relative}
+.sticker .txt{padding:8vw 6vw;display:flex;flex-direction:column;justify-content:center}
+.sticker h2{font-size:clamp(40px,5.6vw,92px)}
+.tick{margin-top:26px;border-top:2px solid var(--ink)}.tick div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:2px solid var(--ink);font-weight:700}.tick span:last-child{color:var(--red)}
+.menu{position:relative;height:100vh;min-height:560px;background:url(rtn-menu.jpg) center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+.menu::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.52)}
+.menu .c{position:relative;z-index:2;padding:0 6vw}.menu h2{font-size:clamp(42px,8vw,140px)}.menu h2 em{color:#ffb3b9}.menu p{font-size:22px;max-width:560px;margin:22px auto 0}
+.phases{background:var(--cream);padding:14vh 6vw}.phases h2{font-size:clamp(40px,6vw,96px)}
+.line{display:grid;grid-template-columns:repeat(3,1fr);margin-top:8vh;position:relative}
+.line::before{content:"";position:absolute;left:0;right:0;top:14px;height:4px;background:var(--ink)}
+.ph{padding-top:46px;position:relative;padding-right:30px}.ph::before{content:"";position:absolute;top:0;left:0;width:32px;height:32px;border-radius:50%;background:var(--red);border:4px solid var(--cream);box-shadow:0 0 0 3px var(--ink)}
+.ph h3{font-size:40px}.ph .w{font-weight:800;color:var(--red);font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}.ph p{margin-top:10px;max-width:300px}
+.goal{background:var(--red);color:#fff;padding:14vh 6vw;text-align:center}
+.goal .big{font-size:clamp(120px,26vw,420px);font-weight:800;letter-spacing:-.07em;line-height:.8}.goal .big em{font-size:.5em}
+.goal p{font-size:22px;max-width:560px;margin:26px auto 0}.goal small{display:block;margin-top:34px;opacity:.85;font-size:15px;letter-spacing:.05em}
+.ba{display:grid;grid-template-columns:1fr 1fr;background:var(--ink);color:#fff}.ba div{padding:10vh 6vw}.ba div:last-child{background:#fff;color:var(--ink)}.ba h3{font-size:clamp(34px,4.6vw,70px)}.ba p{margin-top:16px;font-size:20px;max-width:380px}
+.end{padding:14vh 6vw;text-align:center;background:var(--cream)}.end h2{font-size:clamp(40px,7vw,120px)}.end h2 em{color:var(--red)}.end p{margin-top:22px;font-weight:700}
+.fine{padding:22px;text-align:center;font-size:13px;color:#777;background:var(--cream)}
+.rv{opacity:0;transform:translateY(40px);transition:1s cubic-bezier(.2,.7,.2,1)}.rv.on{opacity:1;transform:none}
+@media(max-width:860px){.split,.moment,.sticker,.ba{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.stp:nth-child(2){border-right:0}.stp{border-bottom:3px solid var(--ink)}.line{grid-template-columns:1fr;gap:34px}.line::before{display:none}.sticky{left:12px}.split .pic,.moment .pic,.sticker .pic{min-height:70vh}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}.stp{border-right:0}}
+.six{background:#fff;padding:12vh 6vw;border-bottom:3px solid var(--ink)}.six h2{font-size:clamp(40px,6vw,96px);margin-bottom:6vh}.six h2 em{color:var(--red)}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);border-top:3px solid var(--ink)}
+.sg div{padding:28px 24px 34px;border-bottom:3px solid var(--ink);border-right:3px solid var(--ink);min-height:190px}.sg div:nth-child(3n){border-right:0}.sg div:nth-child(2),.sg div:nth-child(4){background:var(--pink)}
+.sg b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:12px}.sg p{font-weight:800;font-size:26px;line-height:1.1;letter-spacing:-.02em;margin:0}
+.imp{background:var(--cream);padding:12vh 6vw}.imp h2{font-size:clamp(40px,6vw,96px)}.imp h2 em{color:var(--red)}
+.ib{display:grid;grid-template-columns:repeat(3,1fr);margin-top:6vh;border:3px solid var(--ink)}
+.ib div{padding:30px 26px;border-right:3px solid var(--ink)}.ib div:last-child{border:0;background:var(--red);color:#fff}.ib b{font-size:12px;letter-spacing:.14em;text-transform:uppercase}.ib .n{font-size:84px;font-weight:800;letter-spacing:-.05em;line-height:1;margin:12px 0 4px}.ib p{font-size:16px;margin:0}.ib em{display:block;margin-top:10px;font:700 11px var(--sans);letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.cta{margin-top:5vh;display:flex;gap:18px;flex-wrap:wrap;align-items:center}.cta span{background:var(--ink);color:#fff;padding:14px 22px;border-radius:99px;font-weight:800}.cta i{font-family:var(--serif);font-size:24px}
+@media(max-width:860px){.sg,.ib{grid-template-columns:1fr}.sg div,.ib div{border-right:0}}
+.hero{background:var(--red)!important}.hero::after{background:none!important}
+.hero::before{content:"NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE";position:absolute;inset:0;font-weight:800;font-size:150px;line-height:1;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.18);word-break:break-all;overflow:hidden}
+.hero h1 em{color:#fff!important}.hero .in,.badge{z-index:3}.badge{background:var(--ink)}
+.stk{position:absolute;z-index:3;right:7vw;top:20vh;width:min(32vw,360px);background:#fffdf4;color:var(--ink);padding:22px;border-radius:4px;transform:rotate(5deg);box-shadow:0 30px 70px rgba(0,0,0,.35);font-family:var(--hand);font-size:34px;line-height:1.05}
+.stk small{display:block;font:800 11px var(--sans);letter-spacing:.14em;color:#888;margin-bottom:8px}.stk b{display:block;color:var(--red);margin-top:12px}
+.split .pic{background:var(--pink)!important;display:flex;align-items:center;justify-content:center}
+.split .pic::before{content:"\201C";font-family:var(--serif);font-size:420px;color:var(--red);line-height:.8}
+.moment .pic{background:var(--ink)!important}.wide{background:var(--ink)!important}.wide::after{background:none!important}
+.wide::before{content:"REPLY";position:absolute;right:-1vw;top:6vh;font-weight:800;font-size:clamp(120px,24vw,380px);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.25);line-height:.8}
+.sticker .pic{background:#f1e7dc!important;display:flex;align-items:center;justify-content:center}
+.sticker .pic::before{content:"Hope this brightens your day!\A It did!";white-space:pre;display:block;background:#fff;padding:26px 30px;transform:rotate(-4deg);box-shadow:0 20px 50px rgba(0,0,0,.25);font-family:var(--hand);font-size:40px;line-height:1.05;color:#2a3a8a;border-radius:4px;max-width:80%}
+.menu{background:var(--ink)!important}.menu::after{background:none!important}
+.drop{background:var(--cream);padding:12vh 6vw}.drop h2{font-size:clamp(40px,6vw,96px)}.drop h2 em{color:var(--red)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:0;margin-top:6vh;border:3px solid var(--ink)}
+.cal div{padding:16px 10px;border-right:3px solid var(--ink);min-height:150px;font-size:14px}.cal div:last-child{border:0}.cal b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:8px}.cal .h{font-family:var(--hand);font-size:24px;line-height:1;font-weight:700}.cal .x{background:var(--red);color:#fff}.cal .x b{color:#fff}
+@media(max-width:860px){.stk{position:relative;right:auto;top:auto;width:80%;margin:20px 6vw}.cal{grid-template-columns:1fr 1fr}.cal div{border-bottom:3px solid var(--ink)}}
+
+.hero{background:var(--red)!important;display:flex;align-items:center}.hero::after{display:none}.hero .stk{display:none}
+.hero .in{padding:110px 6vw 7vh}.hero h1{color:#fff}.hero h1 em{color:var(--ink)}
+.hero p{font-size:clamp(22px,2.8vw,40px);max-width:980px;line-height:1.25;font-weight:700}
+.an{padding:12vh 6vw;display:grid;grid-template-columns:1fr 3fr;gap:4vw;border-top:3px solid var(--ink)}.an:nth-of-type(even){background:var(--pink)}
+.an .lab{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}.an .lab b{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:120px;line-height:.9;letter-spacing:0;color:var(--ink)}
+.an h2{font-size:clamp(34px,4.6vw,76px);margin-bottom:22px}.an p,.an li{max-width:760px;font-size:19px}.an ul{padding-left:20px}.an li{margin-bottom:10px}
+.insq{font-family:var(--serif);font-size:clamp(28px,3.4vw,52px);line-height:1.15;max-width:960px;border-left:8px solid var(--red);padding-left:24px;font-weight:400}
+.gt{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:8px}.gt div{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:16px;font-size:16px}.gt .kicker{display:block;margin-bottom:6px}
+.story{height:700vh;position:relative}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:60px 6vw 0;background:var(--ink);color:#fff;transition:background .5s}
+.stage[data-s="1"]{background:#2b1315}.stage[data-s="2"]{background:var(--red)}.stage[data-s="3"]{background:var(--cream);color:var(--ink)}.stage[data-s="4"]{background:var(--pink);color:var(--ink)}
+.cap{font-weight:800;letter-spacing:-.03em;line-height:1;font-size:clamp(32px,4.2vw,68px)}.cap small{display:block;font-weight:500;letter-spacing:0;font-size:clamp(16px,1.4vw,21px);margin-top:16px;line-height:1.5;max-width:500px;opacity:.9}
+.sc{display:flex;justify-content:center;align-items:center;height:78vh;position:relative}
+.ph0{width:min(300px,72vw);height:min(560px,72vh);background:#fff;border-radius:34px;border:8px solid #000;padding:20px 16px;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.45);position:relative}
+.ph0 .l{font-size:12px;color:#777;font-weight:700;letter-spacing:.05em}.nb{margin-top:8px;border:2px solid var(--red);border-radius:10px;padding:12px;font-family:var(--hand);font-size:30px;line-height:1.05;min-height:150px}
+.nb::after{content:"|";animation:bl 1s infinite}@keyframes bl{50%{opacity:0}}
+.pb{margin-top:16px;background:var(--red);color:#fff;text-align:center;border-radius:10px;padding:12px;font-weight:800}
+.bub{position:absolute;left:12px;right:12px;bottom:90px;background:var(--ink);color:#fff;border-radius:16px 16px 16px 0;padding:12px 14px;font-family:var(--hand);font-size:28px;line-height:1;opacity:0;transform:translateY(30px);transition:.5s}.bub.on{opacity:1;transform:none}
+.bub small{display:block;font-family:var(--sans);font-size:11px;opacity:.7;margin-bottom:4px;letter-spacing:.06em}
+.bag{width:min(280px,70vw);height:340px;background:#d6a46b;border-radius:6px 6px 14px 14px;position:relative;box-shadow:0 30px 60px rgba(0,0,0,.35)}.bag::before{content:"";position:absolute;top:-26px;left:20%;width:60%;height:34px;border:6px solid #b9864f;border-bottom:0;border-radius:40px 40px 0 0}
+.stk2{position:absolute;left:8%;right:8%;top:22%;background:#fff;color:var(--ink);padding:14px;border-radius:6px;transform:rotate(-4deg) translateY(40px);opacity:0;transition:.6s;box-shadow:0 14px 30px rgba(0,0,0,.3)}.stk2.on{opacity:1;transform:rotate(-4deg)}
+.stk2 small{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--red)}.stk2 .n1{font-family:var(--hand);font-size:26px;line-height:1.05;margin:4px 0 8px}.stk2 .n2{font-family:var(--hand);font-size:26px;line-height:1.05;color:var(--red);border-top:2px dashed #ccc;padding-top:8px}
+.post{position:absolute;right:-2%;bottom:6%;background:var(--ink);color:#fff;padding:12px 16px;border-radius:12px;font-weight:800;font-size:15px;opacity:0;transform:translateY(20px);transition:.6s}.post.on{opacity:1;transform:none}
+.hint{position:absolute;left:6vw;bottom:14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.mq2{display:none}
+@media(max-width:900px){.an{grid-template-columns:1fr}.stage{grid-template-columns:1fr;padding-top:70px}.sc{height:52vh}.bag{height:260px}}
+.stage{height:100vh;height:100svh}.ph0{rotate:calc((var(--w,.5) - .5)*3deg)}.bag{translate:0 calc((.5 - var(--w,.5))*14px)}.cap{translate:0 calc((.5 - var(--w,.5))*-18px)}
+.hero{display:grid!important;grid-template-columns:1.15fr .85fr;gap:3vw;align-items:center;padding:0 6vw}.hero .in{padding:110px 0 7vh!important}.hero h1{font-size:clamp(60px,10vw,170px)!important}.hero .badge{right:auto;left:6vw;top:80px}
+.hchk{margin-top:22px;background:#fff;color:var(--ink);border-radius:12px;padding:14px 18px;max-width:540px;font-size:15px;box-shadow:0 12px 30px rgba(0,0,0,.2)}.hchk div{padding:3px 0}.hchk b{color:var(--red)}
+.rcp{background:#fff;color:var(--ink);padding:20px 18px;transform:rotate(3deg);box-shadow:0 24px 50px rgba(0,0,0,.35);font-family:"Special Elite","Courier New",monospace;font-size:13px;max-width:340px;margin:auto;position:relative}.rcp h4{margin:0 0 8px;font-size:18px;text-align:center;letter-spacing:.1em}.rcp .r{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px dashed #bbb}.rcp .n{margin-top:12px;border:2px solid var(--red);border-radius:8px;padding:10px;font-family:var(--hand);font-size:26px;line-height:1}.rcp .n b{display:block;color:var(--red);margin-top:6px}
+.sk2{position:absolute;right:-20px;bottom:-34px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;font-weight:800;font-size:14px;transform:rotate(-5deg)}
+.mqz{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;font-family:var(--serif);font-style:italic;font-size:clamp(28px,3.4vw,52px);padding:16px 0}.mqz div{display:inline-block;animation:m 36s linear infinite}.mqz span{margin:0 26px}
+.dgz{padding:7vh 6vw;border-top:3px solid var(--ink);background:var(--cream)}.dgz figure{margin:0;max-width:680px;background:#fff;border:2px solid var(--ink);border-radius:12px;padding:16px;box-shadow:8px 8px 0 var(--ink)}.dgz svg{width:100%;height:auto}.dgz figcaption{font-size:14px;margin-top:8px}.hn{font-family:"Caveat",cursive;font-size:24px;fill:#E23744;font-weight:700}
+table.rt{border-collapse:collapse;width:100%;max-width:1100px;background:#fff;font-size:15px;border:2px solid var(--ink)}table.rt th{background:var(--ink);color:#fff;padding:10px;text-align:left}table.rt td{padding:10px;border-bottom:1px solid #ccc}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}@keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.dgs.one,.dgf,.dgz,.dia{padding-top:5vh!important;padding-bottom:5vh!important;text-align:center}.dgs.one .dgg,.dia .dg{justify-content:center;margin-left:auto;margin-right:auto}.dgf figure,.dgz figure{margin:12px auto 0!important}.dgs.one .dgg figure,.dia figure{margin:auto}.dgs.one .dgg{grid-template-columns:minmax(300px,720px)!important}.dia .dg{grid-template-columns:minmax(300px,720px)!important}
+.ctw{padding:8vh 6vw!important}.ctw .cbox{margin:0 auto}.cs{justify-content:center}
+.an{padding:7vh 5vw!important}
+.insight{padding:9vh 6vw!important}.mech{padding:8vh 0 0!important}.drop,.phases,.imp,.goal{padding:8vh 6vw!important}.end{padding:10vh 6vw!important}.split .txt,.moment .txt,.sticker .txt{padding:6vw!important}.hero .in{padding:96px 0 5vh!important}html,body{max-width:100%;overflow-x:clip}
+@media(max-width:900px){
+*{min-width:0}
+.hero,.intro{grid-template-columns:minmax(0,1fr)!important;text-align:center!important;justify-items:center!important;padding:84px 5vw 28px!important;min-height:auto!important;display:grid!important}
+.hero>*,.intro>*{max-width:100%}
+.hero h1,.intro h1{font-size:clamp(44px,15vw,90px)!important;text-align:center}
+.hero .sub,.hero p,.intro .what{font-size:clamp(17px,4.6vw,24px)!important;line-height:1.35!important;margin-left:auto;margin-right:auto;text-align:center}
+.hero .sub{font-family:var(--mono,inherit)!important;transform:none!important}
+.hero .badge{position:static!important;display:inline-block;margin:0 auto 12px}
+.hchk,.ck{margin:18px auto 0!important;text-align:left;max-width:100%!important}
+.poster,.wallp,.rcp{transform:none!important;margin:20px auto 0!important;max-width:320px!important;width:100%}
+.hv2{width:100%}.hv2 svg{position:relative!important;left:0!important;bottom:0!important;margin:-26px auto 0;display:block;width:230px!important}
+.intro::before{inset:8px!important;border-width:6px!important}
+.hv{width:100%;max-width:340px;margin:0 auto}
+.an,.pp{grid-template-columns:minmax(0,1fr)!important;text-align:center;gap:14px!important}
+.an .lab b{font-size:60px!important;text-shadow:none}
+.an p,.an li{margin-left:auto!important;margin-right:auto!important;max-width:100%!important}.an ul{padding:0!important;list-style-position:inside}
+.insq{border-left:0!important;padding-left:0!important;box-shadow:none!important}
+.gt{grid-template-columns:minmax(0,1fr)!important;text-align:center}.gt .tape,.gt .kicker,.gt .eyebrow{margin-left:auto!important;margin-right:auto!important}
+.stage{grid-template-columns:minmax(0,1fr)!important;text-align:center;align-content:center;gap:0;padding:64px 4vw 0!important}
+.cap{text-align:center!important;font-size:clamp(24px,7vw,40px)!important}.cap small{margin-left:auto;margin-right:auto}
+.sc{height:46vh!important}
+.six .sg,.sg,.six,.st,.ib,.steps,.phases,.line,.boxes,.cards,.film,.ph{grid-template-columns:minmax(0,1fr)!important;text-align:center}
+.sg div,.ib div,.s,.ic,.bx,.p,.stp{border-right:0!important}
+.sec,.mech,.dark,.insight,.board .t,.lb,.imp,.goal,.end,.ctw,.dgs,.dgf,.dgz,.dia{text-align:center!important}
+.row{font-size:22px!important}
+.cs{flex-direction:column;align-items:center;text-align:center}
+.ph1,.board,.prob,.split,.moment,.sticker,.ba{grid-template-columns:minmax(0,1fr)!important;text-align:center}
+.drop .cal{grid-template-columns:minmax(0,1fr)!important}
+table{font-size:12px!important}
+.wall{grid-template-columns:minmax(0,1fr)!important}
+}
+@media(max-width:900px){.stage{grid-template-rows:auto auto;align-content:center!important;row-gap:10px;padding-top:66px!important}.cap{font-size:clamp(20px,5.6vw,30px)!important}.cap small{font-size:13px!important;margin-top:8px!important}.sc{height:auto!important;min-height:0!important;margin-top:6px}.phone{width:min(210px,56vw)!important;height:min(400px,46vh)!important;border-width:6px!important}.ph0{width:min(230px,60vw)!important;height:min(400px,46vh)!important;border-width:6px!important;padding:14px 12px!important}.nb{min-height:100px!important;font-size:24px!important}.qrb{width:120px!important;height:120px!important;margin-top:28px!important}.tm{font-size:60px!important}.bag{height:230px!important;width:min(230px,60vw)!important}.fc{width:min(190px,48vw)!important}.fc .ph0{height:120px!important}.hint{display:none}.cap p{font-size:19px!important}}</style>
+<style id="ph">
+.xpb{position:relative;display:grid;grid-template-columns:1fr;min-height:64vh;overflow:hidden;background:#111}
+.xpb.xtwo{grid-template-columns:1fr 1fr}
+.xpb .xph{position:relative;min-height:64vh;overflow:hidden}
+.xpb .xph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.12);transition:transform 2.4s cubic-bezier(.2,.7,.2,1),clip-path 1.2s cubic-bezier(.6,0,.2,1);clip-path:inset(0 0 0 0)}
+.js .xpb:not(.xin) .xph img{clip-path:inset(0 100% 0 0)}
+.xpb.xin .xph img{transform:scale(1)}
+.xpb .xph::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.28),rgba(0,0,0,.78))}
+.xpb .xcp{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 6vw 5vh;text-align:center;color:#fff}
+.xpb .xcp b{display:block;font:400 clamp(22px,3.2vw,46px)/1.1 var(--pbf);text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.xpb .xcp i{display:block;margin-top:8px;font:400 clamp(18px,2vw,28px)/1.2 var(--pbh);color:var(--pba);font-style:normal}
+.xpb .xtg{position:absolute;top:18px;left:50%;transform:translateX(-50%) rotate(-2deg);z-index:3;background:var(--pba);color:#111;font:700 11px/1 var(--pbm);letter-spacing:.14em;text-transform:uppercase;padding:7px 12px}
+.xfw{padding:10vh 6vw;text-align:center;background:var(--fbg);color:var(--ffg)}
+.xfw .xk{font:700 12px/1 var(--pbm);letter-spacing:.18em;text-transform:uppercase;color:var(--pba)}
+.xfw h2{font:400 clamp(30px,4.6vw,72px)/1.04 var(--pbf);margin:16px auto 14px;max-width:18em}
+.xfw .xlead{max-width:44em;margin:0 auto 34px;font-size:clamp(16px,1.5vw,21px);line-height:1.55;opacity:.9}
+.xfw .xcards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1200px;margin:0 auto 34px}
+.xfw .xcd{border:2px solid var(--pba);padding:22px 18px;text-align:center;background:rgba(255,255,255,.04)}
+.xfw .xcd small{display:block;font:700 11px/1 var(--pbm);letter-spacing:.16em;text-transform:uppercase;color:var(--pba);margin-bottom:10px}
+.xfw .xcd b{display:block;font:400 clamp(20px,2vw,30px)/1.15 var(--pbf);margin-bottom:8px}
+.xfw .xcd p{margin:0;font-size:15px;line-height:1.5;opacity:.85}
+.xfw svg{width:min(100%,900px);height:auto;display:block;margin:0 auto}
+.xfw .xnote{margin-top:18px;font:400 clamp(20px,2.4vw,32px)/1.2 var(--pbh);color:var(--pba)}
+.xcr{padding:22px 6vw;text-align:center;font:12px/1.6 system-ui,sans-serif;background:#0c0c0c;color:#9a9a9a}
+.xcr a{color:#cfcfcf}
+@media(max-width:760px){.xpb.xtwo{grid-template-columns:1fr}.xpb,.xpb .xph{min-height:44vh}.xfw .xcards{grid-template-columns:1fr}.xfw{padding:8vh 5vw}}
+</style>
+<script>document.documentElement.classList.add('js');addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('xin');o.unobserve(x.target)}})},{threshold:.15});document.querySelectorAll('.xpb').forEach(function(b){o.observe(b)})})</script>
+<style>:root{--pbf:"Instrument Serif",serif;--pbh:"Caveat",cursive;--pba:#ffd2d6;--pbm:"Plus Jakarta Sans",sans-serif}</style><style id="hero2">.hero{background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.82)),#000 url(/campaign/read-the-note/zomato-delivery-partner-on-a-y.jpg) center/cover no-repeat!important}.hero::after{display:none!important}.hero::before{opacity:.35}.hero::after{background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.8))!important}.hero h1 em{color:#ffd2d6!important}.hero p,.hero h1{color:#fff!important}.ck,.hchk{background:rgba(8,8,10,.52)!important;border:1px solid rgba(255,255,255,.4)!important;box-shadow:none!important;backdrop-filter:blur(3px)}.ck div,.hchk div{color:#fff!important}.ck b,.hchk b,.hchk i{color:#ff6b76!important}</style></head><body>
+<div class="top"><a href="/">Diya Nathwani</a><a href="/campaign/">All campaigns</a></div>
+<header class="hero"><div class="badge">Spec concept &middot; Food delivery</div><div class="in"><h1>Read.<br><em>The note.</em></h1><p>This campaign makes the note box on a food order a two-way conversation, where the delivery partner writes back and the reply is printed on a sticker on the bag.</p>
+<div class="hchk"><div><b>&#10003;</b> For: urban customers aged 18 to 30 ordering for one or two</div><div><b>&#10003;</b> The act: type one line, the rider taps a reply</div><div><b>&#10003;</b> The ask: type one line in the note box tonight</div><div><b>&#10003;</b> The plan: 10 weeks, 2 pilot cities</div></div></div>
+<div class="rcp"><h4>YOUR ORDER</h4><div class="r"><span>Paneer roll x1</span><span>&#8377;--</span></div><div class="r"><span>Cold coffee x1</span><span>&#8377;--</span></div><div class="n">Thanda mat lana. Gaadi dheere chalana.<b>Garam hi hai. Dheere hi aaya.</b></div><div class="sk2">Reply from your rider</div></div></header>
+<div class="mqz"><div><span>Gate pe kutta hai.</span><span>&bull;</span><span>Nani ko zor se bolna.</span><span>&bull;</span><span>Exam kal hai.</span><span>&bull;</span><span>Bell mat bajana.</span><span>&bull;</span><span>Extra pyaar daal dena.</span><span>&bull;</span><span>Gate pe kutta hai.</span><span>&bull;</span><span>Nani ko zor se bolna.</span><span>&bull;</span><span>Exam kal hai.</span><span>&bull;</span><span>Bell mat bajana.</span><span>&bull;</span><span>Extra pyaar daal dena.</span><span>&bull;</span></div></div>
+<section class="an"><div class="lab"><b>01</b>Brand ki samajh</div><div><h2>A brand whose voice is already funny, fast and very Indian.</h2>
+<p>Zomato talks to its customers in a witty, conversational voice, with push notifications and outdoor ads that read like a friend texting rather than a company announcing something.</p>
+<p>That makes it the right brand for an idea built on a human line in a small box, because the tone of voice already exists and only the ritual is missing.</p>
+<p><em>This is an independent spec concept, made without Zomato's involvement.</em></p></div></section>
+<section class="dgz"><div class="kicker">Brand fit</div><figure><svg viewBox="0 0 520 240"><g stroke="#1c1c1c" stroke-width="2"><rect x="40" y="30" width="60" height="180" fill="#ffe3e5"/><rect x="40" y="30" width="60" height="22" fill="#E23744"/><rect x="150" y="30" width="60" height="180" fill="#ffe3e5"/><rect x="150" y="30" width="60" height="22" fill="#E23744"/><rect x="260" y="30" width="60" height="180" fill="#ffe3e5"/><rect x="260" y="30" width="60" height="22" fill="#E23744"/><rect x="370" y="30" width="60" height="180" fill="#ffe3e5"/><rect x="370" y="30" width="60" height="22" fill="#E23744"/><rect x="20" y="210" width="440" height="14" fill="#1c1c1c"/></g><g font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="11" text-anchor="middle"><text x="70" y="130">Voice</text><text x="180" y="130">Humour</text><text x="290" y="130">Ritual</text><text x="400" y="130">Scale</text></g><text class="hn" x="260" y="22" text-anchor="middle">four pillars of the brand fit</text></svg><figcaption>Pillar model: voice, humour, ritual and scale are the four things the idea borrows from the brand.</figcaption></figure></section>
+
+<section class="an"><div class="lab"><b>02</b>Observations</div><div><h2>What we notice at 10 PM on any ordering app.</h2>
+<ul><li>People type lines like "bell mat bajana, baby soyi hai" in the note box, and those lines are warm, specific and a little funny.</li>
+<li>Almost nobody ever hears back, so the note box feels like writing into a void.</li>
+<li>Delivery apps look and feel the same at that hour, which means the only thing that differentiates them is whether the order feels human.</li></ul>
+<p><em>These are strategist observations to be validated with order-note data, and they are not Zomato data.</em></p></div></section>
+<section class="xpb xtwo"><span class="xtg">The street at dinner time</span><div class="xph"><img src="/campaign/read-the-note/street-food-vendors-in-kalbade.jpg" alt="" loading="lazy" style="object-position:50% 50%"><div class="xcp"><b>India eats from the street first, the app second.</b><i>Food is already a conversation</i></div></div><div class="xph"><img src="/campaign/read-the-note/night-life-at-charminar-hydera.jpg" alt="" loading="lazy" style="object-position:50% 40%"><div class="xcp"><b>Cities have a night voice, and it is loud.</b><i>Hyderabad after 10 PM</i></div></div></section><section class="an"><div class="lab"><b>03</b>Insight</div><div><h2>From observation to insight.</h2>
+<p class="insq">People who order food alone at night feel unseen, because the order is a transaction that nobody acknowledges. So Zomato can answer the one honest line a customer writes, and turn that answer into the most shareable thing on the bag.</p></div></section>
+<section class="dgz"><div class="kicker">Insight model</div><figure><svg viewBox="0 0 520 240"><circle cx="190" cy="120" r="80" fill="none" stroke="#1c1c1c" stroke-width="2"/><circle cx="270" cy="120" r="80" fill="none" stroke="#E23744" stroke-width="3"/><g font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="13" text-anchor="middle" fill="#1c1c1c"><text x="135" y="124">Alone at 10 PM</text><text x="325" y="124">Wants to be seen</text><text x="230" y="116" font-size="12">One honest line</text></g><text class="hn" x="260" y="30" text-anchor="middle">the note box is the overlap</text></svg><figcaption>Venn diagram: the note box sits where being alone at night meets wanting to be seen.</figcaption></figure></section>
+
+<section class="story" id="story"><div class="stage" id="stage" data-s="0"><div><div class="cap" id="cap"></div></div>
+<div class="sc"><div class="ph0" id="ph0"><div class="l">ADD A NOTE FOR THE DELIVERY PARTNER</div><div class="nb" id="nb"></div><div class="pb">Place order</div><div class="bub" id="bub"><small>REPLY FROM YOUR RIDER</small>Dheere hi aaya. Garam hi hai.</div></div>
+<div class="bag" id="bag" style="display:none"><div class="stk2" id="stk"><small>YOUR NOTE</small><div class="n1">Thanda mat lana. Gaadi dheere chalana.</div><div class="n2">Garam hi hai. Dheere hi aaya.</div></div><div class="post" id="post">Posted to a story</div></div></div><div class="hint">Keep scrolling</div></div></section>
+<section class="ctw" style="background:#ffe3e5;color:#1c1c1c;padding:12vh 6vw;border-top:3px solid #E23744"><div style="font:700 13px/1 'Plus Jakarta Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#E23744">Click through the story</div>
+<h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(30px,4.4vw,70px);margin:14px 0 26px;line-height:1.05">What happens after she places the order?</h2>
+<div class="cbox"><div class="cs" data-i="0"><b>1</b><p>The note travels with the order, and the rider sees it on the delivery screen before pickup.</p></div><div class="cs" data-i="1"><b>2</b><p>The rider taps one of six preset reply cards, so nobody types on a bike.</p></div><div class="cs" data-i="2"><b>3</b><p>The note and the reply print together on a sticker on the bag, and the customer finds it at the door.</p></div><div class="cs" data-i="3"><b>4</b><p>She peels it off, posts it, and the best notes of the week are named on a partner menu.</p></div></div><div style="margin-top:22px;display:flex;gap:14px;align-items:center;flex-wrap:wrap"><button class="cbtn" id="cbtn" style="background:#E23744;color:#fff;border:0;padding:16px 28px;font:700 15px 'Plus Jakarta Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:4px">Click here &rarr; what happens next</button><span id="cdots" style="font:700 14px 'Plus Jakarta Sans',sans-serif;opacity:.7"></span></div></section>
+<style>.cbox{position:relative;min-height:170px;max-width:900px}.cs{display:none;gap:18px;align-items:flex-start;animation:ci .5s}.cs.on{display:flex}.cs b{font-size:90px;line-height:.8;color:#E23744;font-family:'Plus Jakarta Sans',sans-serif}.cs p{font-size:clamp(20px,2.2vw,32px);line-height:1.35;margin:0}@keyframes ci{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:none}}.cbtn{animation:pl 1.6s infinite}@keyframes pl{50%{box-shadow:0 0 0 10px rgba(128,128,128,.18)}}</style>
+<script>(function(){var s=document.querySelectorAll(".cs"),i=0,b=document.getElementById("cbtn"),d=document.getElementById("cdots");function show(){s.forEach(function(x,k){x.classList.toggle("on",k===i)});d.textContent=(i+1)+" / "+s.length;b.innerHTML=i===s.length-1?"Start again &#8635;":"Click here &rarr; what happens next"}b.onclick=function(){i=(i+1)%s.length;show()};show()})();</script>
+
+<section class="dgz"><div class="kicker">Order journey</div><figure><svg viewBox="0 0 520 240"><g stroke="#1c1c1c" stroke-width="2" fill="#fff"><rect x="10" y="20" width="140" height="50" rx="8"/><rect x="190" y="20" width="140" height="50" rx="8"/><rect x="370" y="20" width="140" height="50" rx="8"/><rect x="10" y="150" width="140" height="50" rx="8"/><rect x="190" y="150" width="140" height="50" rx="8"/><rect x="370" y="150" width="140" height="50" rx="8" fill="#E23744"/></g><g font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="13" text-anchor="middle" fill="#1c1c1c"><text x="80" y="50">Types a note</text><text x="260" y="50">Places order</text><text x="440" y="50">Rider taps reply</text><text x="80" y="180">Sticker prints</text><text x="260" y="180">Customer posts</text><text x="440" y="180" fill="#fff">Reorders</text></g><g stroke="#E23744" stroke-width="3" fill="none"><path d="M150 45H190"/><path d="M330 45H370"/><path d="M440 70V110H80V150"/><path d="M150 175H190"/><path d="M330 175H370"/></g><text class="hn" x="170" y="104">the sticker is the product</text></svg><figcaption>Flowchart: from a typed note to a repeat order.</figcaption></figure></section>
+<section class="xpb"><span class="xtg">Every city, one voice</span><div class="xph"><img src="/campaign/read-the-note/charminar-night-view-2019.jpg" alt="" loading="lazy" style="object-position:50% 40%"><div class="xcp"><b>Local first. Then the note travels.</b><i>One landmark, one line, one sticker</i></div></div></section><section class="six"><div class="kicker rv">05 The idea as a six-piece brief</div><h2 class="rv">Six sentences. <em>One idea.</em></h2><div class="sg">
+<div><b>Business problem</b><p>Food delivery apps look the same at 10 PM, and customer loyalty to any one of them is thin.</p></div>
+<div><b>Consumer problem</b><p>Ordering feels like a transaction, and nobody on the other end seems to see the customer.</p></div>
+<div><b>Insight</b><p>People write kinder lines to a stranger in the note box than to almost anyone else.</p></div>
+<div><b>Solution</b><p>Note Back lets the rider reply with one tap, and the note and reply print as a sticker on the bag.</p></div>
+<div><b>Consumer goal</b><p>The customer wants to feel that a real human is on the other end of the order.</p></div>
+<div><b>Business goal</b><p>Zomato wants the note box to become a ritual that people open on purpose.</p></div></div></section>
+<section class="an"><div class="lab"><b>06</b>Depth</div><div><h2>The strategy under the idea, in plain agency terms.</h2>
+<div class="gt">
+<div><span class="kicker">ICP</span>Urban customers aged 18 to 30 who order for one or two people at night, typically from hostels, shared flats and early-career homes.</div>
+<div><span class="kicker">Not for</span>Bulk and office orders, because the note box is a personal moment.</div>
+<div><span class="kicker">Hook</span>"Type one line tonight. Your rider will write back."</div>
+<div><span class="kicker">Rider reality</span>The rider taps one of six preset reply cards and never types, so the idea adds no time or risk on a bike.</div>
+<div><span class="kicker">Earned media</span>The sticker is the product, and every peeled and posted sticker is an organic ad on the customer's own story.</div>
+<div><span class="kicker">Drops</span>A limited weekly Note Drop of seven notes keeps the feed fresh and gives people a reason to check back.</div>
+<div><span class="kicker">Retention</span>Customers return to see whether their note is chosen as the Note of the Week, which is named on a partner restaurant menu.</div>
+<div><span class="kicker">Go to market</span>Two pilot cities with no paid media, then creators, then all cities with a short film cut from real replies.</div>
+<div><span class="kicker">One call to action</span>Type one line in the note box tonight.</div>
+<div><span class="kicker">Goal and timeline</span>A 10-week plan with a target of 1 in 10 pilot-city orders carrying a note by week 8, to be set against Zomato's own baseline.</div></div></div></section>
+<section class="drop"><div class="kicker rv">The weekly Note Drop</div><h2 class="rv">One set. <em>Seven days.</em></h2><div class="cal">
+<div><b>Mon</b><span class="h">Gate pe kutta hai.</span></div><div><b>Tue</b><span class="h">Nani ko zor se bolna.</span></div><div><b>Wed</b><span class="h">Exam kal hai.</span></div><div><b>Thu</b><span class="h">Bell mat bajana.</span></div><div><b>Fri</b><span class="h">Extra pyaar daal dena.</span></div><div><b>Sat</b><span class="h">Chai bhi lana.</span></div><div class="x"><b>Sun</b><span class="h">Note of the Week named on a menu.</span></div></div></section>
+<section class="phases"><div class="kicker rv">Launch</div><h2 class="rv">Three phases. <em>Ten weeks.</em></h2>
+<div class="line">
+<div class="ph rv"><div class="w">Weeks 1-2</div><h3>Plant</h3><p>Reply cards and stickers in 2 pilot cities. No ads.</p></div>
+<div class="ph rv"><div class="w">Weeks 3-6</div><h3>Share</h3><p>First Note of the Week. Creators post stickers.</p></div>
+<div class="ph rv"><div class="w">Weeks 7-10</div><h3>Grow</h3><p>All cities. A short film cut from real replies.</p></div></div></section>
+
+<section class="xfw" style="--fbg:#E23744;--ffg:#fff8f3"><div class="xk">Marketing framework &middot; method &middot; category</div><h2>A brand-voice ritual, built on distinctive brand assets.</h2><p class="xlead">This idea sits in always-on brand-voice and moment marketing, run on packaging. It uses the Ehrenberg-Bass idea of distinctive brand assets: a voice people can recognise without the logo.</p><div class="xcards"><div class="xcd"><small>Category</small><b>Brand voice and moment marketing</b><p>Owned packaging and the order screen become the media.</p></div><div class="xcd"><small>Framework</small><b>Distinctive brand assets</b><p>Red, the tone of voice and the note box become signals people remember.</p></div><div class="xcd"><small>Method</small><b>Prompt, reply, print, share</b><p>The partner writes, the customer replies, the reply is printed, and people share the sticker.</p></div></div><svg viewBox="0 0 900 150" role="img" aria-label="method"><g fill="none" stroke="#ffe3e5" stroke-width="3" stroke-linecap="round"><circle cx="112" cy="55" r="34"/><path d="M152 55 H297 M289 47 L297 55 L289 63"/><circle cx="337" cy="55" r="34"/><path d="M377 55 H522 M514 47 L522 55 L514 63"/><circle cx="562" cy="55" r="34"/><path d="M602 55 H747 M739 47 L747 55 L739 63"/><circle cx="787" cy="55" r="34"/></g><g fill="currentColor" font-family="Caveat,cursive" font-size="26" text-anchor="middle"><text x="112" y="64">1</text><text x="112" y="128" font-size="24">Prompt</text><text x="337" y="64">2</text><text x="337" y="128" font-size="24">Reply</text><text x="562" y="64">3</text><text x="562" y="128" font-size="24">Print</text><text x="787" y="64">4</text><text x="787" y="128" font-size="24">Share</text></g></svg><div class="xnote">Independent spec concept. Not commissioned by the brand.</div></section><section class="dgz"><div class="kicker">Goal shape</div><figure><svg viewBox="0 0 520 240"><line x1="50" y1="205" x2="500" y2="205" stroke="#1c1c1c" stroke-width="2"/><line x1="50" y1="20" x2="50" y2="205" stroke="#1c1c1c" stroke-width="2"/><g stroke="#1c1c1c" stroke-width="2"><rect x="90" y="150" width="60" height="55" fill="#ffe3e5"/><rect x="190" y="115" width="60" height="90" fill="#ffb3b9"/><rect x="290" y="80" width="60" height="125" fill="#E23744"/><rect x="390" y="45" width="60" height="160" fill="#1c1c1c"/></g><g font-family="Plus Jakarta Sans,sans-serif" font-size="11" font-weight="700" text-anchor="middle"><text x="120" y="224">Week 2</text><text x="220" y="224">Week 4</text><text x="320" y="224">Week 6</text><text x="420" y="224">Week 8</text></g><text class="hn" x="110" y="55">orders with a note, aiming for 1 in 10</text></svg><figcaption>Illustrative shape of the goal, not data: the share of orders with a note should rise week by week.</figcaption></figure></section>
+<section class="dgz"><div class="kicker">Research and measurement plan</div><table class="rt"><tr><th>Metric</th><th>How it is measured</th><th>Baseline</th><th>Target</th><th>Source</th></tr><tr><td>Orders carrying a note</td><td>Share of pilot-city orders with a note</td><td>Zomato's current note rate</td><td>1 in 10 by week 8 (target)</td><td>Zomato order data</td></tr><tr><td>Stickers posted</td><td>Posts with the campaign tag</td><td>Zero at launch</td><td>Set at launch</td><td>Social platforms</td></tr><tr><td>Customers who felt a human replied</td><td>One-tap survey after delivery</td><td>Not yet measured</td><td>Set at launch</td><td>In-app survey</td></tr><tr><td>Repeat orders from noting customers</td><td>Reorder rate against non-noting customers</td><td>Current reorder rate</td><td>Set at launch</td><td>Zomato order data</td></tr></table><p style="max-width:760px;margin-top:14px">This is an independent spec concept, so every baseline here belongs to Zomato and is not known to us. Before any launch we would pull a sample of anonymised note-box text to test whether the kindness observation holds.</p></section>
+<section class="goal"><div class="kicker" style="color:#fff;opacity:.8">The goal</div><div class="big">1<em>in</em>10</div>
+<p>orders in pilot cities carry a note by week 8.</p><small>TARGET, TO BE SET AGAINST ZOMATO'S OWN BASELINE. NOT A RESULT.</small></section>
+
+<section class="imp"><div class="kicker rv">07 Analytics, planned</div><h2 class="rv">Comms. Brand. <em>Business.</em></h2><div class="ib">
+<div><b>Comms</b><div class="n">tbd</div><p>Stickers posted with the tag.</p><em>Target set at launch</em></div>
+<div><b>Brand</b><div class="n">tbd</div><p>Orders where people say a human replied.</p><em>Target set at launch</em></div>
+<div><b>Business</b><div class="n">1 in 10</div><p>orders carry a note by week 8, in pilot cities.</p><em>Target, not a result</em></div></div>
+<div class="cta"><span>For: 18 to 30, ordering for one or two</span><span>Not for: bulk and office orders</span><i>One ask: type one line tonight.</i></div></section>
+<section class="xcr">Photographs are real, free-licensed images from Wikimedia Commons, chosen to set the scene. Zomato is not involved in this concept. <a href="https://commons.wikimedia.org/wiki/File:Zomato_delivery_partner_on_a_Yulu_bike.jpg">Zomato delivery partner on a Yulu bike</a> (SerChevalerie, CC0) &middot; <a href="https://commons.wikimedia.org/wiki/File:Street_food_vendors_in_Kalbadevi,_Mumbai.jpg">Street food vendors in Kalbadevi, Mumbai</a> (Radosław Botev, CC BY 3.0 pl) &middot; <a href="https://commons.wikimedia.org/wiki/File:Night_life_at_Charminar,_Hyderabad.jpg">Night life at Charminar, Hyderabad</a> (CosmicCodex, CC BY-SA 4.0) &middot; <a href="https://commons.wikimedia.org/wiki/File:Charminar_night_view_2019.jpg">Charminar night view 2019</a> (Rashid Jorvee, CC BY-SA 4.0)</section><section class="end"><h2 class="rv">The voice is already there.<br><em>This gives it a ritual.</em></h2><p>Concept and strategy by Diya Nathwani</p></section>
+<div class="fine">Independent spec concept. Not made for or affiliated with Zomato. Notes are written for this concept.</div>
+<div class="fine">Independent spec concept. Not made for or affiliated with Zomato. Notes are written for this concept.</div>
+<script>var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("on")})},{threshold:.15});document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+var C=[["A customer types one honest line into the note box.","The note box is the one place on the app where people say something real."],["She places the order, and the rider taps a reply.","One tap on a preset card keeps the rider's eyes on the road."],["The note and the reply print together on a sticker on the bag.","The bag arrives carrying a small conversation."],["She peels the sticker off and posts it.","The sticker is the product, and it is built to be shared."],["The best note of the week is named on a real menu.","One note a week becomes a combo, which gives everyone a reason to write a better line."]];
+var T="Thanda mat lana. Gaadi dheere chalana.";var st=document.getElementById("stage"),sec=document.getElementById("story"),cap=document.getElementById("cap"),nb=document.getElementById("nb"),bub=document.getElementById("bub"),ph0=document.getElementById("ph0"),bag=document.getElementById("bag"),stk=document.getElementById("stk"),post=document.getElementById("post"),last=-1;
+var __c=0;function SM(x){__c+=(x-__c)*.14;return Math.abs(x-__c)<.0005?x:__c}
+function f(){var r=sec.getBoundingClientRect(),t=SM(Math.max(0,Math.min(1,-r.top/(r.height-innerHeight)))),s=Math.min(4,Math.floor(t*5)),w=t*5-s;st.style.setProperty('--w',w);st.style.setProperty('--t',t);
+if(s!==last){last=s;st.dataset.s=s;cap.innerHTML=C[s][0]+"<small>"+C[s][1]+"</small>";ph0.style.display=s<=1?"block":"none";bag.style.display=s>=2?"block":"none";bub.classList.toggle("on",s>=1);stk.classList.toggle("on",s>=2);post.classList.toggle("on",s>=3)}
+if(s===0)nb.textContent=T.slice(0,Math.ceil(Math.min(1,w*1.5)*T.length));else if(s>0)nb.textContent=T}
+(function L(){f();requestAnimationFrame(L)})();</script><script>(function(){var G=[].slice.call(document.querySelectorAll(".dgg svg,.hv svg,.wallp svg,.dsvg"));G.forEach(function(sv){var els=[].slice.call(sv.querySelectorAll("path,line,rect,circle,polygon,polyline,ellipse")).filter(function(e){return e.getAttribute("stroke")||(e.parentNode.getAttribute&&e.parentNode.getAttribute("stroke"))});els.forEach(function(e,i){try{e.setAttribute("pathLength","1")}catch(x){}e.style.strokeDasharray="1";e.style.strokeDashoffset="1";e._i=i/Math.max(1,els.length)});var tx=[].slice.call(sv.querySelectorAll("text"));tx.forEach(function(t){t.style.opacity=0});sv._e=els;sv._t=tx});
+function d(){G.forEach(function(sv){var r=sv.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.92-r.top)/(innerHeight*.55)));sv._e.forEach(function(e){var q=Math.min(1,Math.max(0,(p-e._i*.5)*2));e.style.strokeDashoffset=1-q;e.style.fillOpacity=q});sv._t.forEach(function(t){t.style.opacity=p>.6?(p-.6)/.4:0})})}
+(function L(){d();requestAnimationFrame(L)})()})();</script></body></html>
