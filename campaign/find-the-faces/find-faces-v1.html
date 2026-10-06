@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find the Faces | Campaign case study by Diya Nathwani</title>
+<meta name="description" content="A nationwide campus hunt for creators. Scan a poster, drop a 15-second video, climb your college leaderboard.">
+<link rel="canonical" href="https://diyanathwani.site/campaign/find-the-faces/">
+<meta property="og:title" content="Find the Faces | Campaign by Diya Nathwani"><meta property="og:description" content="Every campus has a star. Let's find them.">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;700&family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#141414;--paper:#f7f5f1;--purple:#8940FA;--yellow:#F2D410;--lime:#d4f75e;--coral:#ff5a36;--cond:"Antonio",Impact,sans-serif;--hand:"Caveat",cursive;--sans:"Inter",system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.55 var(--sans);overflow-x:hidden}
+h1,h2,h3{font-family:var(--cond);text-transform:uppercase;line-height:1.08;margin:0}p{margin:0 0 12px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:2px solid var(--ink);display:flex;justify-content:space-between;align-items:center;padding:12px 28px;font-family:var(--cond);font-size:24px}
+nav a{color:var(--ink);text-decoration:none}
+.tag{display:inline-block;font-family:var(--cond);text-transform:uppercase;background:var(--yellow);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:3px 12px;transform:rotate(-2deg);font-size:16px}
+.tag.p{background:var(--purple);color:#fff}.tag.l{background:var(--lime)}.tag.c{background:var(--coral);color:#fff}
+.hand{font-family:var(--hand);font-weight:700;color:var(--purple)}
+.hl{background:var(--yellow);padding:0 .14em}
+section{padding:84px 0}
+.hero{text-align:center;background:var(--yellow);border-bottom:3px solid var(--ink);padding-bottom:70px}
+.hero h1{font-size:clamp(60px,12vw,150px)}.hero h1 span{color:var(--purple);text-shadow:5px 5px 0 #fff}
+.tagline{font-family:var(--cond);text-transform:uppercase;font-size:clamp(22px,3vw,36px);margin:18px 0 6px}
+.one{max-width:640px;margin:8px auto 0;font-size:21px;font-weight:500}
+.box{max-width:430px;margin:44px auto 0;background:#fff;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);text-align:left;padding:16px 18px;transform:rotate(-1.5deg)}
+.box small{font-weight:700;letter-spacing:.5px;color:#777;font-size:12px;text-transform:uppercase}
+.box .in{margin-top:8px;border:2px solid var(--ink);border-radius:8px;padding:10px 12px;font-family:var(--hand);font-size:27px;line-height:1.1;background:#fffdf4}
+.chip{position:relative;display:inline-block;margin-top:34px;background:var(--ink);color:#fff;padding:10px 22px;font-family:var(--cond);font-size:26px;text-transform:uppercase;transform:rotate(-2deg);box-shadow:5px 5px 0 var(--purple)}
+.chip small{display:block;font:12px var(--sans);text-transform:none;opacity:.8}
+.idea{background:var(--purple);color:#fff;text-align:center}.idea h2{font-size:clamp(38px,6.5vw,84px)}.idea h2 b{color:var(--ink);background:var(--yellow);padding:0 .14em;display:inline-block;margin-top:8px}
+.idea p{max-width:620px;margin:24px auto 0;font-size:21px}
+.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+h2.big{font-size:clamp(36px,5.2vw,68px)}
+.goalpill{display:inline-block;margin-top:14px;background:var(--lime);border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:10px 16px;font-weight:600}
+.notes{position:relative;height:360px}
+.n{position:absolute;background:#fffdf4;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:8px 12px;font-family:var(--hand);font-size:25px;line-height:1.05;max-width:250px}
+.insight{background:#141414;color:#fff}.insight h2{font-size:clamp(36px,6.4vw,88px);text-align:center}.insight h2 em{font-style:normal;color:var(--ink);background:var(--lime);padding:0 .12em;display:inline-block;transform:rotate(-1.5deg)}
+.insight p{max-width:600px;margin:26px auto 0;text-align:center;font-size:20px}
+.moment{background:var(--lime);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.clock{width:260px;height:260px;border-radius:50%;background:#fff;border:4px solid var(--ink);box-shadow:9px 9px 0 var(--coral);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:auto}
+.clock b{font-family:var(--cond);font-size:76px;line-height:.9}.clock span{font-family:var(--hand);font-size:24px;font-weight:700;text-align:center;padding:0 34px;line-height:1.05;margin-top:6px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.st{border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);background:#fff;padding:16px}
+.st:nth-child(1){background:var(--yellow);transform:rotate(-1.2deg)}.st:nth-child(2){background:#fff;transform:rotate(1deg) translateY(10px)}.st:nth-child(3){background:var(--lime);transform:rotate(-.8deg)}.st:nth-child(4){background:var(--purple);color:#fff;transform:rotate(1.2deg) translateY(8px)}
+.st h3{font-size:30px;margin:6px 0}.st .no{font-family:var(--cond);font-size:44px}
+.mock{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;margin-top:46px;align-items:start}
+.bag{background:#e9dfc9;border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);height:300px;position:relative;overflow:hidden}
+.bag::before{content:"";position:absolute;left:0;right:0;top:0;height:46px;background:repeating-linear-gradient(90deg,#d8cbb0 0 14px,#e9dfc9 14px 28px);border-bottom:3px solid var(--ink)}
+.sticker{position:absolute;left:18px;right:18px;top:80px;background:#fff;border:3px solid var(--ink);padding:14px;transform:rotate(-2deg);box-shadow:4px 4px 0 var(--coral)}
+.sticker small{font-weight:700;color:#777;font-size:11px;letter-spacing:.5px}.sticker .q{font-family:var(--hand);font-size:23px;line-height:1.05;color:#777;text-decoration:line-through;text-decoration-thickness:1px}.sticker .r{font-family:var(--hand);font-size:30px;line-height:1.05;color:var(--purple);margin-top:6px}
+.phone{background:var(--ink);border-radius:28px;padding:12px;box-shadow:7px 7px 0 var(--purple);height:300px}
+.phone .sc{background:var(--paper);border-radius:18px;height:100%;padding:14px;overflow:hidden}
+.phone .sc h3{font-size:22px}.phone .c{margin-top:10px;border:2px solid var(--ink);background:#fff;padding:8px 10px;font-size:15px;line-height:1.3}
+.menu{background:#fffdf4;border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);height:300px;padding:22px;transform:rotate(1.2deg)}
+.menu h3{font-size:26px;border-bottom:2px dashed var(--ink);padding-bottom:8px}.menu .it{font-family:var(--hand);font-size:28px;line-height:1.05;margin-top:12px}.menu .by{font-size:14px;color:#666;margin-top:6px}
+.cap{font-family:var(--hand);font-size:24px;color:var(--purple);font-weight:700;margin-top:12px}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.ph{padding:20px;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink)}.ph:nth-child(1){background:var(--yellow)}.ph:nth-child(2){background:var(--lime);transform:translateY(14px)}.ph:nth-child(3){background:var(--coral);color:#fff}
+.ph h3{font-size:30px}
+.ba{display:grid;grid-template-columns:1fr 1fr;max-width:760px;margin:36px auto 0}.ba div{padding:8px 28px;font-size:19px}.ba div:first-child{border-right:3px dashed var(--ink)}.ba h3{font-size:32px;margin-bottom:6px}
+.goal{background:var(--yellow);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+ul.m{padding-left:20px;margin:10px 0 0}ul.m li{margin:6px 0}
+.end{background:var(--purple);color:#fff;text-align:center;padding:80px 0}.end h2{font-size:clamp(36px,6vw,76px)}
+.fine{font-size:14px;text-align:center;padding:26px 24px;color:#555}
+@media(max-width:820px){.grid2,.mock,.phases,.ba{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.ba div:first-child{border-right:0;border-bottom:3px dashed var(--ink)}.notes{height:420px}.ph:nth-child(2){transform:none}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}.st{transform:none!important}}
+
+.poster{max-width:380px;margin:44px auto 0;background:#fffdf4;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:18px;transform:rotate(2deg);text-align:center}
+.poster h3{font-size:54px;letter-spacing:2px;border-bottom:3px solid var(--ink);padding-bottom:6px}.poster p{font-family:var(--hand);font-size:30px;line-height:1;margin:14px 0 8px;color:var(--purple);font-weight:700}
+.qr{width:120px;height:120px;margin:10px auto;border:3px solid var(--ink);background:conic-gradient(var(--ink) 25%,#fff 0 50%,var(--ink) 0 75%,#fff 0) 0 0/24px 24px}
+.board{background:#fff;border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);padding:16px}.board h3{font-size:26px;margin-bottom:8px}
+.row{display:flex;justify-content:space-between;border-bottom:2px dashed #bbb;padding:8px 0;font-weight:600}.row:last-child{border:0}.row span:last-child{font-family:var(--cond);font-size:22px}
+.row.me{background:var(--lime);margin:0 -8px;padding:8px}
+</style></head><body>
+<nav><a href="/">Diya Nathwani</a><a href="/campaign/walls-that-raised-us/" style="font-size:16px">More campaigns</a></nav>
+<section class="hero" style="background:var(--lime)"><div class="wrap">
+<span class="tag p">Campaign case study</span>
+<h1 style="margin-top:18px">Find.<br><span>The Faces.</span></h1>
+<div class="tagline">Every campus has a star. Let's find them.</div>
+<p class="one">A nationwide campus hunt for creators. Scan a poster. Drop a 15-second video. Climb your college leaderboard.</p>
+<div class="poster"><h3>WANTED</h3><p>Campus stars</p><div style="font-weight:700;font-family:var(--cond);font-size:26px">YOUR COLLEGE HAS A STAR.</div><div class="qr"></div><b>SCAN NOW</b></div>
+<div class="chip" style="box-shadow:5px 5px 0 var(--coral)">50 campuses<small>pilot size (plan)</small></div>
+</div></section>
+
+<section class="idea"><div class="wrap"><span class="tag l">The idea</span>
+<h2 style="margin-top:16px">Make talent hunting<br><b>public and competitive.</b></h2>
+<p>A poster at the chai stall.<br>A 15-second video.<br>A leaderboard where your college fights for first place.</p></div></section>
+
+<section><div class="wrap grid2"><div>
+<span class="tag c">The problem</span>
+<h2 class="big" style="margin-top:14px">Talent is everywhere.<br>Opportunity is not.</h2>
+<p style="margin-top:16px">Campuses make creators every year.<br>Their fame ends at the campus gate.<br>Brands pay for reach. Beginners have no way in.</p>
+<div class="goalpill">Goal: a first stop for new creators, before agencies and brands find them.</div></div>
+<div class="notes">
+<div class="n" style="left:0;top:6px;transform:rotate(-3deg)">"He is famous in college... but nowhere else."</div>
+<div class="n" style="right:0;top:90px;transform:rotate(3deg)">Hostel singer. 40 followers. 1 great voice.</div>
+<div class="n" style="left:30px;top:200px;transform:rotate(2deg)">Algorithm says: post more. Nobody says: who sees it.</div></div></div></section>
+
+<section class="insight"><div class="wrap"><span class="tag">The insight</span>
+<h2 style="margin-top:18px">College builds creators.<br><em>Not careers.</em></h2>
+<p>Students are driven by identity, visibility and belonging.<br>Make a win visible to the whole campus, and they start to care.<br>Hiding it in an algorithm does the opposite.</p></div></section>
+
+<section class="moment"><div class="wrap grid2">
+<div class="clock"><b>4:30</b><span>PM, canteen, chai in hand</span></div>
+<div><span class="tag p">The audience moment</span>
+<h2 class="big" style="margin-top:14px">Waiting for chai.<br>Eyes on the wall poster.</h2>
+<p style="margin-top:14px">Who: college students, 18 to 24, in any city.<br>The moment: five idle minutes at the canteen, library or hostel notice board, phone already in hand.</p></div></div></section>
+
+<section><div class="wrap">
+<span class="tag l">The mechanic</span>
+<h2 class="big" style="margin-top:14px">Scan. Drop. Rank. Share.</h2>
+<div class="steps">
+<div class="st"><div class="no">1</div><h3>Scan</h3>Scan the QR on a poster at your chai stall, library or canteen.</div>
+<div class="st"><div class="no">2</div><h3>Drop</h3>Record 15 seconds. Sing, dance, joke, anything. No editing needed.</div>
+<div class="st"><div class="no">3</div><h3>Rank</h3>Every entry adds points to your college. The leaderboard moves live.</div>
+<div class="st"><div class="no">4</div><h3>Share</h3>Friends share the clip. "She is from my batch!" Friends beat brands.</div></div>
+</div></section>
+
+<section style="background:#efe9dc;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)"><div class="wrap">
+<span class="tag p">What you would see</span>
+<h2 class="big" style="margin-top:14px">Three places the idea shows up.</h2>
+<div class="mock">
+<div><div class="poster" style="margin:0;transform:rotate(-1.5deg);height:300px;max-width:none"><h3 style="font-size:40px">WANTED</h3><div class="qr" style="width:90px;height:90px"></div><div style="font-family:var(--cond);font-size:20px">Canteen wall, 2nd floor</div></div><div class="cap">The canteen poster</div></div>
+<div><div class="phone"><div class="sc"><h3>Record 15s</h3><div class="c" style="background:var(--ink);color:#fff;height:120px;display:flex;align-items:center;justify-content:center;border-radius:12px">&#9679; TAP TO RECORD</div><div class="c" style="background:var(--yellow)">Posting for: your college</div></div></div><div class="cap">The 15-second drop</div></div>
+<div><div class="board"><h3>Campus leaderboard</h3><div class="row"><span>1. College A</span><span>5.2K</span></div><div class="row"><span>2. College B</span><span>4.8K</span></div><div class="row me"><span>3. Your college</span><span>4.1K</span></div><div class="row"><span>4. College D</span><span>3.9K</span></div></div><div class="cap">Don't let them beat us</div></div>
+</div><p style="margin-top:20px;font-size:15px;color:#555">Mockups made by the author. College names and scores are placeholders.</p></div></section>
+
+<section><div class="wrap"><span class="tag c">Launch in 3 phases</span>
+<div class="phases">
+<div class="ph"><h3>Phase 1<br>Pilot</h3><p>50 campuses. Posters at canteens, libraries and chai stalls. Founding faces seeded as first entries.</p></div>
+<div class="ph"><h3>Phase 2<br>Rivalry</h3><p>Leaderboards go live. Meme pages and campus pages push "beat your rival college".</p></div>
+<div class="ph"><h3>Phase 3<br>Platform</h3><p>Year 1: grow into the first discovery step for new creators, with brand matches on top.</p></div></div></div></section>
+
+<section class="goal"><div class="wrap"><span class="tag p">Goal and how we would check it</span>
+<h2 class="big" style="margin-top:14px">One pilot. Four checks.</h2>
+<p style="margin-top:14px;max-width:660px"><b>Pilot plan (projected):</b> 150K reach and 10K scans across 50 campuses. These are planning targets, not results.</p>
+<ul class="m"><li>Scans to videos posted</li><li>Videos per college, and repeat posting</li><li>Clips shared outside the app</li><li>Creators who get a brand enquiry</li></ul>
+<div class="ba"><div><h3>Before</h3>A great singer is famous in one hostel. Nobody outside hears them.</div><div><h3>After</h3>Their college ranks them, friends share them, a brand can find them.</div></div></div></section>
+
+<section class="end"><div class="wrap"><h2>Not a campaign.<br>A movement.</h2><p style="margin-top:18px;font-size:20px">Campaign concept and strategy by Diya Nathwani.</p></div></section>
+<div class="fine">Numbers on this page are projected planning targets. Mockups are illustrative.</div>
+</body></html>
