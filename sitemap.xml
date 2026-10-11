@@ -1,2 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://diyanathwani.site/</loc></url><url><loc>https://diyanathwani.site/book</loc></url><url><loc>https://diyanathwani.site/social</loc></url><url><loc>https://diyanathwani.site/privacy</loc></url><url><loc>https://diyanathwani.site/terms</loc></url></urlset>
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://diyanathwani.site/</loc>
+  </url>
+  <url>
+    <loc>https://diyanathwani.site/book</loc>
+  </url>
+  <url>
+    <loc>https://diyanathwani.site/social</loc>
+  </url>
+  <url>
+    <loc>https://diyanathwani.site/privacy</loc>
+  </url>
+  <url>
+    <loc>https://diyanathwani.site/terms</loc>
+  </url>
+  <url>
+    <loc>https://diyanathwani.site/campaign/</loc>
+  </url>
+  <url>
+    <loc>https://diyanathwani.site/campaign/walls-that-raised-us/</loc>
+  </url>
+  <url>
+    <loc>https://diyanathwani.site/campaign/find-the-faces/</loc>
+  </url>
+  <url>
+    <loc>https://diyanathwani.site/campaign/read-the-note/</loc>
+  </url>
+  <url>
+    <loc>https://diyanathwani.site/campaign/city-in-a-frame/</loc>
+  </url>
+</urlset>
