@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Diya Universe - Every Role, Client & Side-Quest, One Page | Diya Nathwani</title>
+<meta name="description" content="Diya Nathwani's master universe: 3.5 years across content strategy, brand storytelling and AI workflows. Every role, client, degree, award and project, properly labelled."/>
+<link rel="canonical" href="https://diyanathwani.site/universe"/>
+<meta property="og:type" content="profile"/>
+<meta property="og:site_name" content="Diya Nathwani"/>
+<meta property="og:title" content="The Diya Universe - Diya Nathwani"/>
+<meta property="og:description" content="Every role, client, degree, award and side-quest. One page, properly labelled."/>
+<meta property="og:url" content="https://diyanathwani.site/universe"/>
+<style>
+@font-face{font-family:"Antonio";src:url("/assets/XTA6ZR4X.woff2") format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:"Caveat";src:url("/assets/P25GCNZB.woff2") format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:"GT America";src:url("/assets/2L3TNOC4.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"GT America";src:url("/assets/GWBPHQBQ.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"GT America";src:url("/assets/6HBTCF3E.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Season Mix";src:url("/assets/7UAGB34N.woff2") format("woff2");font-weight:400;font-display:swap}
+:root{
+ --ink:#141414; --cream:#f4eee3; --paper:#f7f5f1; --purple:#8940fa;
+ --yellow:#f2d410; --lime:#d4f75e; --coral:#ff5a36; --lilac:#cfc3ff;
+ --cond:"Antonio","Anton","Oswald",Impact,"Arial Narrow",sans-serif;
+ --sans:"GT America",-apple-system,"Helvetica Neue",Arial,sans-serif;
+ --serif:"Season Mix",Georgia,serif;
+ --hand:"Caveat",cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:16px/1.6 var(--sans);overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%}
+::selection{background:var(--yellow)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:2px solid var(--ink)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:12px;padding-bottom:12px}
+.logo{font-family:var(--cond);font-size:24px;letter-spacing:.02em;text-decoration:none;text-transform:uppercase}
+.top-mid{font-family:var(--cond);font-size:13px;letter-spacing:.18em;text-transform:uppercase;opacity:.75}
+.btn{display:inline-block;font-family:var(--cond);font-size:16px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:8px 18px;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn-y{background:var(--yellow)}
+.btn-p{background:var(--purple);color:#fff}
+.btn-w{background:#fff}
+
+/* ---------- hero ---------- */
+.hero{padding:74px 0 64px;position:relative}
+.tag{display:inline-block;font-family:var(--cond);font-size:15px;letter-spacing:.08em;text-transform:uppercase;background:var(--lime);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:6px 14px;transform:rotate(-1.6deg)}
+h1{font-family:var(--cond);font-weight:700;font-size:clamp(58px,10.5vw,132px);line-height:.94;text-transform:uppercase;letter-spacing:-.01em;margin:26px 0 22px}
+h1 .hl{background:linear-gradient(transparent 62%,var(--yellow) 62%)}
+.lead{font-size:clamp(18px,2.2vw,23px);line-height:1.5;max-width:760px;font-weight:500}
+.lead b{background:linear-gradient(transparent 62%,var(--yellow) 62%)}
+.scribble{font-family:var(--hand);font-size:clamp(21px,2.6vw,27px);color:var(--purple);transform:rotate(-2deg);display:inline-block;margin-top:16px;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.chip{font-family:var(--cond);font-size:15px;letter-spacing:.05em;text-transform:uppercase;background:#fff;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:7px 14px}
+.chip:nth-child(2){background:var(--lime)}
+.chip:nth-child(3){background:var(--lilac)}
+.chip:nth-child(4){background:var(--yellow)}
+
+/* ---------- section basics ---------- */
+section{padding:70px 0}
+h2{font-family:var(--cond);font-weight:700;font-size:clamp(38px,6vw,64px);line-height:1;text-transform:uppercase;margin-bottom:8px}
+h2 .mk{background:var(--yellow);padding:0 10px;box-shadow:4px 4px 0 var(--ink);display:inline-block;transform:rotate(-1deg)}
+h2 .mk-p{background:var(--purple);color:#fff;padding:0 10px;box-shadow:4px 4px 0 var(--ink);display:inline-block;transform:rotate(1deg)}
+.kicker{font-family:var(--hand);font-size:24px;font-weight:700;color:var(--purple);margin-bottom:34px}
+.on-dark .kicker{color:var(--lime)}
+
+/* ---------- numbers ---------- */
+.numbers{background:var(--purple);color:#fff;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:38px;padding-right:8px}
+.num{background:#fff;color:var(--ink);border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:20px 18px 16px;position:relative}
+.num:nth-child(odd){transform:rotate(-.8deg)}
+.num:nth-child(even){transform:rotate(.7deg)}
+.num .n{font-family:var(--cond);font-weight:700;font-size:clamp(38px,4.6vw,56px);line-height:1;display:block}
+.num .n .plus{color:var(--purple)}
+.num small{display:block;margin-top:8px;font-size:13.5px;line-height:1.4;font-weight:500}
+.num .star{position:absolute;top:-14px;right:-10px;font-size:26px;transform:rotate(12deg)}
+.numbers .fine{margin-top:26px;font-family:var(--hand);font-size:21px;font-weight:700;color:var(--lime)}
+
+/* ---------- experience timeline ---------- */
+.tl{margin-top:40px;position:relative}
+.tl:before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:3px;background:var(--ink)}
+.job{position:relative;padding:0 0 34px 46px}
+.job:last-child{padding-bottom:6px}
+.job .dot{position:absolute;left:0;top:4px;width:25px;height:25px;background:var(--yellow);border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);transform:rotate(45deg)}
+.job:nth-child(3n+2) .dot{background:var(--lime)}
+.job:nth-child(3n) .dot{background:var(--lilac)}
+.job-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
+.job h3{font-family:var(--cond);font-weight:700;font-size:clamp(22px,3vw,29px);text-transform:uppercase;letter-spacing:.01em}
+.job .co{font-weight:700}
+.job .when{font-family:var(--cond);font-size:14px;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--cream);padding:3px 10px;transform:rotate(-.6deg)}
+.job .kind{font-family:var(--hand);font-size:19px;font-weight:700;color:var(--purple)}
+.job ul{list-style:none;margin-top:10px}
+.job li{position:relative;padding-left:22px;margin-bottom:6px;max-width:840px}
+.job li:before{content:"";position:absolute;left:2px;top:9px;width:9px;height:9px;background:var(--purple)}
+.job li b{background:linear-gradient(transparent 65%,var(--yellow) 65%)}
+.also{margin-top:26px;background:#fff;border:2px dashed var(--ink);padding:18px 22px;font-size:15px;max-width:900px}
+.also b{font-family:var(--cond);letter-spacing:.06em;text-transform:uppercase}
+
+/* ---------- clients vs projects ---------- */
+.vs{background:var(--ink);color:var(--cream)}
+.vs h2 .mk{box-shadow:4px 4px 0 var(--purple)}
+.vs-cols{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:38px}
+.vs-col{border:3px solid var(--cream);padding:26px 24px;position:relative}
+.vs-col.c{background:var(--lime);color:var(--ink);border-color:var(--ink);box-shadow:7px 7px 0 var(--purple)}
+.vs-col.p{background:#1f1f1f;border-color:var(--cream)}
+.vs-col h3{font-family:var(--cond);font-weight:700;font-size:clamp(26px,3.4vw,36px);text-transform:uppercase}
+.vs-col .sub{font-family:var(--hand);font-size:21px;font-weight:700;margin-bottom:16px}
+.vs-col.c .sub{color:#3a5b00}
+.vs-col.p .sub{color:var(--yellow)}
+.vs-col ul{list-style:none}
+.vs-col li{padding:11px 0;border-top:1px solid rgba(20,20,20,.25);font-size:15px;line-height:1.5}
+.vs-col.p li{border-top:1px solid rgba(244,238,227,.22)}
+.vs-col li b{font-weight:700}
+.vs-col.c li b{background:linear-gradient(transparent 65%,#fff 65%)}
+.vs-col.p li b{color:var(--yellow)}
+.vs-note{margin-top:26px;font-family:var(--hand);font-size:22px;font-weight:700;color:var(--lilac);max-width:820px}
+
+/* ---------- education ---------- */
+.edu{background:var(--lilac)}
+.edu-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;margin-top:38px}
+.deg{background:#fff;border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);padding:28px 26px;position:relative}
+.deg:nth-child(2){background:var(--paper)}
+.deg .cap{position:absolute;top:-15px;left:20px;font-family:var(--cond);font-size:13px;letter-spacing:.12em;text-transform:uppercase;background:var(--yellow);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:3px 10px}
+.deg h3{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3vw,31px);line-height:1.15;margin-bottom:4px}
+.deg .where{font-weight:700;margin-bottom:12px}
+.deg ul{list-style:none}
+.deg li{position:relative;padding-left:20px;margin-bottom:6px;font-size:15px}
+.deg li:before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;background:var(--purple)}
+.deg .flex{margin-top:14px;background:var(--ink);color:var(--lime);font-family:var(--cond);font-size:16px;letter-spacing:.04em;text-transform:uppercase;padding:10px 14px;transform:rotate(-.8deg);display:inline-block}
+.deg .flex small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:0;text-transform:none;color:var(--cream);opacity:.85;margin-top:2px}
+
+/* ---------- awards + events ---------- */
+.aw-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}
+.aw{background:#fff;border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:18px 20px;display:flex;gap:16px;align-items:flex-start}
+.aw:nth-child(1){transform:rotate(-.7deg)}
+.aw:nth-child(2){transform:rotate(.6deg)}
+.aw:nth-child(3){transform:rotate(.5deg)}
+.aw:nth-child(4){transform:rotate(-.6deg)}
+.aw .em{font-size:30px;line-height:1}
+.aw b{font-family:var(--cond);font-size:19px;letter-spacing:.03em;text-transform:uppercase;display:block}
+.aw span{font-size:14px;line-height:1.45;display:block;margin-top:3px}
+.tickets{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
+.ticket{background:var(--coral);color:#fff;border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:16px 20px;min-width:250px;flex:1;position:relative}
+.ticket:nth-child(2){background:var(--purple)}
+.ticket:nth-child(3){background:#2f7d5b}
+.ticket b{font-family:var(--cond);font-size:19px;letter-spacing:.03em;text-transform:uppercase;display:block}
+.ticket span{font-size:13.5px;line-height:1.45;display:block;margin-top:4px}
+.ticket .stub{font-family:var(--hand);font-size:19px;font-weight:700;color:var(--yellow);margin-top:6px}
+
+/* ---------- certs ---------- */
+.certs-row{display:flex;gap:16px;overflow-x:auto;padding:34px 4px 14px;scrollbar-width:thin}
+.cert{flex:0 0 255px;background:#fff;border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:20px}
+.cert:nth-child(odd){transform:rotate(-.8deg)}
+.cert:nth-child(even){transform:rotate(.7deg)}
+.cert .yr{font-family:var(--cond);font-size:13px;letter-spacing:.14em;background:var(--ink);color:var(--cream);padding:2px 9px;display:inline-block}
+.cert b{font-family:var(--cond);font-size:21px;line-height:1.15;text-transform:uppercase;display:block;margin:12px 0 6px}
+.cert span{font-size:13.5px;line-height:1.45;display:block}
+.certs-note{font-family:var(--hand);font-size:21px;font-weight:700;color:var(--purple);margin-top:14px}
+
+/* ---------- skills ---------- */
+.skills{background:var(--yellow);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.sk-group{margin-top:30px}
+.sk-group h3{font-family:var(--cond);font-size:21px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.sk-group h3 span{background:var(--ink);color:var(--yellow);padding:2px 10px}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{background:#fff;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:6px 14px;font-size:14px;font-weight:500}
+.pill:nth-child(4n+2){background:var(--lime)}
+.pill:nth-child(4n+3){background:var(--lilac)}
+.pill:nth-child(4n){background:var(--cream)}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:var(--cream);padding:74px 0 46px}
+.foot h2{color:#fff}
+.foot .scribble{color:var(--lime)}
+.foot .tag{color:var(--ink)}
+.foot-cards{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
+.fcard{display:flex;align-items:center;gap:13px;background:#fff;color:var(--ink);text-decoration:none;border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--purple);padding:13px 20px 13px 14px}
+.fcard small{display:block;font-family:var(--cond);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#6b6b6b}
+.fcard b{font-size:15px}
+.fcard .ic{width:38px;height:38px;border-radius:9px;border:2px solid var(--ink);display:grid;place-items:center;flex:none}
+.fine-line{margin-top:38px;padding-top:22px;border-top:1px solid rgba(244,238,227,.25);font-size:13px;color:#bdb5a8;display:flex;flex-wrap:wrap;gap:8px 26px;align-items:center;justify-content:space-between}
+.fine-line a{color:var(--lime)}
+.pen{font-family:var(--hand);font-size:21px;font-weight:700;color:var(--lilac)}
+
+@media(max-width:900px){
+ .num-grid{grid-template-columns:repeat(2,1fr)}
+ .vs-cols,.edu-grid,.aw-grid{grid-template-columns:1fr}
+ .top-mid{display:none}
+}
+@media(max-width:520px){
+ .num-grid{grid-template-columns:1fr 1fr;gap:14px}
+ .job{padding-left:38px}
+ .hero{padding:52px 0 46px}
+ section{padding:54px 0}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Diya Nathwani","url":"https://diyanathwani.site/","jobTitle":"Content & Brand Strategist","address":{"@type":"PostalAddress","addressLocality":"Nagpur","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/diya-nathwani6622"]}}
+</script>
+</head>
+<body>
+
+<header class="topbar">
+ <div class="wrap">
+  <a class="logo" href="/">Diya N.</a>
+  <span class="top-mid">the universe - everything, one page</span>
+  <a class="btn btn-y" href="https://wa.link/kzc6zv" target="_blank" rel="noopener">Let's chat</a>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="wrap">
+  <span class="tag">Every resume. One page. No filler.</span>
+  <h1>The Diya<br><span class="hl">Universe</span></h1>
+  <p class="lead">Every role, client, degree, award and side-quest from all my resumes, finally in one place.<br><b>Clients vs projects vs experiments, properly labelled</b>, because they are not the same thing.</p>
+  <span class="scribble">yes, all of it. numbers included. &darr;</span>
+  <div class="chips">
+   <span class="chip">3.5 yrs experience</span>
+   <span class="chip">20+ clients, self-sourced</span>
+   <span class="chip">IIT Madras BS '26</span>
+   <span class="chip">Nagpur, India</span>
+  </div>
+ </div>
+</section>
+
+<section class="numbers on-dark">
+ <div class="wrap">
+  <h2>Numbers <span class="mk">never lie!</span></h2>
+  <p class="kicker">counted from the master inventory, October 2026</p>
+  <div class="num-grid">
+   <div class="num"><span class="n" data-n="3.5" data-suffix="">0</span><small>years across content strategy, brand storytelling & AI workflows</small></div>
+   <div class="num"><span class="n" data-n="20" data-suffix="+">0</span><small>clients, all self-sourced. No agency middleman.</small></div>
+   <div class="num"><span class="n" data-n="2000" data-suffix="+">0</span><small>articles & assets shipped for US consumer-health audiences</small></div>
+   <div class="num"><span class="star">&#11088;</span><span class="n" data-n="11.2" data-suffix="M">0</span><small>views on the top reel I strategised (fitness creator, ~201K followers)</small></div>
+   <div class="num"><span class="n" data-n="65" data-suffix="M+">0</span><small>views across that account's top 12 reels</small></div>
+   <div class="num"><span class="n" data-n="300" data-suffix="K+">0</span><small>combined monthly visits across 11 US health sites I edited</small></div>
+   <div class="num"><span class="n" data-n="12" data-suffix="">0</span><small>writers led across India & the US</small></div>
+   <div class="num"><span class="n" data-n="20" data-suffix="+">0</span><small>LinkedIn recommendations from clients, colleagues & seniors</small></div>
+  </div>
+  <p class="fine">latest 90-day proof: 7.18M views, 24K shares, 24.6K saves on one creator account. screenshots exist.</p>
+ </div>
+</section>
+
+<section id="journey">
+ <div class="wrap">
+  <h2>The <span class="mk-p">journey</span> so far</h2>
+  <p class="kicker">newest first. every date real.</p>
+  <div class="tl">
+   <div class="job">
+    <span class="dot"></span>
+    <div class="job-head"><h3>Independent Content Expert</h3><span class="when">Aug 2024 - Present</span><span class="kind">self-employed, my own practice</span></div>
+    <ul>
+     <li>Built a client base of <b>20+ brands, websites and creators from scratch</b> - positioning, messaging, websites, SEO content, social and founder-led content.</li>
+     <li><b>Ranked #1 in ChatGPT for a content-strategist query</b>, above agencies, by structuring web content for LLM crawling and citation. It brought a real inbound client lead.</li>
+     <li>Grew a fitness creator (~201K followers) to multi-million-view reels through organic strategy, positioning and scripts.</li>
+     <li>Audited <b>50+ websites and content setups</b> into brand-communication and conversion opportunities. Also deliver corporate AI-in-marketing training.</li>
+    </ul>
+   </div>
+   <div class="job">
+    <span class="dot"></span>
+    <div class="job-head"><h3>Content Strategist (Part-Time)</h3><span class="co">- Affinco Solutions, Nagpur</span><span class="when">Mar - Aug 2024</span></div>
+    <ul>
+     <li>Grew <b>CTR 18% and sign-ups 22%</b> across 9 B2B SaaS and ecommerce sites.</li>
+     <li>Cut content-team production time <b>40%</b> with AI-assisted workflows and prompt libraries; mentored 3 junior editors.</li>
+    </ul>
+   </div>
+   <div class="job">
+    <span class="dot"></span>
+    <div class="job-head"><h3>AI Trainer, RLHF</h3><span class="co">- Soul AI (Project Mercury)</span><span class="when">Jun - Jul 2024</span></div>
+    <ul>
+     <li>Evaluated model outputs on <b>completeness, security, tonality and length</b> - the human judgement side of LLM quality.</li>
+    </ul>
+   </div>
+   <div class="job">
+    <span class="dot"></span>
+    <div class="job-head"><h3>Web Content Strategist & B2B SaaS Writer</h3><span class="co">- StatGlow</span><span class="when">Oct 2023 - Mar 2024</span></div>
+    <ul>
+     <li>Built brand narratives, SEO content and website wireframes tested with <b>A/B tests and client feedback</b>.</li>
+     <li>Via Pepper Content: AEO-optimised articles for <b>Atlan, Portkey AI, Harness AI and Talkspace</b> - live on their blogs, not in a drawer.</li>
+    </ul>
+   </div>
+   <div class="job">
+    <span class="dot"></span>
+    <div class="job-head"><h3>Content Editor</h3><span class="co">- CenturySoft, Nagpur (US audience)</span><span class="when">Jun - Dec 2023</span></div>
+    <ul>
+     <li>Scaled to <b>2,000+ assets across 11 US health and lifestyle sites</b> (300K+ combined monthly visits) with briefs, quality standards and search-led optimisation.</li>
+     <li>After Google's September 2023 Helpful Content Update: learned the new guidelines, <b>trained 12 writers to republish fast</b> and refreshed articles. The biggest site recovered to 358.4K traffic by Dec 2023.</li>
+    </ul>
+   </div>
+   <div class="job">
+    <span class="dot"></span>
+    <div class="job-head"><h3>Web Administrator</h3><span class="co">- IIT Madras BS Programme (student government)</span><span class="when">Sep 2022 - Aug 2023</span></div>
+    <ul>
+     <li>Managed a <b>2,500-student community</b> and led the content creation team; social reach grew <b>+179.8%</b>.</li>
+     <li>Earned a <b>Letter of Recommendation (Oct 2023)</b> from the IIT Madras student head.</li>
+    </ul>
+   </div>
+   <div class="job">
+    <span class="dot"></span>
+    <div class="job-head"><h3>Content Head</h3><span class="co">- Paradox, IIT Madras' fest</span><span class="when">Oct 2022 - Jun 2023</span></div>
+    <ul>
+     <li>Instagram reach <b>+399.7%</b>, engagement <b>+553.8%</b> with 25+ live formats for a fest of <b>3,000+ on-ground attendees</b>.</li>
+     <li>Managed a 15-member team across content, design and video; led on-ground coverage at IFP.</li>
+    </ul>
+   </div>
+   <div class="job">
+    <span class="dot"></span>
+    <div class="job-head"><h3>Content Creation Intern</h3><span class="co">- ICCW, Chennai</span><span class="when">Nov 2022 - Jan 2023</span></div>
+    <ul>
+     <li>Turned water-sustainability research into website and awareness-campaign content. The "care about the brief" origin story.</li>
+    </ul>
+   </div>
+  </div>
+  <div class="also"><b>Also in the multiverse:</b> Business Development & Research Intern, Younity (2022) | Head of Content, Outliers E-Cell | Content Strategist, SeekEase (IITM project, Feb - Sep 2023) | part-time Upwork work alongside the consultancy.</div>
+ </div>
+</section>
+
+<section class="vs on-dark">
+ <div class="wrap">
+  <h2>Clients <span class="mk">&ne;</span> Projects</h2>
+  <p class="kicker">paid engagements on one side. experiments, assignments and my own builds on the other. no mixing.</p>
+  <div class="vs-cols">
+   <div class="vs-col c">
+    <h3>Clients</h3>
+    <p class="sub">self-sourced, paid, receipts exist</p>
+    <ul>
+     <li><b>Melooha</b> - Shark Tank India astrology-tech brand. Hinglish paid-ad hooks, UGC and founder scripts for Google & Meta. ~38% conversion lift.</li>
+     <li><b>Pristilo</b> - cold-pressed oil company, Dubai. Organic UGC + a 30-day challenge. ~42% sales lift.</li>
+     <li><b>Cultstore (Cult.fit)</b> - performance-ad strategy & copy. <a href="/casestudy/cultstore"><u>Full case study here</u></a>.</li>
+     <li><b>StatGlow</b> - B2B SaaS web content strategy and writing.</li>
+     <li><b>Pepper Content</b> - AEO-optimised B2B SaaS articles; end clients Atlan, Portkey AI, Harness AI, Talkspace.</li>
+     <li><b>Terribly Tiny Tales</b> - writing for the storytelling company (and their Writing That Sells Pro grad).</li>
+     <li><b>Kohinoor Viva City & Kukreja Builders</b> - real-estate content, incl. the 'City in a Frame' campaign.</li>
+     <li><b>Creator accounts</b> - a fitness creator (~201K IG; top reel 11.2M, top 12 ~65M+) and a YouTube creator (~229K subs; one script hit 58.7K views, ~4x his median), plus more across fitness & education. Names stay private - their audiences are their business.</li>
+    </ul>
+   </div>
+   <div class="vs-col p">
+    <h3>Projects</h3>
+    <p class="sub">own builds, assignments & collabs - not paid clients</p>
+    <ul>
+     <li><b>CreatorVerse</b> - my own creator-brand collaboration platform, taken through Empathise -&gt; Analyse -&gt; Solve (IITM design thinking).</li>
+     <li><b>Instagram growth playbook</b> - an unsolicited 3-part playbook (perception audit -&gt; growth engine -&gt; execution) for a 147K-follower founder-led brand.</li>
+     <li><b>Heltr Skelter strategy assignment</b> - 97 pages, incl. a digital-presence audit for SPAK Orgochem (B2B chemicals).</li>
+     <li><b>Ansuni</b> - lyricist & concept strategist on the song.</li>
+     <li><b>Breakthrough #LetsTalk</b> - co-writer, script & dialogue, short film on depression.</li>
+     <li><b>AskIVA</b> - IITM AI chatbot (7-member team): role-based dashboards, context-aware hints, JWT login, ChromaDB.</li>
+     <li><b>SeekEase</b> - mental-wellness app concept; Content Strategist; Spirit @Parivartan '23 runner-up.</li>
+     <li><b>Safar</b> - car-pooling app idea; Innovation & Ideation 2nd runner-up.</li>
+     <li><b>Founder & studio collabs</b> - podcast IP concepts, positioning and strategy folders with founders, creators and studios. Names stay in the DMs.</li>
+    </ul>
+   </div>
+  </div>
+  <p class="vs-note">the rule: client = paid engagement. project = build, assignment or collab. if it ever changes sides, it moves columns.</p>
+ </div>
+</section>
+
+<section class="edu">
+ <div class="wrap">
+  <h2>The <span class="mk">degrees</span></h2>
+  <p class="kicker">yes, the strategist is also a data-science graduate.</p>
+  <div class="edu-grid">
+   <div class="deg">
+    <span class="cap">2021 - 2026</span>
+    <h3>BS in Data Science & Applications</h3>
+    <p class="where">Indian Institute of Technology, Madras</p>
+    <ul>
+     <li><b>CGPA 7.38/10</b> | project CGPA <b>9.33/10</b></li>
+     <li>Diplomas in Programming and in Data Science (Sep 2024)</li>
+     <li>Minor in Economics & Finance: corporate finance, managerial economics, game theory</li>
+     <li>Course projects across app development, machine learning, data visualisation and film design</li>
+    </ul>
+    <span class="flex">fewer than 1% of entrants finish the full 4-year degree<small>(source: Careers360, Aug 2025)</small></span>
+   </div>
+   <div class="deg">
+    <span class="cap">2020 - 2023</span>
+    <h3>BBA, Human Resources Management</h3>
+    <p class="where">Gondwana University (on campus)</p>
+    <ul>
+     <li><b>CGPA 9.49/10</b> - First Division with Distinction</li>
+     <li>Final-year project: <b>95/100 (O grade)</b></li>
+     <li>Focus: marketing management, product marketing, marketing strategy</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="awards">
+ <div class="wrap">
+  <h2>Awards & <span class="mk-p">applause</span></h2>
+  <p class="kicker">ordered by how hard they were to get, not by date.</p>
+  <div class="aw-grid">
+   <div class="aw"><span class="em">&#127942;</span><div><b>IFP 50 Hours Writing Challenge - nominee</b><span>Writer Awards, Think Piece category, India Film Project, Dec 2025. The think piece did the talking.</span></div></div>
+   <div class="aw"><span class="em">&#129354;</span><div><b>Spirit @Parivartan '23 - Runner-Up</b><span>DMS, IIT Delhi, Feb 2023. For SeekEase, a mental-wellness app idea.</span></div></div>
+   <div class="aw"><span class="em">&#129395;</span><div><b>Innovation & Ideation - 2nd Runner-Up</b><span>Gondwana University, Jul 2021. For Safar, a car-pooling app idea.</span></div></div>
+   <div class="aw"><span class="em">&#128172;</span><div><b>20+ LinkedIn recommendations + IITM LOR</b><span>From clients, colleagues and seniors. Plus a Letter of Recommendation from IIT Madras for content & events (Oct 2023).</span></div></div>
+  </div>
+  <div class="tickets">
+   <div class="ticket"><b>India AI Film Festival 2026</b><span>Event Coordinator (volunteer), Qutub Minar, Delhi - InVideo x Localhost. Also handled heritage-site permissions.</span><div class="stub">admit one: feb 2026</div></div>
+   <div class="ticket"><b>IFP Season 15, 2025</b><span>Event volunteer & coordinator: live social coverage, Meta ads, writer coordination.</span><div class="stub">admit one: season 15</div></div>
+   <div class="ticket"><b>Paradox 2023</b><span>Content lead, IIT Madras' fest. Full numbers in the journey above.</span><div class="stub">admit one: chennai</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="certs" style="padding-top:0">
+ <div class="wrap">
+  <h2>Certificates & <span class="mk">courses</span></h2>
+  <div class="certs-row">
+   <div class="cert"><span class="yr">SEP 2025</span><b>Google Ads Creative Certification</b><span>Google. The paid-side vocabulary to match the organic work.</span></div>
+   <div class="cert"><span class="yr">AUG 2025</span><b>Generative AI Mastermind</b><span>Outskill. 2 days, 16 hours: ChatGPT & custom GPTs, MidJourney, Runway, Leonardo, AI agents, no-code MVPs.</span></div>
+   <div class="cert"><span class="yr">MAR 2024</span><b>Writing That Sells Pro</b><span>TTT Academy. Sales writing, finished with distinction-level stubbornness.</span></div>
+   <div class="cert"><span class="yr">SEP 2024</span><b>Building Your Power Brand</b><span>Unstop (participation).</span></div>
+   <div class="cert"><span class="yr">2023 - 24</span><b>IITM & experience certificates</b><span>Web Admin certificate, Event Marketing LOR, plus experience letters from CenturySoft, ICCW, Younity and Bandipur House.</span></div>
+  </div>
+  <p class="certs-note">more in progress - listed here only once they are actually done. a page that brags early is a page that lies.</p>
+ </div>
+</section>
+
+<section class="skills">
+ <div class="wrap">
+  <h2>Skills & <span class="mk-p">tools</span></h2>
+  <div class="sk-group">
+   <h3><span>Strategy & writing</span></h3>
+   <div class="pills"><span class="pill">content strategy</span><span class="pill">SEO & AEO</span><span class="pill">content architecture</span><span class="pill">editorial standards</span><span class="pill">messaging frameworks</span><span class="pill">creative briefs</span><span class="pill">scripts</span><span class="pill">ad copy & hooks</span><span class="pill">brand storytelling</span><span class="pill">social strategy</span><span class="pill">event marketing</span><span class="pill">team leadership</span></div>
+  </div>
+  <div class="sk-group">
+   <h3><span>Tools</span></h3>
+   <div class="pills"><span class="pill">GA4</span><span class="pill">Search Console</span><span class="pill">SEMrush</span><span class="pill">Ahrefs</span><span class="pill">Google Trends</span><span class="pill">WordPress</span><span class="pill">Canva</span><span class="pill">Figma</span><span class="pill">Notion</span><span class="pill">Python & data science (IIT Madras)</span></div>
+  </div>
+  <div class="sk-group">
+   <h3><span>AI, used daily</span></h3>
+   <div class="pills"><span class="pill">Claude</span><span class="pill">ChatGPT</span><span class="pill">Gemini</span><span class="pill">Perplexity</span><span class="pill">prompt libraries</span><span class="pill">AI-assisted editorial workflows (40% faster)</span><span class="pill">RLHF evaluation</span><span class="pill">AI-search ranking proof</span></div>
+  </div>
+  <div class="sk-group">
+   <h3><span>Languages</span></h3>
+   <div class="pills"><span class="pill">English (full professional)</span><span class="pill">Hindi (full professional)</span><span class="pill">Gujarati (native)</span><span class="pill">Marathi (limited working)</span></div>
+  </div>
+ </div>
+</section>
+
+<footer class="foot on-dark">
+ <div class="wrap">
+  <span class="tag">Still reading? Impressive.</span>
+  <h2 style="margin-top:24px">Got a <span class="mk">brief?</span></h2>
+  <p class="scribble">the universe is open for new planets.</p>
+  <div class="foot-cards">
+   <a class="fcard" href="https://wa.link/kzc6zv" target="_blank" rel="noopener">
+    <span class="ic" style="background:#25d366"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.7 1.6.3.2.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.6-.1 1.1z"/></svg></span>
+    <span><small>WhatsApp</small><b>Message me</b></span>
+   </a>
+   <a class="fcard" href="mailto:diyanathwani.media@gmail.com">
+    <span class="ic" style="background:var(--yellow)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+    <span><small>Email</small><b>diyanathwani.media@gmail.com</b></span>
+   </a>
+   <a class="fcard" href="https://www.linkedin.com/in/diya-nathwani6622" target="_blank" rel="noopener">
+    <span class="ic" style="background:#0a66c2"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.4 8.4h4.6V24H.4zM8.6 8.4h4.4v2.1h.1c.6-1.2 2.1-2.4 4.4-2.4 4.7 0 5.5 3.1 5.5 7V24h-4.6v-7.6c0-1.8 0-4.1-2.5-4.1s-2.9 2-2.9 4V24H8.6z"/></svg></span>
+    <span><small>LinkedIn</small><b>diya-nathwani6622</b></span>
+   </a>
+   <a class="fcard" href="/">
+    <span class="ic" style="background:var(--lilac)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/></svg></span>
+    <span><small>Main site</small><b>diyanathwani.site</b></span>
+   </a>
+  </div>
+  <div class="fine-line">
+   <span>Every number from my private master inventory, Oct 2026. Creator names stay private on purpose.</span>
+   <span class="pen">also writes as drishti(&#2325;&#2379;&#2339;) &#128064;</span>
+  </div>
+ </div>
+</footer>
+
+<script>
+// count-up numbers when visible (site convention: numbers animate, nothing else dances)
+(function(){
+ var els=document.querySelectorAll('.num .n');
+ function fmt(v,suf){
+   if(v%1!==0) return v.toFixed(1)+suf;
+   return (v>=1000? v.toLocaleString('en-IN'): v)+suf;
+ }
+ var io=new IntersectionObserver(function(entries){
+   entries.forEach(function(e){
+     if(!e.isIntersecting) return;
+     var el=e.target; io.unobserve(el);
+     var target=parseFloat(el.dataset.n), suf=el.dataset.suffix||'';
+     var t0=null, dur=1100;
+     function step(ts){
+       if(!t0) t0=ts;
+       var p=Math.min((ts-t0)/dur,1);
+       var ease=1-Math.pow(1-p,3);
+       el.textContent=fmt(target*ease,suf);
+       if(p<1) requestAnimationFrame(step); else el.textContent=fmt(target,suf);
+     }
+     requestAnimationFrame(step);
+   });
+ },{threshold:.4});
+ els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
