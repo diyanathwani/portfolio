@@ -39,7 +39,9 @@
 #results .nk-numgrid{margin:24px 0}
 #results .nk-numgrid>*,#results .nk-numstrip>*{color:var(--sf-ink)!important}
 #results .nk-numgrid strong{color:var(--sf-accent)!important}
-#results .nk-numgrid p{color:var(--sf-ink)!important}
+#results :is(p,span,small,figcaption),#results .nk-eyebrow{color:var(--sf-ink)!important}
+#results .nk-numgrid strong{color:var(--sf-accent)!important}
+.sf-body>section :is(p,small,figcaption){color:var(--sf-ink)!important}
 #results .sf-body .rs-proofs,#results .sf-body .client-snapshots{color:var(--sf-ink)}
 #social-strengths>h2,#social-method>h2{font-size:clamp(32px,4vw,48px);text-align:left;margin-top:14px}
 #social-strengths>.oglead,#social-method>.oglead{text-align:left;margin-left:0;margin-bottom:24px}
@@ -77,11 +79,11 @@ if(!root||!chapter||!chapter.querySelector('.ogcsgrid')||!recent||!document.quer
 if(document.querySelector('#selected-work'))return true;
 function disclosure(label,nodes,cls){const d=document.createElement('details');d.className='sf-disclosure '+(cls||'');const s=document.createElement('summary');s.textContent=label;const b=document.createElement('div');b.className='sf-body';nodes.filter(Boolean).forEach(n=>b.append(n));d.append(s,b);return d}
 function group(id,title,note){const s=document.createElement('section');s.id=id;s.className='sf-section';const h=document.createElement('h2');h.textContent=title;s.append(h);if(note){const p=document.createElement('p');p.textContent=note;s.append(p)}return s}
-const selected=document.createElement('section');selected.id='selected-work';selected.className='ognew';const title=document.createElement('h2');title.textContent='SELECTED WORK';selected.append(title,chapter);recent.after(selected);
+const selected=document.createElement('section');selected.id='selected-work';selected.className='ognew';const title=document.createElement('h2');title.textContent='SELECTED WORK';selected.append(title,chapter);recent.after(selected);const chapterHeading=chapter.querySelector(':scope>h3');if(chapterHeading)chapterHeading.replaceWith(disclosure('Documented portfolio snapshots',[chapterHeading]));const breakdownHeading=chapter.querySelector(':scope>h4');if(breakdownHeading)breakdownHeading.textContent='Strategy, scripts & paid social';
 const cardGrid=chapter.querySelector('.oggrid'),snapshots=chapter.querySelector('.client-snapshots');chapter.append(disclosure('More documented work & account snapshots',[cardGrid,snapshots]));
 const results=document.querySelector('#results');selected.after(results);
 const resultExtra=[...results.children].filter(e=>e.matches('.rs-proofs,.client-snapshots,.rs-all'));if(resultExtra.length)results.append(disclosure('Open the screenshots, case notes & all results',resultExtra));
-const testimonials=document.querySelector('#testimonials');results.after(testimonials);const testimonialExtra=testimonials.querySelector('.sagar-writing-testimonial');if(testimonialExtra)testimonials.append(disclosure('Read the full writing recommendation',[testimonialExtra]));
+const testimonials=document.querySelector('#testimonials');results.after(testimonials);const testimonialExtra=testimonials.querySelector('.sagar-writing-testimonial');if(testimonialExtra)testimonials.append(disclosure('Read the full writing recommendation',[testimonialExtra]));const quotes=[...testimonials.children].filter(e=>e.matches('.tm-marquee,.tm-arrows'));if(quotes.length)testimonials.append(disclosure('Read client & team recommendations',quotes));
 const about=document.querySelector('#about');testimonials.after(about);const chat=about.querySelector('.chat1');const extra=[...chat.children].slice(2).filter(e=>!e.hidden);if(extra.length)chat.append(disclosure('More about my approach & background',extra));
 const position=document.querySelector('.social40-position');about.after(position);position.after(strength);strength.querySelector('h2').innerHTML='WHAT I WORK ON.';
 [...strength.querySelector(':scope>.oggrid').children].forEach(card=>{const h=card.querySelector('h3'),small=card.querySelector('small');const label=h?h.textContent:card.textContent;const d=disclosure(label,[],'sf-capability');const summary=d.querySelector('summary');summary.textContent='';const span=document.createElement('span');if(small)span.append(small);const strong=document.createElement('strong');strong.textContent=label;span.append(strong);summary.append(span);const b=d.querySelector('.sf-body');[...card.children].filter(e=>e!==h&&e!==small).forEach(e=>b.append(e));card.replaceWith(d)});
@@ -91,7 +93,7 @@ const supporting=group('more-about-diya','THE PERSON BEHIND THE WORK','Experienc
 const groups=[['Featured strategy / Varun Agarwal','#varun-strategy'],['Creators & series I learn from','#favorite-profiles'],['Creative playground / writing, song & film','#playground'],['Experience, education & clients','#journey'],['Awards & certificates','#trophies'],['Tools & frameworks','.nk-tools'],['Features & guest appearances','#featured'],['People I got to meet','#rooms'],['Podcasts I host','#media'],['Why writing / the letter','#letter'],['Find me online','#gallery'],['Questions, answered','.nk-faq'],['Positioning & portfolio at a glance','.nk-legacy,.nk-quickstats,.nk-marquee-wrap']];
 groups.forEach(([label,selector])=>{const nodes=[...root.querySelectorAll(':scope>'+selector.split(',').join(',:scope>'))];if(nodes.length)supporting.append(disclosure(label,nodes))});
 const contact=document.querySelector('#contact');supporting.after(contact);
-const nav=document.querySelector('.nk-bar nav');if(nav){const links=[...nav.querySelectorAll('a')];const targets=[['Selected Work','#selected-work'],['Results','#results'],['Approach','#social-strengths'],['About','#about'],['All Work','#portfolio-library'],['More','#more-about-diya']];links.slice(0,targets.length).forEach((a,i)=>{a.textContent=targets[i][0];a.setAttribute('href',targets[i][1])})}
+const nav=document.querySelector('.nk-bar nav');if(nav){const buttons=[...nav.querySelectorAll('button')];const targets=[['Selected Work','#selected-work'],['Results','#results'],['Approach','#social-strengths'],['About','#about'],['All Work','#portfolio-library'],['More','#more-about-diya']];buttons.slice(0,targets.length).forEach((button,i)=>{button.textContent=targets[i][0];button.addEventListener('click',e=>{e.stopImmediatePropagation();location.hash=targets[i][1]},true)})}
 function revealHash(){if(!location.hash)return;let target;try{target=document.querySelector(location.hash)}catch(e){return}if(!target)return;let p=target.parentElement;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement}requestAnimationFrame(()=>target.scrollIntoView({block:'start'}))}
 window.addEventListener('hashchange',revealHash);revealHash();
 root.dataset.socialFlow='59';return true;
