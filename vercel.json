@@ -1,17 +1,83 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/:path*", "has": [{ "type": "host", "value": "www.diyanathwani.site" }], "destination": "https://diyanathwani.site/:path*", "permanent": true },
-    { "source": "/campaign/walls-that-raised-us", "destination": "/campaign/walls-that-raised-us/walls-v12", "permanent": true },
-    { "source": "/campaign/walls-that-raised-us/", "destination": "/campaign/walls-that-raised-us/walls-v12", "permanent": true },
-    { "source": "/campaign/find-the-faces", "destination": "/campaign/find-the-faces/find-faces-v11", "permanent": true },
-    { "source": "/campaign/find-the-faces/", "destination": "/campaign/find-the-faces/find-faces-v11", "permanent": true },
-    { "source": "/campaign/read-the-note", "destination": "/campaign/read-the-note/read-note-v11", "permanent": true },
-    { "source": "/campaign/read-the-note/", "destination": "/campaign/read-the-note/read-note-v11", "permanent": true },
-    { "source": "/campaign/city-in-a-frame", "destination": "/campaign/city-in-a-frame/city-frame-v12", "permanent": true },
-    { "source": "/campaign/city-in-a-frame/", "destination": "/campaign/city-in-a-frame/city-frame-v12", "permanent": true },
-    { "source": "/social", "destination": "/social-v58-campaign-links", "permanent": true },
-    { "source": "/social/", "destination": "/social-v58-campaign-links", "permanent": true }
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.diyanathwani.site"
+        }
+      ],
+      "destination": "https://diyanathwani.site/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.diyanathwani.site"
+        }
+      ],
+      "destination": "https://diyanathwani.site/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/campaign/walls-that-raised-us",
+      "destination": "/campaign/walls-that-raised-us/walls-v12",
+      "permanent": true
+    },
+    {
+      "source": "/campaign/walls-that-raised-us/",
+      "destination": "/campaign/walls-that-raised-us/walls-v12",
+      "permanent": true
+    },
+    {
+      "source": "/campaign/find-the-faces",
+      "destination": "/campaign/find-the-faces/find-faces-v11",
+      "permanent": true
+    },
+    {
+      "source": "/campaign/find-the-faces/",
+      "destination": "/campaign/find-the-faces/find-faces-v11",
+      "permanent": true
+    },
+    {
+      "source": "/campaign/read-the-note",
+      "destination": "/campaign/read-the-note/read-note-v11",
+      "permanent": true
+    },
+    {
+      "source": "/campaign/read-the-note/",
+      "destination": "/campaign/read-the-note/read-note-v11",
+      "permanent": true
+    },
+    {
+      "source": "/campaign/city-in-a-frame",
+      "destination": "/campaign/city-in-a-frame/city-frame-v12",
+      "permanent": true
+    },
+    {
+      "source": "/campaign/city-in-a-frame/",
+      "destination": "/campaign/city-in-a-frame/city-frame-v12",
+      "permanent": true
+    },
+    {
+      "source": "/social",
+      "destination": "/social-v58-campaign-links",
+      "permanent": true
+    },
+    {
+      "source": "/social/",
+      "destination": "/social-v58-campaign-links",
+      "permanent": true
+    }
   ],
-  "rewrites": [{ "source": "/og-preview.png", "destination": "/api/og" }]
+  "rewrites": [
+    {
+      "source": "/og-preview.png",
+      "destination": "/api/og"
+    }
+  ]
 }
