@@ -76,6 +76,10 @@
   ],
   "rewrites": [
     {
+      "source": "/images/diya-nathwani-content-strategist.jpg",
+      "destination": "/assets/TQLYGLA5.jpg"
+    },
+    {
       "source": "/og-preview.png",
       "destination": "/api/og"
     }
